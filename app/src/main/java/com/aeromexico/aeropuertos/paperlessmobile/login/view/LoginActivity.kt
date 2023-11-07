@@ -85,6 +85,7 @@ class LoginActivity : AppCompatActivity(),
 
             }
             tvVersion.text = BuildConfig.VERSION_NAME
+            /*
             oktaLogin.root.setOnClickListener {
                 toast("isAuth ${oktaManager.isAuthenticated()} ${oktaManager.gettoken()?.accessToken.toString()}")
                 desactiveUserPw(true)
@@ -99,12 +100,14 @@ class LoginActivity : AppCompatActivity(),
                 toast("isAuth ${oktaManager.isAuthenticated()} ${oktaManager.gettoken()?.accessToken.toString()}")
                 oktaManager.registerUserProfileCallback(this@LoginActivity)
             }
+             */
         }
-
+        desactiveUserPw(true)
         model.getDomains().observeOnce(Observer {
             if (it != null) {
                 if (it.result != null) {
                     if (!it.result.dominios.isNullOrEmpty()) {
+                        desactiveUserPw(false)
                         var listDomaians = it.result.dominios
                         listDomaians.filter { d -> d.activo }
                         listDomaians.forEach { s -> listDominio.add(s.dominio) }
@@ -186,6 +189,7 @@ class LoginActivity : AppCompatActivity(),
             etEmail.isEnabled = !b
             etPassword.isEnabled = !b
             spinnerDominio.spinner.isEnabled = !b
+            btnLogin.isEnabled = !b
         }
     }
 
@@ -225,13 +229,12 @@ class LoginActivity : AppCompatActivity(),
     private fun verificarCampos(): Boolean {
 
         var s = binding.spinnerDominio.spinner.selectedItemPosition
-        if (s == 0) {
+        if (s <= 0) {
             showToast("${resources.getString(R.string.field)}")
             return false
+        }else{
+            model.loginUser = "${binding.etEmail.text.toString().trim()}${listDominio[s]?:""}"
         }
-
-        model.loginUser = "${binding.etEmail.text.toString().trim()}${listDominio[s]}"
-
 
         return if (android.util.Patterns.EMAIL_ADDRESS.matcher(model.loginUser).matches()
         ) {
@@ -266,6 +269,7 @@ class LoginActivity : AppCompatActivity(),
 
     override fun onResume() {
         super.onResume()
+        /*
         model.getTokensOkta().observe(this, Observer {
             if(it.isNullOrEmpty()){
                 desactiveUserPw(false)
@@ -273,6 +277,7 @@ class LoginActivity : AppCompatActivity(),
                 toast(it)
             }
         })
+         */
     }
 
     private fun getSignOutCallback(): RequestCallback<Int, AuthorizationException> {
