@@ -37,8 +37,8 @@ android {
                 //API DESARROLLO
 
                 buildConfigField "String", "PAPERLESS_AMBIENT", '"dev"'
-               // buildConfigField "String", "PAPERLESS_URL_API", '"https://furostest.aeromexico.com/api/"'
-                buildConfigField "String", "PAPERLESS_URL_API", '"https://0qdxh9tpza.execute-api.us-east-1.amazonaws.com/"'
+                buildConfigField "String", "PAPERLESS_URL_API", '"https://furostest.aeromexico.com/api/"'
+                // buildConfigField "String", "PAPERLESS_URL_API", '"https://0qdxh9tpza.execute-api.us-east-1.amazonaws.com/"'
             } else {
                 //PROD
                 buildConfigField "String", "PAPERLESS_AMBIENT", '"prod"'
