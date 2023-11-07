@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/dimen_4"
+    android:background="@color/color_gray_white_background_checklist_faded"
+    tools:context=".ordenCargaCombustibles.views.tabs.InformacionCombustible">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView8"
+                style="@style/textViewFormTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/combustible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tipoCarga"
+                style="@style/Tema"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_0"
+                app:boxBackgroundColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView8">
+
+                <AutoCompleteTextView
+                    android:id="@+id/spinTipoCarga"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:inputType="none"
+                    android:text="Carga"
+                    android:textSize="@dimen/text_14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilTemperatura"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_width="@dimen/margin_0"
+                android:layout_height="wrap_content"
+                android:hint="@string/temperatura"
+                app:boxBackgroundColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/tipoCarga"
+                app:layout_constraintEnd_toStartOf="@id/tilGrados"
+                app:layout_constraintStart_toStartOf="parent" >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietTemperatura"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:digits="0123456789-"
+                    android:textSize="@dimen/text_14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilGrados"
+                style="@style/Tema"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_0"
+                app:boxBackgroundColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/tilTemperatura"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tilTemperatura"
+                app:layout_constraintTop_toTopOf="@+id/tilTemperatura">
+
+                <AutoCompleteTextView
+                    android:id="@+id/spinGrados"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:inputType="none"
+                    android:text="Cº"
+                    android:textSize="@dimen/text_14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilDensidad"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_width="@dimen/margin_0"
+                android:layout_height="wrap_content"
+                android:hint="@string/densidad"
+                android:layout_marginTop="@dimen/dimen_4"
+                app:boxBackgroundColor="@color/white"
+                app:layout_constraintEnd_toStartOf="@id/tilUnidadesDensidad"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilTemperatura">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietDensidad"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/white"
+                    android:digits="0123456789."
+                    android:inputType="numberDecimal"
+                    android:textSize="@dimen/text_14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilUnidadesDensidad"
+                style="@style/Tema"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_0"
+                app:boxBackgroundColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/tilDensidad"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tilDensidad"
+                app:layout_constraintTop_toTopOf="@+id/tilDensidad">
+
+                <AutoCompleteTextView
+                    android:id="@+id/spinUnidadesDensidad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:inputType="none"
+                    android:text="Kg/l"
+                    android:textSize="@dimen/text_14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilCombustibleAntesCargar"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                app:boxBackgroundColor="@color/white"
+                android:layout_width="@dimen/margin_0"
+                android:layout_height="wrap_content"
+                android:hint="@string/combustible_antes_de_cargar"
+                android:layout_marginTop="@dimen/dimen_4"
+                app:endIconMode="clear_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilDensidad">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietCombustibleAntesCargar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:digits="0123456789."
+                    android:inputType="number"
+                    android:textSize="@dimen/text_14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvDistribucion"
+                style="@style/textViewFormTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Distribucion de combustible"
+                android:layout_marginTop="@dimen/dimen_8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilCombustibleAntesCargar" />
+
+            <TextView
+                android:id="@+id/tvLibras"
+                style="@style/textViewFormTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginEnd="@dimen/dimen_4"
+                android:text="LB"
+                app:layout_constraintEnd_toStartOf="@+id/cbLibras"
+                app:layout_constraintTop_toTopOf="@+id/tvDistribucion" />
+
+            <CheckBox
+                android:id="@+id/cbLibras"
+                android:layout_width="@dimen/dimen_28"
+                android:layout_height="@dimen/margin_0"
+                android:layout_marginEnd="@dimen/dimen_16"
+                app:layout_constraintBottom_toBottomOf="@+id/tvLibras"
+                app:layout_constraintEnd_toStartOf="@+id/tvKilos"
+                app:layout_constraintTop_toTopOf="@+id/tvLibras" />
+
+            <TextView
+                android:id="@+id/tvKilos"
+                style="@style/textViewFormTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginEnd="@dimen/dimen_4"
+                android:text="KG"
+                app:layout_constraintEnd_toStartOf="@+id/cbKilos"
+                app:layout_constraintTop_toTopOf="@+id/cbLibras" />
+
+            <CheckBox
+                android:id="@+id/cbKilos"
+                android:layout_width="@dimen/dimen_28"
+                android:layout_height="@dimen/margin_0"
+                app:layout_constraintBottom_toBottomOf="@+id/tvKilos"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvKilos" />
+
+            <TextView
+                android:id="@+id/tvFallaIndicador"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_14"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:gravity="center"
+                android:text="Falla del indicador"
+                app:layout_constraintEnd_toStartOf="@+id/cbFallaIndicador"
+                app:layout_constraintTop_toBottomOf="@+id/tvDistribucion" />
+
+            <CheckBox
+                android:id="@+id/cbFallaIndicador"
+                android:layout_width="@dimen/dimen_28"
+                android:layout_height="@dimen/margin_0"
+                app:layout_constraintBottom_toBottomOf="@+id/tvFallaIndicador"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvFallaIndicador" />
+
+            <TextView
+                android:id="@+id/tvTanque"
+                style="@style/textViewFormItem"
+                android:layout_width="@dimen/margin_0"
+                android:layout_height="@dimen/margin_0"
+                android:gravity="center"
+                android:text="@string/tanque"
+                app:layout_constraintEnd_toEndOf="@+id/tvIzquierdo"
+                app:layout_constraintBottom_toBottomOf="@+id/tvRequerido"
+                app:layout_constraintStart_toStartOf="@+id/tvDistribucion"
+                app:layout_constraintTop_toTopOf="@+id/tvCombustibleRequerido" />
+
+            <TextView
+                android:id="@+id/tvCombustibleRequerido"
+                android:background="@color/white"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/combustible_requerido"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:paddingTop="@dimen/dimen_8"
+                android:paddingHorizontal="@dimen/dimen_4"
+                android:layout_marginHorizontal="@dimen/dimen_4"
+                app:layout_constraintEnd_toStartOf="@+id/tvCombustibleFinal"
+                app:layout_constraintStart_toEndOf="@+id/tvTanque"
+                app:layout_constraintTop_toBottomOf="@+id/tvFallaIndicador" />
+
+            <TextView
+                android:id="@+id/tvRequerido"
+                android:layout_width="@dimen/margin_0"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dimen_8"
+                android:text="Requerido"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/tvCombustibleRequerido"
+                app:layout_constraintStart_toStartOf="@+id/tvCombustibleRequerido"
+                app:layout_constraintTop_toBottomOf="@+id/tvCombustibleRequerido" />
+
+            <TextView
+                android:id="@+id/tvCombustibleFinal"
+                style="@style/textViewFormItem"
+                android:layout_width="@dimen/margin_0"
+                android:layout_height="@dimen/margin_0"
+                android:gravity="center"
+                android:text="@string/combustible_final"
+                android:layout_marginBottom="@dimen/dimen_4"
+                app:layout_constraintBottom_toTopOf="@id/tvIndicado"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvCombustibleRequerido"
+                app:layout_constraintTop_toTopOf="@+id/tvCombustibleRequerido" />
+
+            <TextView
+                android:id="@+id/tvIndicado"
+                style="@style/textViewFormItem"
+                android:layout_width="@dimen/margin_0"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Indicado"
+                app:layout_constraintBottom_toBottomOf="@+id/tvRequerido"
+                app:layout_constraintEnd_toStartOf="@id/tvPorreglas"
+                app:layout_constraintStart_toStartOf="@+id/tvCombustibleFinal"
+                app:layout_constraintTop_toBottomOf="@+id/tvCombustibleFinal" />
+
+            <TextView
+                android:id="@+id/tvPorreglas"
+                style="@style/textViewFormItem"
+                android:layout_width="@dimen/margin_0"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_4"
+                android:gravity="center"
+                android:text="Por reglas"
+                app:layout_constraintBottom_toBottomOf="@+id/tvIndicado"
+                app:layout_constraintEnd_toEndOf="@+id/tvCombustibleFinal"
+                app:layout_constraintStart_toEndOf="@+id/tvIndicado"
+                app:layout_constraintTop_toTopOf="@+id/tvIndicado" />
+
+            <TextView
+                android:id="@+id/tvIzquierdo"
+                style="@style/textViewFormItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_4"
+                android:text="IZQUIERDO"
+                app:layout_constraintStart_toStartOf="@+id/tvTanque"
+                app:layout_constraintTop_toBottomOf="@+id/tvTanque" />
+
+            <TextView
+                android:id="@+id/tvCentral"
+                style="@style/textViewFormItem"
+                android:layout_width="@dimen/margin_0"
+                android:layout_height="wrap_content"
+                android:text="CENTRAL"
+                android:layout_marginTop="@dimen/dimen_4"
+                app:layout_constraintEnd_toEndOf="@+id/tvIzquierdo"
+                app:layout_constraintStart_toStartOf="@+id/tvIzquierdo"
+                app:layout_constraintTop_toBottomOf="@+id/tvIzquierdo" />
+
+            <TextView
+                android:id="@+id/tvDerecho"
+                style="@style/textViewFormItem"
+                android:layout_width="@dimen/margin_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_4"
+                android:text="DERECHO"
+                app:layout_constraintEnd_toEndOf="@+id/tvIzquierdo"
+                app:layout_constraintStart_toStartOf="@+id/tvIzquierdo"
+                app:layout_constraintTop_toBottomOf="@+id/tvCentral" />
+
+            <EditText
+                android:id="@+id/etIzquierdoCombustibleRequerido"
+                style="@style/textViewFormItem"
+                android:layout_width="@dimen/margin_0"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:digits="0123456789."
+                android:maxLength="7"
+                android:hint="0.0"
+                app:layout_constraintEnd_toEndOf="@+id/tvRequerido"
+                app:layout_constraintStart_toStartOf="@+id/tvRequerido"
+                app:layout_constraintTop_toTopOf="@+id/tvIzquierdo" />
+
+            <EditText
+                android:hint="0.0"
+                android:id="@+id/etIzquierdoIndicado"
+                style="@style/textViewFormItem"
+                android:layout_width="@dimen/margin_0"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:digits="0123456789."
+                android:maxLength="7"
+                app:layout_constraintEnd_toEndOf="@+id/tvIndicado"
+                app:layout_constraintStart_toStartOf="@+id/tvIndicado"
+                app:layout_constraintTop_toTopOf="@+id/etIzquierdoCombustibleRequerido" />
+
+            <EditText
+                android:hint="0.0"
+                android:id="@+id/etIzquierdoPorReglas"
+                style="@style/textViewFormItem"
+                android:layout_width="@dimen/margin_0"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:digits="0123456789."
+                android:maxLength="7"
+                app:layout_constraintEnd_toEndOf="@+id/tvPorreglas"
+                app:layout_constraintStart_toStartOf="@+id/tvPorreglas"
+                app:layout_constraintTop_toTopOf="@+id/etIzquierdoIndicado" />
+
+            <EditText
+                android:hint="0.0"
+                android:id="@+id/etCentralCombustiblerequerido"
+                style="@style/textViewFormItem"
+                android:layout_width="@dimen/margin_0"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:digits="0123456789."
+                android:maxLength="7"
+                app:layout_constraintEnd_toEndOf="@+id/etIzquierdoCombustibleRequerido"
+                app:layout_constraintStart_toStartOf="@+id/etIzquierdoCombustibleRequerido"
+                app:layout_constraintTop_toTopOf="@+id/tvCentral" />
+
+            <EditText
+                android:hint="0.0"
+                android:id="@+id/etCentralIndicado"
+                style="@style/textViewFormItem"
+                android:layout_width="@dimen/margin_0"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:digits="0123456789."
+                android:maxLength="7"
+                app:layout_constraintEnd_toEndOf="@+id/etIzquierdoIndicado"
+                app:layout_constraintStart_toStartOf="@+id/etIzquierdoIndicado"
+                app:layout_constraintTop_toTopOf="@+id/etCentralCombustiblerequerido" />
+
+            <EditText
+                android:hint="0.0"
+                android:id="@+id/etCentralPorReglas"
+                style="@style/textViewFormItem"
+                android:layout_width="@dimen/margin_0"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:digits="0123456789."
+                android:maxLength="7"
+                app:layout_constraintEnd_toEndOf="@+id/etIzquierdoPorReglas"
+                app:layout_constraintStart_toStartOf="@+id/etIzquierdoPorReglas"
+                app:layout_constraintTop_toTopOf="@+id/etCentralIndicado" />
+
+            <EditText
+                android:hint="0.0"
+                android:id="@+id/tvDerechoCombustibleRequerido"
+                style="@style/textViewFormItem"
+                android:layout_width="@dimen/margin_0"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:digits="0123456789."
+                android:maxLength="7"
+                app:layout_constraintEnd_toEndOf="@+id/etIzquierdoCombustibleRequerido"
+                app:layout_constraintStart_toStartOf="@+id/etIzquierdoCombustibleRequerido"
+                app:layout_constraintTop_toTopOf="@+id/tvDerecho" />
+
+            <EditText
+                android:hint="0.0"
+                android:id="@+id/tvderechoIndicado"
+                style="@style/textViewFormItem"
+                android:layout_width="@dimen/margin_0"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:maxLength="7"
+                android:digits="0123456789."
+                app:layout_constraintEnd_toEndOf="@+id/etIzquierdoIndicado"
+                app:layout_constraintStart_toStartOf="@+id/etIzquierdoIndicado"
+                app:layout_constraintTop_toTopOf="@+id/tvDerechoCombustibleRequerido" />
+
+            <EditText
+                android:hint="0.0"
+                android:id="@+id/tvderechoPorReglas"
+                style="@style/textViewFormItem"
+                android:layout_width="@dimen/margin_0"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:digits="0123456789."
+                android:maxLength="7"
+                app:layout_constraintEnd_toEndOf="@+id/etIzquierdoPorReglas"
+                app:layout_constraintStart_toStartOf="@+id/etIzquierdoPorReglas"
+                app:layout_constraintTop_toTopOf="@+id/tvderechoIndicado" />
+
+            <TextView
+                android:id="@+id/tvTotal"
+                style="@style/textViewFormItem"
+                android:layout_width="@dimen/margin_0"
+                android:layout_height="wrap_content"
+                android:text="Total"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/dimen_4"
+                app:layout_constraintEnd_toEndOf="@+id/tvDerecho"
+                app:layout_constraintStart_toStartOf="@+id/tvDerecho"
+                app:layout_constraintTop_toBottomOf="@+id/tvDerecho" />
+
+            <TextView
+                android:id="@+id/tvTotalCombustibleRequerido"
+                style="@style/textViewFormItem"
+                android:layout_width="@dimen/margin_0"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0"
+                app:layout_constraintEnd_toEndOf="@+id/tvDerechoCombustibleRequerido"
+                app:layout_constraintStart_toStartOf="@+id/tvDerechoCombustibleRequerido"
+                app:layout_constraintTop_toTopOf="@+id/tvTotal" />
+
+            <TextView
+                android:id="@+id/tvTotalIndicado"
+                style="@style/textViewFormItem"
+                android:layout_width="@dimen/margin_0"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0"
+                app:layout_constraintEnd_toEndOf="@+id/tvderechoIndicado"
+                app:layout_constraintStart_toStartOf="@+id/tvderechoIndicado"
+                app:layout_constraintTop_toTopOf="@+id/tvTotalCombustibleRequerido" />
+
+            <TextView
+                android:id="@+id/tvTotalPorReglas"
+                style="@style/textViewFormItem"
+                android:layout_width="@dimen/margin_0"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0"
+                app:layout_constraintEnd_toEndOf="@+id/tvderechoPorReglas"
+                app:layout_constraintStart_toStartOf="@+id/tvderechoPorReglas"
+                app:layout_constraintTop_toTopOf="@+id/tvTotalIndicado" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilVolCargadoDispensador"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                app:boxBackgroundColor="@color/white"
+                android:layout_width="@dimen/margin_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:hint="Volumen cargado por el dispensador"
+                android:layout_marginEnd="@dimen/dimen_4"
+                app:layout_constraintEnd_toStartOf="@+id/tilVolumen"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTotal">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietVolCargadoDispensador"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:digits="0123456789."
+                    android:inputType="number"
+                    android:textSize="@dimen/text_14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilVolumen"
+                app:boxBackgroundColor="@color/white"
+                style="@style/Tema"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_0"
+                app:layout_constraintBottom_toBottomOf="@+id/tilVolCargadoDispensador"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tilVolCargadoDispensador">
+
+                <AutoCompleteTextView
+                    android:id="@+id/spinVolumen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="none"
+                    android:text="LT"
+                    android:textSize="@dimen/text_14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_marginTop="@dimen/dimen_10"
+                android:id="@+id/btnGuardarLocal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_4"
+                android:background="@drawable/background_logout_button"
+                android:clickable="true"
+                android:drawableStart="@drawable/ic_save"
+                android:drawablePadding="@dimen/dimen_4"
+                android:drawableTint="@color/white"
+                android:elevation="@dimen/dimen_8"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="@string/guardar_formulario"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_14"
+                app:layout_constraintEnd_toEndOf="@id/tilVolumen"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilVolCargadoDispensador" />
+
+            <TextView
+                android:id="@+id/adversaid"
+                style="@style/textViewFormTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="!Recuerda! para enviar es necesario Capturar el Consentimiento"
+                app:layout_constraintEnd_toEndOf="@+id/btnGuardarLocal"
+                app:layout_constraintStart_toStartOf="@+id/btnGuardarLocal"
+                app:layout_constraintTop_toBottomOf="@+id/btnGuardarLocal" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

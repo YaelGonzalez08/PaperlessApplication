@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_inspeccion_aeronave_primer_vuelo_dia"
+    app:startDestination="@id/primerVueloDiaFragment">
+
+    <fragment
+        android:id="@+id/primerVueloDiaFragment"
+        android:name="com.aeromexico.aeropuertos.paperlessmobile.inspeccionAeronavePrimerVuelo.view.PrimerVueloDiaFragment"
+        android:label="fragment_primer_vuelo_dia"
+        tools:layout="@layout/fragment_primer_vuelo_dia" >
+        <action
+            android:id="@+id/action_primerVueloDiaFragment_to_pdfInstructionsFragment"
+            app:destination="@id/pdfInstructionsFragment" />
+        <argument
+            android:name="vuelo"
+            app:argType="com.aeromexico.aeropuertos.paperlessmobile.webService.Responses.Vuelos" />
+        <action
+            android:id="@+id/action_primerVueloDiaFragment_to_succes"
+            app:destination="@id/succes">
+            <argument
+                android:name="response"
+                app:argType="com.aeromexico.aeropuertos.paperlessmobile.webService.Responses.PrimerVueloResponse"/>
+        </action>
+    </fragment>
+    <dialog
+        android:id="@+id/pdfInstructionsFragment"
+        android:name="com.aeromexico.aeropuertos.paperlessmobile.inspeccionAeronavePrimerVuelo.view.tabs.PdfInstructionsFragment"
+        android:label="fragment_pdf_instructions"
+        tools:layout="@layout/fragment_pdf_instructions" >
+        <action
+            android:id="@+id/action_pdfInstructionsFragment_to_primerVueloDiaFragment"
+            app:destination="@id/primerVueloDiaFragment" />
+    </dialog>
+    <fragment
+        android:id="@+id/succes"
+        android:name="com.aeromexico.aeropuertos.paperlessmobile.inspeccionAeronavePrimerVuelo.view.Succes"
+        android:label="fragment_succes"
+        tools:layout="@layout/fragment_succes" >
+        <argument
+            android:name="response"
+            app:argType="com.aeromexico.aeropuertos.paperlessmobile.webService.Responses.PrimerVueloResponse" />
+    </fragment>
+
+</navigation>

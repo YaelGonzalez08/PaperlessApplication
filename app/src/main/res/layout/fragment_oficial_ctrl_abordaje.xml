@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/dimen_4"
+    tools:context=".controlAbordaje.tabs.OficialCtrlAbordajeFragment">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvtitleTripulacion"
+                style="@style/textViewFormTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:gravity="center"
+                android:text="Tripulación a bordo"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/tvtitleHora"
+                style="@style/textViewFormTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:gravity="center"
+                android:text="Hora"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvtitleTripulacion"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/tvTecnica"
+                style="@style/textViewFormItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_padding_min"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:gravity="center"
+                android:text="Técnica"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvtitleTripulacion" />
+
+            <TextView
+                android:id="@+id/tvHoraTecnica"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_rectangle_rounded"
+                android:drawableStart="@drawable/ic_clock"
+                android:padding="4dp"
+                android:text="@string/msj_selecciona_hora"
+                app:layout_constraintBottom_toBottomOf="@id/tvTecnica"
+                app:layout_constraintEnd_toEndOf="@id/tvtitleHora"
+                app:layout_constraintStart_toStartOf="@id/tvtitleHora"
+                app:layout_constraintTop_toTopOf="@id/tvTecnica" />
+
+            <TextView
+                android:id="@+id/tvServicio"
+                style="@style/textViewFormItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_padding_min"
+                android:layout_marginTop="@dimen/dimen_16"
+                android:gravity="center"
+                android:text="Servicio"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTecnica" />
+
+            <TextView
+                android:id="@+id/tvHoraServicio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_rectangle_rounded"
+                android:drawableStart="@drawable/ic_clock"
+                android:padding="4dp"
+                android:text="@string/msj_selecciona_hora"
+                app:layout_constraintBottom_toBottomOf="@id/tvServicio"
+                app:layout_constraintEnd_toEndOf="@id/tvtitleHora"
+                app:layout_constraintStart_toStartOf="@id/tvtitleHora"
+                app:layout_constraintTop_toTopOf="@id/tvServicio" />
+
+            <TextView
+                android:id="@+id/tvtitleTiempo"
+                style="@style/textViewFormTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:gravity="center"
+                android:text="Tiempo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvServicio" />
+
+            <TextView
+                android:id="@+id/tvtitleHoraTi"
+                style="@style/textViewFormTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Hora"
+                app:layout_constraintBottom_toBottomOf="@+id/tvtitleTiempo"
+                app:layout_constraintEnd_toEndOf="@id/tvtitleHora"
+                app:layout_constraintStart_toStartOf="@+id/tvtitleHora"
+                app:layout_constraintTop_toTopOf="@+id/tvtitleTiempo" />
+
+            <TextView
+                android:id="@+id/tvSoliProcSeg"
+                style="@style/textViewFormItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:gravity="start"
+                android:lines="2"
+                android:text="Solicitud de procedimiento \nde seguridad"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvtitleTiempo" />
+
+            <TextView
+                android:id="@+id/tvHoraSoliProcSeg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_rectangle_rounded"
+                android:drawableStart="@drawable/ic_clock"
+                android:padding="4dp"
+                android:text="@string/msj_selecciona_hora"
+                app:layout_constraintBottom_toBottomOf="@id/tvSoliProcSeg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvSoliProcSeg"
+                app:layout_constraintTop_toTopOf="@id/tvSoliProcSeg" />
+
+            <TextView
+                android:id="@+id/tvEntregaEquipaje"
+                style="@style/textViewFormItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:gravity="center"
+                android:text="Entrega de equipaje a LL"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSoliProcSeg" />
+
+            <TextView
+                android:id="@+id/tvHoraEntregaEquipaje"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_rectangle_rounded"
+                android:drawableStart="@drawable/ic_clock"
+                android:padding="4dp"
+                android:text="@string/msj_selecciona_hora"
+                app:layout_constraintBottom_toBottomOf="@id/tvEntregaEquipaje"
+                app:layout_constraintEnd_toEndOf="@+id/tvHoraSoliProcSeg"
+                app:layout_constraintStart_toStartOf="@+id/tvHoraSoliProcSeg"
+                app:layout_constraintTop_toTopOf="@id/tvEntregaEquipaje" />
+
+            <TextView
+                android:id="@+id/tvRecepcionEquipaje"
+                style="@style/textViewFormItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_16"
+
+                android:gravity="center"
+                android:text="Recepción equipaje a LL"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvEntregaEquipaje" />
+
+            <TextView
+                android:id="@+id/tvHoraRecepcionEquipaje"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_rectangle_rounded"
+                android:drawableStart="@drawable/ic_clock"
+                android:padding="4dp"
+                android:text="@string/msj_selecciona_hora"
+                app:layout_constraintBottom_toBottomOf="@id/tvRecepcionEquipaje"
+                app:layout_constraintEnd_toEndOf="@+id/tvHoraEntregaEquipaje"
+                app:layout_constraintStart_toStartOf="@+id/tvHoraEntregaEquipaje"
+                app:layout_constraintTop_toTopOf="@id/tvRecepcionEquipaje" />
+
+            <include
+                android:id="@+id/datos_LL"
+                android:layout_marginTop="@dimen/dimen_8"
+                layout="@layout/item_datos_empleado_firma"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvHoraRecepcionEquipaje" />
+
+            <TextView
+                android:id="@+id/tvtitleObservaciones"
+                style="@style/textViewFormTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:gravity="center"
+                android:text="Observaciones"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/datos_LL" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilObservaciones"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/remarks"
+                app:endIconMode="clear_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvtitleObservaciones"
+                app:startIconDrawable="@drawable/ic_text_snippet">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etRemarks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <include
+                android:layout_marginTop="@dimen/dimen_8"
+                android:id="@+id/datos_Oficial_operaciones"
+                layout="@layout/item_datos_empleado_firma"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tilObservaciones" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/mbEnviar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_padding_default"
+                android:backgroundTint="@color/verde_success"
+                android:enabled="true"
+                android:text="@string/continuar"
+                android:visibility="visible"
+                app:icon="@drawable/ic_send"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/datos_Oficial_operaciones" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

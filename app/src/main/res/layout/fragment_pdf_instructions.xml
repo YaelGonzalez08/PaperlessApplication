@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="@dimen/dimen_8"
+    android:background="@drawable/backgrounf_for_pdf"
+    tools:context=".inspeccionAeronavePrimerVuelo.view.tabs.PdfInstructionsFragment">
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_arrow_down"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/close"
+        tools:layout_editor_absoluteX="8dp">
+
+        <View
+            android:id="@+id/textView11"
+            android:layout_width="@dimen/dimen_110"
+            android:layout_height="@dimen/dimen_1"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextMultiLine"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextMultiLine"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/editTextTextMultiLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:gravity="center"
+            android:text="Todas las revisiones se deben hacer con el avión vacío (sin pasajeros equipaje, carga, equipaje de tripulaciones). Se debe buscar objetos no autorizados o sospechosos o que puedan fijarse en la aeronave."
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+        <View
+            android:id="@+id/textView12"
+            android:layout_width="@dimen/margin_0"
+            android:layout_height="@dimen/dimen_1"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:background="@color/azul_pregunta"
+            app:layout_constraintEnd_toEndOf="@+id/textView11"
+            app:layout_constraintStart_toStartOf="@+id/textView11"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:gravity="center"
+            android:text="La revisión de puertas pisos techos chalecos debe ser visual a fin de detectar posibles alteraciones o abultamientos en caso de los chalecos sacar de manera aleatoria algunos chalecos de su alojamiento y revisar su alojamiento."
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_12"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextMultiLine"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextMultiLine"
+            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+        <View
+            android:id="@+id/textView14"
+            android:layout_width="@dimen/margin_0"
+            android:layout_height="@dimen/dimen_1"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:background="@color/azul_pregunta"
+            app:layout_constraintEnd_toEndOf="@+id/textView12"
+            app:layout_constraintStart_toStartOf="@+id/textView12"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:gravity="center"
+            android:text="Los alojamientos no sellados deberán abrirse y verificarse visualmente."
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_12"
+            app:layout_constraintEnd_toEndOf="@+id/textView13"
+            app:layout_constraintStart_toStartOf="@+id/textView13"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <View
+            android:id="@+id/textView16"
+            android:layout_width="@dimen/margin_0"
+            android:layout_height="@dimen/dimen_1"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:background="@color/azul_pregunta"
+            app:layout_constraintEnd_toEndOf="@+id/textView14"
+            app:layout_constraintStart_toStartOf="@+id/textView14"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:gravity="center"
+            android:text="Los respaldos de asientos y cojines deben tocarse con las dos manos a efecto de detectar algo anormal (abultamientos diferencia de materiales etcétera.). no es necesario levantar los cojines."
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_12"
+            app:layout_constraintEnd_toEndOf="@+id/textView15"
+            app:layout_constraintStart_toStartOf="@+id/textView15"
+            app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+        <View
+            android:id="@+id/textView18"
+            android:layout_width="@dimen/margin_0"
+            android:layout_height="@dimen/dimen_1"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:background="@color/azul_pregunta"
+            app:layout_constraintEnd_toEndOf="@+id/textView16"
+            app:layout_constraintStart_toStartOf="@+id/textView16"
+            app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:gravity="center"
+            android:text="Abatir de manera aleatoria algunas masas de los asientos de pasajeros."
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_12"
+            app:layout_constraintEnd_toEndOf="@+id/textView17"
+            app:layout_constraintStart_toStartOf="@+id/textView17"
+            app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+        <View
+            android:id="@+id/textView20"
+            android:layout_width="@dimen/margin_0"
+            android:layout_height="@dimen/dimen_1"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:background="@color/azul_pregunta"
+            app:layout_constraintEnd_toEndOf="@+id/textView18"
+            app:layout_constraintStart_toStartOf="@+id/textView18"
+            app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:gravity="center"
+            android:text="Todos los carritos de servicio deben abrirse y revisarse visualmente para detectar que no hay algo en su interior."
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_12"
+            app:layout_constraintEnd_toEndOf="@+id/textView19"
+            app:layout_constraintStart_toStartOf="@+id/textView19"
+            app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+        <View
+            android:id="@+id/textView24"
+            android:layout_width="@dimen/margin_0"
+            android:layout_height="@dimen/dimen_1"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:background="@color/azul_pregunta"
+            app:layout_constraintEnd_toEndOf="@+id/textView20"
+            app:layout_constraintStart_toStartOf="@+id/textView20"
+            app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:gravity="center"
+            android:text="Verificar la integridad de los sellos en aquellos alojamientos sellados, en caso de detectar alguna anormalidad, se deberá abrir y revisar detalladamente."
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView21"
+            app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+        <View
+            android:id="@+id/textView26"
+            android:layout_width="@dimen/margin_0"
+            android:layout_height="@dimen/dimen_1"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:background="@color/azul_pregunta"
+            app:layout_constraintEnd_toEndOf="@+id/textView24"
+            app:layout_constraintStart_toStartOf="@+id/textView24"
+            app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:gravity="center"
+            android:text="Una vez completado la revisión, continuar con el procedimiento de despacho de la aeronave."
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_12"
+            app:layout_constraintEnd_toEndOf="@+id/textView25"
+            app:layout_constraintStart_toStartOf="@+id/textView25"
+            app:layout_constraintTop_toBottomOf="@+id/textView26" />
+
+        <View
+            android:id="@+id/seprador"
+            android:layout_width="@dimen/margin_0"
+            android:layout_height="@dimen/dimen_1"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:background="@color/azul_pregunta"
+            app:layout_constraintEnd_toEndOf="@+id/textView26"
+            app:layout_constraintStart_toStartOf="@+id/textView26"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <TextView
+            android:id="@+id/tvPreg9"
+            android:layout_width="@dimen/margin_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:gravity="center"
+            android:text="En caso de detectar un objeto extraño o sospechoso no lo toque, no lo mueva, buscar a personal familiarizado con el área en donde se encontró el objeto para tratar de identificarlo. Si el objeto no puede ser identificado, notificar de inmediato a la autoridad local y el Centro de Control Estratégico de AM Connat (5255 - 5571 ò 5752 ò 2135) para seguir instrucciones."
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_12"
+            app:layout_constraintEnd_toEndOf="@+id/textView5"
+            app:layout_constraintStart_toStartOf="@+id/textView5"
+            app:layout_constraintTop_toBottomOf="@id/seprador" />
+
+        <View
+            android:id="@+id/seprador2"
+            android:layout_width="@dimen/margin_0"
+            android:layout_height="@dimen/dimen_1"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:background="@color/azul_pregunta"
+            app:layout_constraintEnd_toEndOf="@id/seprador"
+            app:layout_constraintStart_toStartOf="@+id/seprador"
+            app:layout_constraintTop_toBottomOf="@id/tvPreg9" />
+
+        <TextView
+            android:id="@+id/tvpreg10"
+            android:layout_width="@dimen/margin_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:gravity="center"
+            android:text="Mantener este formato con la papelería de vuelo."
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_12"
+            app:layout_constraintEnd_toEndOf="@+id/tvPreg9"
+            app:layout_constraintStart_toStartOf="@+id/tvPreg9"
+            app:layout_constraintTop_toBottomOf="@id/seprador2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:padding="@dimen/dimen_4"
+    tools:context=".ordenCargaCombustibles.views.tabs.CombustibleConsentimiento">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_marginTop="@dimen/dimen_8"
+            android:id="@+id/tvSwitchHeader"
+            style="@style/textViewFormItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/margin_0"
+            android:text="O.O/AAR"
+            android:textSize="@dimen/text_12"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchCompat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primaryColor"
+            android:checked="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/til_externo"
+            style="@style/textViewFormItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/margin_0"
+            android:text="Externo"
+            android:textSize="@dimen/text_10"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/switchCompat"
+            app:layout_constraintEnd_toStartOf="@+id/switchCompat"
+            app:layout_constraintTop_toTopOf="@+id/switchCompat" />
+
+        <LinearLayout
+            android:id="@+id/containerUser"
+            android:layout_width="@dimen/margin_0"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/dimen_8"
+            app:layout_constraintEnd_toStartOf="@+id/btnConsultarOficial"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSwitchHeader">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilNumeroOficial"
+                android:layout_marginTop="@dimen/dimen_8"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="No. de empleado"
+                app:prefixText="AM"
+                app:startIconDrawable="@drawable/ic_person">
+
+                <AutoCompleteTextView
+                    android:id="@+id/actvNumeroOficial"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:paddingHorizontal="@dimen/dimen_8"
+                    android:textSize="@dimen/text_14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilNombreOficialManual"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_4"
+                android:hint="@string/nombre_oficial"
+                android:visibility="gone"
+                app:startIconDrawable="@drawable/ic_person">
+
+                <AutoCompleteTextView
+                    android:id="@+id/actvNombreOficial"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="textPersonName"
+                    android:maxLength="30"
+                    android:paddingHorizontal="@dimen/dimen_8"
+                    android:textSize="@dimen/text_14" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btnConsultarOficial"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_40"
+            android:layout_marginStart="@dimen/dimen_8"
+            android:background="@drawable/white_button_outlined"
+            android:drawableTint="@color/primaryColor"
+            android:elevation="@dimen/dimen_16"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:drawableStartCompat="@drawable/ic_search"
+            app:layout_constraintBottom_toBottomOf="@+id/containerUser"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/containerUser"
+            app:layout_constraintTop_toTopOf="@+id/containerUser" />
+
+        <TextView
+            android:id="@+id/tvNombreOficial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_8"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/containerUser" />
+
+        <ImageView
+            android:id="@+id/ivFirmaOficial"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:background="@drawable/border_for_image_view_signature"
+            app:layout_constraintEnd_toStartOf="@id/btnFirmar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvNombreOficial" />
+
+        <TextView
+            android:id="@+id/btnFirmar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_consultar"
+            android:clickable="true"
+            android:drawableTint="@color/white"
+            android:elevation="@dimen/dimen_8"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:drawableStartCompat="@drawable/ic_pencil"
+            app:layout_constraintBottom_toBottomOf="@+id/ivFirmaOficial"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivFirmaOficial"
+            app:layout_constraintTop_toTopOf="@+id/ivFirmaOficial" />
+
+        <TextView
+            android:id="@+id/btnFirmarHeaderOficial"
+            style="@style/textViewFormItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/margin_0"
+            android:text="Firmar"
+            android:textSize="@dimen/text_12"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/btnFirmar"
+            app:layout_constraintStart_toStartOf="@+id/btnFirmar"
+            app:layout_constraintTop_toBottomOf="@+id/btnFirmar" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilObservacionesOficial"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_8"
+            android:hint="Observaciones"
+            app:endIconMode="clear_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivFirmaOficial">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etObservacionesValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ .,/-0123456789_:"
+                android:ems="5"
+                android:inputType="none"
+                android:paddingHorizontal="@dimen/dimen_8"
+                android:textSize="@dimen/text_14" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchCompatMecanico"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primaryColor"
+            android:checked="false"
+            app:layout_constraintBottom_toBottomOf="@+id/mecanicoExternoLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/mecanicoExternoLabel" />
+
+        <TextView
+            android:id="@+id/mecanicoExternoLabel"
+            style="@style/textViewFormItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/margin_0"
+            android:text="Externo"
+            android:textSize="@dimen/text_10"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvSwitchMecanicoHeader"
+            app:layout_constraintEnd_toStartOf="@+id/switchCompatMecanico"
+            app:layout_constraintTop_toTopOf="@+id/tvSwitchMecanicoHeader" />
+
+        <TextView
+            android:id="@+id/tvSwitchMecanicoHeader"
+            style="@style/textViewFormItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_12"
+            android:gravity="center"
+            android:padding="@dimen/margin_0"
+            android:text="@string/mec_nico"
+            android:textSize="@dimen/text_12"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilObservacionesOficial" />
+
+        <LinearLayout
+            android:id="@+id/containerMecanico"
+            android:layout_width="@dimen/margin_0"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/dimen_12"
+            app:layout_constraintEnd_toStartOf="@+id/btnConsultarMecanico"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSwitchMecanicoHeader">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilNumeroMecanico"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="No. de empleado mecánico"
+                app:prefixText="AM"
+                android:layout_marginTop="@dimen/dimen_8"
+                app:startIconDrawable="@drawable/ic_person">
+
+                <AutoCompleteTextView
+                    android:id="@+id/actvNumeroMecanico"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:paddingHorizontal="@dimen/dimen_8"
+                    android:textSize="@dimen/text_14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilNombreMecanicoManual"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_4"
+                android:hint="@string/nombre_oficial"
+                android:visibility="gone"
+                app:startIconDrawable="@drawable/ic_person">
+
+                <AutoCompleteTextView
+                    android:id="@+id/actvOficialNombreMecanico"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="textPersonName"
+                    android:maxLength="30"
+                    android:paddingHorizontal="@dimen/dimen_8"
+                    android:textSize="@dimen/text_14" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btnConsultarMecanico"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_40"
+            android:layout_marginStart="@dimen/dimen_8"
+            android:background="@drawable/white_button_outlined"
+            android:drawableTint="@color/primaryColor"
+            android:elevation="@dimen/dimen_16"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:drawableStartCompat="@drawable/ic_search"
+            app:layout_constraintBottom_toBottomOf="@+id/containerMecanico"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/containerMecanico"
+            app:layout_constraintTop_toTopOf="@+id/containerMecanico" />
+
+        <TextView
+            android:id="@+id/tvNombreMecanico"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_8"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/containerMecanico" />
+
+        <ImageView
+            android:id="@+id/ivFirmaMecanico"
+            android:layout_width="200dp"
+            android:layout_height="105dp"
+            android:layout_marginHorizontal="@dimen/dimen_4"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:background="@drawable/border_for_image_view_signature"
+            app:layout_constraintEnd_toStartOf="@id/tilMecanicoHour"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvNombreMecanico" />
+
+        <TextView
+            android:id="@+id/btnFirmarMecanico"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:background="@drawable/button_consultar"
+            android:clickable="true"
+            android:drawableTint="@color/white"
+            android:elevation="@dimen/dimen_8"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:drawableStartCompat="@drawable/ic_pencil"
+            app:layout_constraintBottom_toTopOf="@+id/btnFirmarHeaderMecanico"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivFirmaMecanico"
+            app:layout_constraintTop_toBottomOf="@+id/tilMecanicoHour" />
+
+        <TextView
+            android:id="@+id/btnFirmarHeaderMecanico"
+            style="@style/textViewFormItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/margin_0"
+            android:text="Firmar"
+            android:textSize="@dimen/text_12"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/ivFirmaMecanico"
+            app:layout_constraintEnd_toEndOf="@+id/btnFirmarMecanico"
+            app:layout_constraintStart_toStartOf="@+id/btnFirmarMecanico"
+            app:layout_constraintTop_toBottomOf="@+id/btnFirmarMecanico" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilObservacionesMecanico"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_8"
+            android:hint="Observaciones"
+            app:endIconMode="clear_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivFirmaMecanico">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etObservacionesMecanicoValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ .,/-0123456789_:"
+                android:ems="5"
+                android:inputType="none"
+                android:paddingHorizontal="@dimen/dimen_8"
+                android:textSize="@dimen/text_14" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilMecanicoHour"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="@dimen/margin_0"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_4"
+            android:hint="@string/hora_llegada_mecanico"
+            app:layout_constraintBottom_toTopOf="@id/btnFirmarMecanico"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvNombreMecanico"
+            app:layout_constraintStart_toEndOf="@+id/ivFirmaMecanico"
+            app:startIconDrawable="@drawable/ic_clock">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tietMecanicoHour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:inputType="time"
+                android:textSize="@dimen/text_14" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textView23"
+            style="@style/textViewFormItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:gravity="center"
+            android:padding="@dimen/margin_0"
+            android:text="Extra fuel"
+            android:textSize="@dimen/text_12"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilObservacionesMecanico" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilUno"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:boxBackgroundColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView23">
+
+            <AutoCompleteTextView
+                android:id="@+id/spinUno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:inputType="none"
+                android:text="@string/selecciona_una_opci_n"
+                android:textSize="@dimen/text_14" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilDos"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:visibility="gone"
+            app:boxBackgroundColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/tilUno"
+            app:layout_constraintStart_toStartOf="@+id/tilUno"
+            app:layout_constraintTop_toBottomOf="@+id/tilUno">
+
+            <AutoCompleteTextView
+                android:id="@+id/spinDos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:inputType="none"
+                android:textSize="@dimen/text_14" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:id="@+id/btnEnviarForm"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dimen_8"
+            android:layout_marginHorizontal="@dimen/dimen_4"
+            android:background="@drawable/background_logout_button"
+            android:backgroundTint="@color/color_verde"
+            android:clickable="true"
+            android:drawablePadding="@dimen/dimen_4"
+            android:drawableTint="@color/white"
+            android:elevation="@dimen/dimen_8"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Enviar"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_14"
+            app:layout_constraintEnd_toEndOf="@id/tilDos"
+            app:layout_constraintStart_toStartOf="@id/tilDos"
+            app:layout_constraintTop_toBottomOf="@+id/tilDos" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

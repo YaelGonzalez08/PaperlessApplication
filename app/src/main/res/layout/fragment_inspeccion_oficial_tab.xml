@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".searchList.view.tabs.InspeccionOficialTabFragment">
+
+    <com.github.ksoichiro.android.observablescrollview.ObservableScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView30"
+                style="@style/textViewFormTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:padding="@dimen/margin_0"
+                android:text="Hallazgo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView31"
+                style="@style/textViewFormTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=" No  / Si"
+                app:layout_constraintEnd_toEndOf="@+id/cbPregunta4malo"
+                app:layout_constraintTop_toTopOf="@+id/AreasExternas" />
+
+            <TextView
+                android:id="@+id/AreasExternas"
+                style="@style/textViewFormTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/f_areas_externas"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView30" />
+
+            <TextView
+                android:id="@+id/pregunta4"
+                style="@style/textViewFormItem"
+                android:layout_width="@dimen/margin_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_4"
+                android:text="@string/areas_visibles"
+                app:layout_constraintEnd_toStartOf="@+id/cbPregunta4bueno"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/AreasExternas" />
+
+            <CheckBox
+                android:id="@+id/cbPregunta4bueno"
+                android:layout_width="@dimen/dimen_28"
+                android:layout_height="@dimen/margin_0"
+                android:theme="@style/checkBoxStyle"
+                app:layout_constraintBottom_toBottomOf="@+id/pregunta4"
+                app:layout_constraintEnd_toStartOf="@+id/cbPregunta4malo"
+                app:layout_constraintTop_toTopOf="@+id/pregunta4" />
+
+            <CheckBox
+                android:id="@+id/cbPregunta4malo"
+                android:layout_width="@dimen/dimen_28"
+                android:layout_height="@dimen/margin_0"
+                android:theme="@style/checkBoxStyle_BAD"
+                app:layout_constraintBottom_toBottomOf="@+id/cbPregunta4bueno"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/cbPregunta4bueno" />
+
+            <TextView
+                android:id="@+id/pregunta5"
+                style="@style/textViewFormItem"
+                android:layout_width="@dimen/margin_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_4"
+                android:text="@string/fosos_de_los_trenes_de_aterrizaje"
+                app:layout_constraintEnd_toStartOf="@+id/cbPregunta5bueno"
+                app:layout_constraintStart_toStartOf="@+id/pregunta4"
+                app:layout_constraintTop_toBottomOf="@+id/pregunta4" />
+
+            <CheckBox
+                android:id="@+id/cbPregunta5bueno"
+                android:layout_width="@dimen/dimen_28"
+                android:layout_height="@dimen/margin_0"
+                android:theme="@style/checkBoxStyle"
+                app:layout_constraintBottom_toBottomOf="@+id/pregunta5"
+                app:layout_constraintEnd_toStartOf="@+id/cbPregunta5malo"
+                app:layout_constraintTop_toTopOf="@+id/pregunta5" />
+
+            <CheckBox
+                android:id="@+id/cbPregunta5malo"
+                android:layout_width="@dimen/dimen_28"
+                android:layout_height="@dimen/margin_0"
+                android:theme="@style/checkBoxStyle_BAD"
+                app:layout_constraintBottom_toBottomOf="@+id/cbPregunta5bueno"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/cbPregunta5bueno" />
+
+            <TextView
+                android:id="@+id/pregunta6"
+                style="@style/textViewFormItem"
+                android:layout_width="@dimen/margin_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_4"
+                android:text="@string/registros_cavidades_exteriores"
+                app:layout_constraintEnd_toStartOf="@+id/cbPregunta6bueno"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pregunta5" />
+
+            <CheckBox
+                android:id="@+id/cbPregunta6bueno"
+                android:layout_width="@dimen/dimen_28"
+                android:layout_height="@dimen/margin_0"
+                android:theme="@style/checkBoxStyle"
+                app:layout_constraintBottom_toBottomOf="@+id/pregunta6"
+                app:layout_constraintEnd_toStartOf="@+id/cbPregunta6malo"
+                app:layout_constraintTop_toTopOf="@+id/pregunta6" />
+
+            <CheckBox
+                android:id="@+id/cbPregunta6malo"
+                android:layout_width="@dimen/dimen_28"
+                android:layout_height="@dimen/margin_0"
+                android:theme="@style/checkBoxStyle_BAD"
+                app:layout_constraintBottom_toBottomOf="@+id/cbPregunta6bueno"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/cbPregunta6bueno" />
+
+            <TextView
+                android:id="@+id/pregunta7"
+                style="@style/textViewFormItem"
+                android:layout_width="@dimen/margin_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_4"
+                android:text="@string/compartimentos_de_carga_por_objetos_extra_os_antes_de_estibar_carga"
+                app:layout_constraintEnd_toStartOf="@+id/cbPregunta7bueno"
+                app:layout_constraintStart_toStartOf="@+id/pregunta6"
+                app:layout_constraintTop_toBottomOf="@+id/pregunta6" />
+
+            <CheckBox
+                android:id="@+id/cbPregunta7bueno"
+                android:layout_width="@dimen/dimen_28"
+                android:layout_height="@dimen/margin_0"
+                android:theme="@style/checkBoxStyle"
+                app:layout_constraintBottom_toBottomOf="@+id/pregunta7"
+                app:layout_constraintEnd_toStartOf="@+id/cbPregunta7malo"
+                app:layout_constraintTop_toTopOf="@+id/pregunta7" />
+
+            <CheckBox
+                android:id="@+id/cbPregunta7malo"
+                android:layout_width="@dimen/dimen_28"
+                android:layout_height="@dimen/margin_0"
+                android:theme="@style/checkBoxStyle_BAD"
+                app:layout_constraintBottom_toBottomOf="@+id/cbPregunta7bueno"
+                app:layout_constraintEnd_toEndOf="@+id/cbPregunta6malo"
+                app:layout_constraintTop_toTopOf="@+id/cbPregunta7bueno" />
+
+            <TextView
+                android:id="@+id/pregunta8"
+                style="@style/textViewFormItem"
+                android:layout_width="@dimen/margin_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_4"
+                android:text="@string/tomas_de_aire_y_ductos_de_gases_de_escape_de_los_motores"
+                app:layout_constraintEnd_toStartOf="@+id/cbPregunta8bueno"
+                app:layout_constraintStart_toStartOf="@+id/pregunta7"
+                app:layout_constraintTop_toBottomOf="@+id/pregunta7" />
+
+            <CheckBox
+                android:id="@+id/cbPregunta8bueno"
+                android:layout_width="@dimen/dimen_28"
+                android:layout_height="@dimen/margin_0"
+                android:theme="@style/checkBoxStyle"
+                app:layout_constraintBottom_toBottomOf="@+id/pregunta8"
+                app:layout_constraintEnd_toStartOf="@+id/cbPregunta8malo"
+                app:layout_constraintTop_toTopOf="@+id/pregunta8" />
+
+            <CheckBox
+                android:id="@+id/cbPregunta8malo"
+                android:layout_width="@dimen/dimen_28"
+                android:layout_height="@dimen/margin_0"
+                android:theme="@style/checkBoxStyle_BAD"
+                app:layout_constraintBottom_toBottomOf="@+id/cbPregunta8bueno"
+                app:layout_constraintEnd_toEndOf="@+id/cbPregunta7malo"
+                app:layout_constraintTop_toTopOf="@+id/cbPregunta8bueno" />
+
+            <TextView
+                android:id="@+id/pregunta9"
+                style="@style/textViewFormItem"
+                android:layout_width="@dimen/margin_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_4"
+                android:text="@string/tomas_de_est_tica_tubos_pilot_puertos_de_ventilaci_n_y_otrtas_cavidades"
+                app:layout_constraintEnd_toStartOf="@+id/cbPregunta9bueno"
+                app:layout_constraintStart_toStartOf="@+id/pregunta8"
+                app:layout_constraintTop_toBottomOf="@+id/pregunta8" />
+
+            <CheckBox
+                android:id="@+id/cbPregunta9bueno"
+                android:layout_width="@dimen/dimen_28"
+                android:layout_height="@dimen/margin_0"
+                android:theme="@style/checkBoxStyle"
+                app:layout_constraintBottom_toBottomOf="@+id/pregunta9"
+                app:layout_constraintEnd_toStartOf="@+id/cbPregunta9malo"
+                app:layout_constraintTop_toTopOf="@+id/pregunta9" />
+
+            <CheckBox
+                android:id="@+id/cbPregunta9malo"
+                android:layout_width="@dimen/dimen_28"
+                android:layout_height="@dimen/margin_0"
+                android:theme="@style/checkBoxStyle_BAD"
+                app:layout_constraintBottom_toBottomOf="@+id/cbPregunta9bueno"
+                app:layout_constraintEnd_toEndOf="@+id/cbPregunta8malo"
+                app:layout_constraintTop_toTopOf="@+id/cbPregunta9bueno" />
+
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Toda irregularidad debe reportarse a responsable en turno de estación."
+                android:textSize="@dimen/text_12"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pregunta9" />
+
+            <TextView
+                android:id="@+id/tvConsentimiento"
+                style="@style/textViewFormTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/dimen_4"
+                android:text="Liberación de vuelo"
+                app:layout_constraintStart_toStartOf="@+id/pregunta6"
+                app:layout_constraintTop_toBottomOf="@+id/textView29" />
+
+            <TextView
+                android:id="@+id/textView35"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_4"
+                android:gravity="center"
+                android:text="Todos los requerimientos de seguridad para este vuelo han sido monitoreados por el responsable de la operación y/o su representante autorizado y no existe información pertinente de seguridad que deba ser comunicada, aeronave segura."
+                android:textSize="@dimen/text_12"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/cbPregunta9malo"
+                app:layout_constraintStart_toStartOf="@+id/tvConsentimiento"
+                app:layout_constraintTop_toBottomOf="@+id/tvConsentimiento" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/editText"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_8"
+                android:hint="Información pertinente de seguridad"
+                app:endIconMode="clear_text"
+                app:layout_constraintTop_toBottomOf="@+id/textView35"
+                tools:layout_editor_absoluteX="8dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etInfoSeguridadValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ .,/-0123456789_:"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:paddingHorizontal="@dimen/dimen_8"
+                    android:textSize="@dimen/text_14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvConsentimiento2"
+                style="@style/textViewFormTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/dimen_4"
+                android:text="@string/consentimiento"
+                app:layout_constraintStart_toStartOf="@+id/pregunta6"
+                app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchCompat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/primaryColor"
+                android:checked="false"
+                android:text="@string/empleado_externo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvConsentimiento2" />
+
+            <LinearLayout
+                android:id="@+id/containerUser"
+                android:layout_width="@dimen/margin_0"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/dimen_8"
+                app:layout_constraintEnd_toStartOf="@+id/btnConsultarOficial"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/switchCompat">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilNombreOficial"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="No. de empleado"
+                    app:startIconDrawable="@drawable/ic_person">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/actvNumeroOficial"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:paddingHorizontal="@dimen/dimen_8"
+                        android:textSize="@dimen/text_14" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilNombreOficialManual"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_4"
+                    android:hint="@string/nombre_oficial"
+                    android:visibility="gone"
+                    app:startIconDrawable="@drawable/ic_person">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/actvOficialNombreOficial"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="textPersonName"
+                        android:maxLength="30"
+                        android:paddingHorizontal="@dimen/dimen_8"
+                        android:textSize="@dimen/text_14" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/btnConsultarOficial"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen_40"
+                android:layout_marginStart="@dimen/dimen_8"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:background="@drawable/white_button_outlined"
+                android:drawableTint="@color/primaryColor"
+                android:elevation="@dimen/dimen_16"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:drawableStartCompat="@drawable/ic_search"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/containerUser"
+                app:layout_constraintTop_toTopOf="@+id/containerUser" />
+
+            <TextView
+                android:id="@+id/tvNombreOficial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_padding_default"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/containerUser"
+                app:layout_goneMarginTop="@dimen/dimen_4" />
+
+            <ImageView
+                android:id="@+id/ivFirmaPilotos"
+                android:layout_width="@dimen/margin_0"
+                android:layout_height="@dimen/damagePreviewHeight"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:background="@drawable/border_for_image_view_signature"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/switchCompat"
+                app:layout_constraintStart_toStartOf="@+id/containerUser"
+                app:layout_constraintTop_toBottomOf="@+id/tvNombreOficial" />
+
+            <TextView
+                android:id="@+id/btnFirmar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_4"
+                android:layout_marginTop="@dimen/dimen_4"
+                android:background="@drawable/button_consultar"
+                android:clickable="true"
+                android:drawableTint="@color/white"
+                android:elevation="@dimen/dimen_8"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:visibility="gone"
+                app:drawableStartCompat="@drawable/ic_pencil"
+                app:layout_constraintStart_toStartOf="@+id/ivFirmaPilotos"
+                app:layout_constraintTop_toBottomOf="@+id/ivFirmaPilotos"
+                app:layout_constraintEnd_toStartOf="@id/btnGuardarLocal"/>
+
+            <TextView
+                android:id="@+id/btnGuardarLocal"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="@dimen/dimen_4"
+                android:background="@drawable/background_logout_button"
+                android:backgroundTint="@color/color_verde"
+                android:clickable="true"
+                android:drawablePadding="@dimen/dimen_4"
+                android:drawableTint="@color/white"
+                android:elevation="@dimen/dimen_8"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Enviar"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_14"
+                android:visibility="gone"
+                android:enabled="false"
+                app:layout_constraintBottom_toBottomOf="@+id/btnFirmar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btnFirmar"
+                app:layout_constraintTop_toTopOf="@+id/btnFirmar" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.github.ksoichiro.android.observablescrollview.ObservableScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

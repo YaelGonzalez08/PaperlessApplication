@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/homeFragment2">
+
+
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.aeromexico.aeropuertos.paperlessmobile.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment2_to_buscarVueloFragment3"
+            app:destination="@id/buscarVueloFragment3" />
+        <action
+            android:id="@+id/action_homeFragment2_to_nav_checklist_diario"
+            app:destination="@id/nav_checklist_diario" />
+        <action
+            android:id="@+id/action_homeFragment2_to_metarFragment"
+            app:destination="@id/encuestaFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_pdfFragment"
+            app:destination="@id/pdfFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_GAMeReportFragment"
+            app:destination="@id/GAMeReportFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_comunicadosFragment"
+            app:destination="@id/comunicadosFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_ACARSFragment"
+            app:destination="@id/ACARSFragment" />
+    </fragment>
+    <include app:graph="@navigation/nav_mensajes_operacionales" />
+    <include app:graph="@navigation/nav_inspecion_aeronave" />
+    <fragment
+        android:id="@+id/buscarVueloFragment3"
+        android:name="com.aeromexico.aeropuertos.paperlessmobile.busquedaVuelo.BuscarVueloFragment"
+        android:label="buscar_vuelo_fragment"
+        tools:layout="@layout/buscar_vuelo_fragment">
+        <action
+            android:id="@+id/action_buscarVueloFragment3_to_nav_mensajes_operacionales"
+            app:destination="@id/nav_mensajes_operacionales" />
+        <action
+            android:id="@+id/action_buscarVueloFragment3_to_nav_inspecion_aeronave"
+            app:destination="@id/nav_inspecion_aeronave" >
+            <argument
+                android:name="vuelo"
+                app:argType="com.aeromexico.aeropuertos.paperlessmobile.webService.Responses.Vuelos" />
+           </action>
+        <argument
+            android:name="ModuloSeleccionado"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_buscarVueloFragment3_to_nav_inspeccion_aeronave_primer_vuelo_dia"
+            app:destination="@id/nav_inspeccion_aeronave_primer_vuelo_dia">
+            <argument
+                android:name="vuelo"
+                app:argType="com.aeromexico.aeropuertos.paperlessmobile.webService.Responses.Vuelos" />
+        </action>
+        <action
+            android:id="@+id/action_buscarVueloFragment3_to_informacionManualVueloFragment"
+            app:destination="@id/informacionManualVueloFragment2" />
+        <action
+            android:id="@+id/action_buscarVueloFragment3_to_nav_deshielo"
+            app:destination="@id/nav_deshielo" >
+            <argument
+                android:name="vuelo"
+                android:defaultValue="@null"
+                app:nullable="true"
+                app:argType="com.aeromexico.aeropuertos.paperlessmobile.webService.Responses.Vuelos" />
+        </action>
+        <action
+            android:id="@+id/action_buscarVueloFragment3_to_nav_orden_carga_combustible"
+            app:destination="@id/nav_orden_carga_combustible" >
+            <argument
+                android:name="vuelo"
+                android:defaultValue="@null"
+                app:nullable="true"
+                app:argType="com.aeromexico.aeropuertos.paperlessmobile.webService.Responses.Vuelos" />
+        </action>
+        <action
+            android:id="@+id/action_buscarVueloFragment3_to_nav_search_list"
+            app:destination="@id/nav_search_list">
+            <argument
+                android:name="vuelo"
+                android:defaultValue="@null"
+                app:nullable="true"
+                app:argType="com.aeromexico.aeropuertos.paperlessmobile.webService.Responses.Vuelos" />
+        </action>
+        <action
+            android:id="@+id/action_buscarVueloFragment3_to_nav_opt_bdm"
+            app:destination="@id/nav_opt_bdm" >
+            <argument
+                android:name="vuelo"
+                app:argType="com.aeromexico.aeropuertos.paperlessmobile.webService.Responses.Vuelos" />
+        </action>
+        <action
+            android:id="@+id/action_buscarVueloFragment3_to_notocFragment"
+            app:destination="@id/notocFragment" />
+		<action
+            android:id="@+id/action_buscarVueloFragment3_to_controlAbordajeFragment"
+            app:destination="@id/controlAbordajeFragment" />
+        <action
+            android:id="@+id/action_buscarVueloFragment3_to_nav_manifiesto_carga"
+            app:destination="@id/nav_manifiesto_carga" >
+            <argument
+                android:name="vuelo"
+                app:argType="com.aeromexico.aeropuertos.paperlessmobile.webService.Responses.Vuelos"/>
+        </action>
+        <action
+            android:id="@+id/action_buscarVueloFragment3_to_metarFragment2"
+            app:destination="@id/metarFragment2" />
+        <action
+            android:id="@+id/action_buscarVueloFragment3_to_inspecionAeronaveFragment2"
+            app:destination="@id/inspecionAeronaveFragment2" />
+    </fragment>
+    <include app:graph="@navigation/nav_checklist_diario" />
+    <fragment
+        android:id="@+id/appInformacionFragment"
+        android:name="com.aeromexico.aeropuertos.paperlessmobile.home.AppInformacionFragment"
+        android:label="fragment_app_informacion"
+        tools:layout="@layout/fragment_app_informacion" />
+    <action
+        android:id="@+id/action_global_appInformacionFragment"
+        app:destination="@id/appInformacionFragment"
+        app:popUpToInclusive="true" />
+    <include app:graph="@navigation/nav_inspeccion_aeronave_primer_vuelo_dia" />
+    <fragment
+        android:id="@+id/informacionManualVueloFragment2"
+        android:name="com.aeromexico.aeropuertos.paperlessmobile.inspeccionAeronavePrimerVuelo.view.InformacionManualVueloFragment"
+        android:label="fragment_informacion_manual_vuelo"
+        tools:layout="@layout/fragment_informacion_manual_vuelo">
+        <action
+            android:id="@+id/action_informacionManualVueloFragment2_to_buscarVueloFragment32"
+            app:destination="@id/buscarVueloFragment3" />
+        <argument
+            android:name="ModuloSeleccionado"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_informacionManualVueloFragment2_to_nav_inspeccion_aeronave_primer_vuelo_dia2"
+            app:destination="@id/nav_inspeccion_aeronave_primer_vuelo_dia" >
+            <argument
+                android:name="vuelo"
+                app:argType="com.aeromexico.aeropuertos.paperlessmobile.webService.Responses.Vuelos" />
+        </action>
+        <action
+            android:id="@+id/action_informacionManualVueloFragment2_to_nav_deshielo"
+            app:destination="@id/nav_deshielo" >
+
+            <argument
+                android:name="vuelo"
+                app:argType="com.aeromexico.aeropuertos.paperlessmobile.webService.Responses.Vuelos" />
+        </action>
+        <action
+            android:id="@+id/action_informacionManualVueloFragment2_to_nav_inspecion_aeronave"
+            app:destination="@id/nav_inspecion_aeronave" >
+
+            <argument
+                android:name="vuelo"
+                app:argType="com.aeromexico.aeropuertos.paperlessmobile.webService.Responses.Vuelos" />
+        </action>
+        <action
+            android:id="@+id/action_informacionManualVueloFragment2_to_nav_orden_carga_combustible"
+            app:destination="@id/nav_orden_carga_combustible" >
+            <argument
+                android:name="vuelo"
+                app:argType="com.aeromexico.aeropuertos.paperlessmobile.webService.Responses.Vuelos" />
+
+        </action>
+        <action
+            android:id="@+id/action_informacionManualVueloFragment2_to_nav_search_list"
+            app:destination="@id/nav_search_list" >
+            <argument
+                android:name="vuelo"
+                app:argType="com.aeromexico.aeropuertos.paperlessmobile.webService.Responses.Vuelos"/>
+        </action>
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/pendientesFragment"
+        android:name="com.aeromexico.aeropuertos.paperlessmobile.campanaNotificaciones.views.PendientesFragment"
+        android:label="pendientes_fragment"
+        tools:layout="@layout/pendientes_fragment" />
+    <action
+        android:id="@+id/action_global_appPendientesFragment"
+        app:destination="@id/pendientesFragment"
+        app:popUpToInclusive="true" />
+
+    <include app:graph="@navigation/nav_deshielo" />
+
+    <include app:graph="@navigation/nav_orden_carga_combustible" />
+    <fragment
+        android:id="@+id/encuestaFragment"
+        android:name="com.aeromexico.aeropuertos.paperlessmobile.metar.EncuestaFragment"
+        android:label="fragment_encuesta"
+        tools:layout="@layout/fragment_encuesta" />
+    <include app:graph="@navigation/nav_opt_bdm" />
+    <include app:graph="@navigation/nav_search_list" />
+    <fragment
+        android:id="@+id/pdfFragment"
+        android:name="com.aeromexico.aeropuertos.paperlessmobile.metar.PdfFragment"
+        android:label="fragment_pdf"
+        tools:layout="@layout/fragment_pdf" />
+    <fragment
+        android:id="@+id/controlAbordajeFragment"
+        android:name="com.aeromexico.aeropuertos.paperlessmobile.controlAbordaje.view.ControlAbordajeFragment"
+        android:label="control_abordaje_fragment"
+        tools:layout="@layout/control_abordaje_fragment" >
+        <argument
+            android:name="vuelo"
+            app:argType="com.aeromexico.aeropuertos.paperlessmobile.webService.Responses.Vuelos" />
+    </fragment>
+    <fragment
+        android:id="@+id/GAMeReportFragment"
+        android:name="com.aeromexico.aeropuertos.paperlessmobile.metar.GAMeReportFragment"
+        android:label="fragment_g_a_me_report"
+        tools:layout="@layout/fragment_g_a_me_report" />
+
+    <fragment
+        android:id="@+id/notocFragment"
+        android:name="com.aeromexico.aeropuertos.paperlessmobile.notoc.NotocFragment"
+        android:label="fragment_notoc"
+        tools:layout="@layout/fragment_notoc" >
+    <argument
+        android:defaultValue="@null"
+        app:nullable="true"
+        android:name="vuelo"
+        app:argType="com.aeromexico.aeropuertos.paperlessmobile.webService.Responses.Vuelos" />
+    </fragment>
+    <include app:graph="@navigation/nav_manifiesto_carga" />
+    <fragment
+        android:id="@+id/metarFragment2"
+        android:name="com.aeromexico.aeropuertos.paperlessmobile.metar.MetarFragment"
+        android:label="fragment_metar"
+        tools:layout="@layout/fragment_metar" >
+        <argument
+            android:name="vuelo"
+            app:argType="com.aeromexico.aeropuertos.paperlessmobile.webService.Responses.Vuelos" />
+    </fragment>
+    <fragment
+        android:id="@+id/comunicadosFragment"
+        android:name="com.aeromexico.aeropuertos.paperlessmobile.comunicadosACK.ComunicadosFragment"
+        android:label="fragment_comunicados"
+        tools:layout="@layout/fragment_comunicados" >
+        <action
+            android:id="@+id/action_comunicadosFragment_to_verComunicadoFragment"
+            app:destination="@id/verComunicadoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/verComunicadoFragment"
+        android:name="com.aeromexico.aeropuertos.paperlessmobile.comunicadosACK.VerComunicadoFragment"
+        android:label="fragment_ver_comunicado"
+        tools:layout="@layout/fragment_ver_comunicado" >
+        <argument
+            android:name="comunicadoId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/ACARSFragment"
+        android:name="com.aeromexico.aeropuertos.paperlessmobile.metar.ACARSFragment"
+        android:label="fragment_a_c_a_r_s"
+        tools:layout="@layout/fragment_a_c_a_r_s" />
+    <fragment
+        android:id="@+id/inspecionAeronaveFragment2"
+        android:name="com.aeromexico.aeropuertos.paperlessmobile.inspeccionAeronaveREF.InspecionAeronaveFragment"
+        android:label="fragment_inspecion_aeronave"
+        tools:layout="@layout/fragment_inspecion_aeronave" >
+        <argument
+            android:name="vuelo"
+            app:argType="com.aeromexico.aeropuertos.paperlessmobile.webService.Responses.Vuelos" />
+    </fragment>
+</navigation>

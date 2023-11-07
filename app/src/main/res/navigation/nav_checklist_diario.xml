@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_checklist_diario"
+    app:startDestination="@id/escaneoCredencialesFragment">
+
+    <fragment
+        android:id="@+id/escaneoCredencialesFragment"
+        android:name="com.aeromexico.aeropuertos.paperlessmobile.inspeccionEquipo.view.EscaneoCredencialesFragment"
+        android:label="fragment_escaneo_credenciales"
+        tools:layout="@layout/fragment_escaneo_credenciales" >
+        <action
+            android:id="@+id/action_escaneoCredencialesFragment_to_checkListDiarioFragment"
+            app:destination="@id/checkListDiarioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkListDiarioFragment"
+        android:name="com.aeromexico.aeropuertos.paperlessmobile.inspeccionEquipo.view.CheckListDiarioFragment"
+        android:label="fragment_check_list_diario"
+        tools:layout="@layout/fragment_check_list_diario" >
+        <argument
+            android:name="operador"
+            app:argType="com.aeromexico.aeropuertos.paperlessmobile.webService.Responses.UsuarioCore"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="supervisor"
+            app:argType="com.aeromexico.aeropuertos.paperlessmobile.webService.Responses.UsuarioCore"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="resultEquipo"
+            app:argType="com.aeromexico.aeropuertos.paperlessmobile.webService.Responses.ResultEquipo"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_checkListDiarioFragment_to_escaneoCredencialesFragment"
+            app:destination="@id/escaneoCredencialesFragment" />
+    </fragment>
+
+</navigation>

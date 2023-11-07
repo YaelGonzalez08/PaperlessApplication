@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="170dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/common_padding_min"
+        android:paddingEnd="@dimen/common_padding_min">
+
+        <TextView
+            android:id="@+id/tvtextFechaVuelo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:text="24/05/2021"
+            android:textStyle="bold"
+            android:textColor="@color/primaryColor"
+            android:layout_marginLeft="@dimen/common_padding_min"
+            android:layout_marginTop="@dimen/common_padding_default"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvNumVuelo"/>
+
+        <TextView
+            android:id="@+id/tvNumVuelo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30"
+            android:layout_marginTop="@dimen/common_padding_default"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:textStyle="bold"
+            android:textColor="@color/primaryColor"
+            app:layout_constraintStart_toEndOf="@id/tvAerolinea"
+            android:layout_marginLeft="@dimen/common_padding_min"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvAerolinea"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="AM"
+            android:layout_marginTop="@dimen/common_padding_default"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:textStyle="bold"
+            android:textColor="@color/primaryColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+
+        <TextView
+            android:id="@+id/textoOrigen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ruta:"
+            android:layout_marginTop="@dimen/common_padding_min"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/tvNumVuelo"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvOrigen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MEX - GDL"
+            android:layout_marginTop="@dimen/common_padding_min"
+            android:paddingStart="@dimen/common_padding_min"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            app:layout_constraintStart_toEndOf="@id/textoOrigen"
+            app:layout_constraintTop_toBottomOf="@id/tvtextFechaVuelo"/>
+
+        <TextView
+            android:id="@+id/textoMatricula"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/matricula"
+            android:layout_marginTop="@dimen/common_padding_min"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/tvtMatricula"
+            app:layout_constraintTop_toBottomOf="@id/tvtextFechaVuelo"
+            />
+
+        <TextView
+            android:id="@+id/tvtMatricula"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="XADGBD"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            android:paddingLeft="@dimen/common_padding_min"
+            android:layout_marginRight="@dimen/common_padding_default"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/textoMatricula"/>
+
+
+        <TextView
+            android:id="@+id/textoEquipo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/equipo"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/common_padding_min"
+            app:layout_constraintTop_toBottomOf="@id/textoOrigen"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvEquipo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            android:text="B737-800"
+            android:paddingLeft="@dimen/common_padding_min"
+            app:layout_constraintStart_toEndOf="@id/textoEquipo"
+            app:layout_constraintTop_toTopOf="@id/textoEquipo"/>
+
+
+
+        <TextView
+            android:id="@+id/tvEliminar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eliminar"
+            android:textColor="#ff4d4d"
+            app:layout_constraintTop_toTopOf="@id/btnEnviar"
+            app:layout_constraintBottom_toBottomOf="@id/btnEnviar"
+            app:layout_constraintEnd_toStartOf="@id/btnEnviar"
+            android:layout_marginRight="@dimen/common_padding_middle"
+            />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEnviar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_11"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:text="Enviar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textoEquipo"
+            app:icon="@drawable/ic_check_mini"
+            app:iconGravity="end"
+
+            />
+
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/color_divider"
+            android:layout_marginTop="@dimen/common_padding_min"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnEnviar"/>
+
+
+
+
+
+        <!--        <com.google.android.material.checkbox.MaterialCheckBox-->
+<!--            android:id="@+id/cbBorrarPendMO"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:button="@drawable/ic_delete"-->
+<!--            android:buttonTint="@color/color_rojo_carmin"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/tvtextFechaVuelo"-->
+<!--            app:layout_constraintStart_toEndOf="@id/tvtextFechaVuelo"/>-->
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

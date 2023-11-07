@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/dimen_4"
+    tools:context=".inspeccionEquipo.tabs.CheckListConsentimientoTab">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dimen_4"
+        android:layout_height="wrap_content"
+        android:background="@color/color_gray_white_background_checklist_faded"
+        android:padding="@dimen/dimen_10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/credenciales"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+            android:textSize="@dimen/text_18"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/operadorHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Operador"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+            android:textSize="@dimen/text_18"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/text_16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <LinearLayout
+            android:id="@+id/contet_no_empleado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="@dimen/dimen_8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/operadorHeader">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/n_mero_de_empleado_operador"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:textSize="@dimen/text_18"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/txt_num_operador"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="000000"
+                android:textAlignment="center"
+                android:textColor="@color/primaryLightColor"
+                android:textSize="@dimen/text_18" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/contet_name_operador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/dimen_8"
+            android:paddingBottom="@dimen/dimen_8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contet_no_empleado">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nombre_del_operador"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:textSize="@dimen/text_18"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/txt_name_operador"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="000000"
+                android:textAlignment="center"
+                android:textColor="@color/primaryLightColor"
+                android:textSize="@dimen/text_18" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/supervisorHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Supervisor"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+            android:textSize="@dimen/text_18"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/dimen_16"
+            app:layout_constraintStart_toStartOf="@+id/operadorHeader"
+            app:layout_constraintTop_toBottomOf="@+id/contet_name_operador" />
+
+        <LinearLayout
+            android:id="@+id/content_no_supervisor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="@dimen/dimen_8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/supervisorHeader">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/n_mero_de_empleado_supervisor"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:textSize="@dimen/text_18"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/txt_numero_supervisor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="000000"
+                android:textAlignment="center"
+                android:textColor="@color/primaryLightColor"
+                android:textSize="@dimen/text_18" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/dimen_8"
+            android:paddingBottom="@dimen/dimen_8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/content_no_supervisor">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nombre_del_supervisor"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:textSize="@dimen/text_18"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/txt_nombre_supervisor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="000000"
+                android:textAlignment="center"
+                android:textColor="@color/primaryLightColor"
+                android:textSize="@dimen/text_18" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

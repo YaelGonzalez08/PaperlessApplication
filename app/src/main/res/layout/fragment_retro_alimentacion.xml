@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".comunicadosACK.tabs.RetroAlimentacionFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_regresar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/primaryColor"
+            android:text="@string/regresar"
+            android:visibility="visible"
+            app:icon="@drawable/ic_redo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_questions" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout5"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_marginTop="@dimen/dimen_8"
+            android:background="@drawable/backgroud_circle_blue"
+            android:backgroundTint="@color/color_gray_white_background_checklist_faded"
+            android:gravity="center"
+            android:padding="@dimen/dimen_20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_fondo_exitoso"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/imagen_central"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:background="@drawable/ic_baseline_assignment_24"
+                android:backgroundTint="@color/primaryColor"
+                app:layout_constraintBottom_toBottomOf="@+id/textView28"
+                app:layout_constraintEnd_toEndOf="@+id/textView28"
+                app:layout_constraintStart_toStartOf="@+id/textView28"
+                app:layout_constraintTop_toTopOf="@+id/textView28" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/dimen_55"
+            android:layout_height="@dimen/dimen_55"
+            android:src="@drawable/ic_palomita_con_circulo"
+            app:layout_constraintBottom_toBottomOf="@+id/linearLayout5"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayout5"
+            app:tint="@color/color_verde" />
+
+        <TextView
+            android:id="@+id/folio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:text="@string/folio"
+            android:textAlignment="center"
+            android:textColor="@color/primaryLightColor"
+            android:textSize="@dimen/text_18"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayout5"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout5"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />
+
+        <TextView
+            android:id="@+id/text_mensaje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_8"
+            android:padding="@dimen/dimen_10"
+            android:text="Has completado el \n cuestionario"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_22"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayout5"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout5"
+            app:layout_constraintTop_toBottomOf="@+id/folio" />
+
+        <TextView
+            android:id="@+id/msj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_8"
+            android:text="A continuación encontrarás una \nretroalimentación."
+            android:textAlignment="center"
+            android:textColor="@color/gray_text"
+            android:textSize="@dimen/text_18"
+            app:layout_constraintEnd_toEndOf="@+id/text_mensaje"
+            app:layout_constraintStart_toStartOf="@+id/text_mensaje"
+            app:layout_constraintTop_toBottomOf="@+id/text_mensaje" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_questions"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:padding="@dimen/dimen_8"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/msj"
+            tools:listitem="@layout/item_resolve_cuestionario_ack" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

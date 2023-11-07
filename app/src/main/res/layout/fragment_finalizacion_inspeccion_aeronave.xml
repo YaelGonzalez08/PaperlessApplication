@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".inspeccionAeronave.Finalizacion.FinalizacionInspeccionAeronaveFragment">
+
+    <include
+        android:id="@+id/pantalla_finalizacion"
+        layout="@layout/item_reporte_exitoso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/btnContinuar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Continuar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pantalla_finalizacion"
+        android:layout_marginTop="@dimen/common_padding_default"
+        android:textColor="@color/primaryColor"
+        android:textSize="@dimen/text_16"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

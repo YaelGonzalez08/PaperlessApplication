@@ -1,0 +1,1571 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".inspeccionAeronave.InspeccionForm.InspeccionFormFragment"
+    android:background="@color/white"
+    >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/common_padding_default"
+        >
+
+            <!--Switch de pernocta-->
+            <Switch
+                android:id="@+id/switchPernocta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+
+            <TextView
+                android:id="@+id/tvPernocta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@id/switchPernocta"
+                android:text="@string/pernocta"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toTopOf="@id/switchPernocta"
+                app:layout_constraintBottom_toBottomOf="@id/switchPernocta"
+                android:layout_marginRight="@dimen/common_padding_default"
+                />
+
+            <!--LLegada o Salida-->
+
+            <TextView
+                android:id="@+id/tvSeccionVuelo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tipo_de_vuelo"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                app:layout_constraintTop_toBottomOf="@id/tvPernocta"
+                android:layout_marginTop="@dimen/common_padding_middle"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/primaryColor"
+                android:textSize="@dimen/text_17"
+                />
+
+
+            <TextView
+                android:id="@+id/tvLlegadaoSalida"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/llegada_o_salida"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/tvSeccionVuelo"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/common_padding_default"
+                android:textStyle="bold"
+                android:layout_marginRight="@dimen/common_padding_min"
+
+                />
+
+            <TextView
+                android:id="@+id/tvLlegada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/llegada"
+                app:layout_constraintEnd_toStartOf="@id/cbLlegada"
+                app:layout_constraintTop_toTopOf="@id/tvLlegadaoSalida"
+                android:textSize="@dimen/text_13"
+                android:textColor="@color/black"
+                android:layout_marginRight="@dimen/common_padding_min"
+                />
+
+
+            <CheckBox
+                android:id="@+id/cbLlegada"
+                android:layout_width="@dimen/checkboxWidth"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/tvLlegada"
+                app:layout_constraintBottom_toBottomOf="@id/tvLlegada"
+                app:layout_constraintEnd_toStartOf="@id/tvSalida"
+                android:buttonTint="@color/primaryLightColor"
+                android:layout_marginRight="@dimen/common_padding_middle"
+                />
+
+
+            <TextView
+                android:id="@+id/tvSalida"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/salida"
+                app:layout_constraintTop_toTopOf="@id/tvLlegada"
+                app:layout_constraintEnd_toStartOf="@id/cbSalida"
+                android:layout_marginRight="@dimen/common_padding_min"
+                android:textColor="@color/black"
+                />
+
+            <CheckBox
+                android:id="@+id/cbSalida"
+                android:layout_width="@dimen/checkboxWidth"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/tvSalida"
+                app:layout_constraintBottom_toBottomOf="@id/tvSalida"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:buttonTint="@color/primaryLightColor"
+                />
+
+
+            <TextView
+                android:id="@+id/tvNotaLLegadaSalida"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/warning_llegada"
+                app:layout_constraintTop_toBottomOf="@id/tvLlegada"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/common_padding_default"
+                android:textColor="@color/primaryLightColor"
+                android:visibility="gone"
+                />
+
+            <View
+                android:id="@+id/divider0"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/color_divider"
+                android:layout_marginTop="@dimen/common_padding_default"
+                android:layout_marginBottom="@dimen/common_padding_default"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvNotaLLegadaSalida"
+                />
+
+
+
+
+            <!--Inspección de aeronave-->
+
+            <TextView
+                android:id="@+id/tvInspeccionAeronave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/divider0"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="@string/inspeccion_de_aeronave_form"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_marginTop="@dimen/common_padding_default"
+                />
+
+            <TextView
+                android:id="@+id/tvNota"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tvInspeccionAeronave"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="@string/instrucciones_inspec_aeronave"
+                android:layout_marginTop="@dimen/common_padding_min"
+                android:textColor="@color/primaryLightColor"
+                />
+
+
+
+
+            <!-- Puerta principal-->
+            <TextView
+                android:id="@+id/tvPuertaPrincipal"
+                android:justificationMode="inter_word"
+                android:layout_width="@dimen/dimen_260"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvNota"
+                android:layout_marginTop="@dimen/common_padding_default"
+                android:text="@string/checkPuertaPrincipal"
+                android:textColor="@color/primaryColor"
+                android:textSize="@dimen/text_13"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/tvTieneAveriaPuertaPrincipal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/presenta_danios"
+                app:layout_constraintTop_toBottomOf="@id/tvPuertaPrincipal"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/dimen_12"
+                android:textSize="@dimen/text_13"
+                android:textColor="@color/black"
+                />
+
+            <CheckBox
+                android:id="@+id/cbNoAveriaPuertaPrincipal"
+                android:layout_width="@dimen/checkboxWidth"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/tvTieneAveriaPuertaPrincipal"
+                app:layout_constraintBottom_toBottomOf="@id/tvTieneAveriaPuertaPrincipal"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:buttonTint="@color/primaryLightColor"
+                />
+
+            <TextView
+                android:id="@+id/tvNoPuertaPrincipal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no"
+                app:layout_constraintTop_toTopOf="@id/cbNoAveriaPuertaPrincipal"
+                app:layout_constraintBottom_toBottomOf="@id/cbNoAveriaPuertaPrincipal"
+                app:layout_constraintEnd_toStartOf="@id/cbNoAveriaPuertaPrincipal"
+                />
+
+            <CheckBox
+                android:id="@+id/cbPuertaPrincipal"
+                android:layout_width="@dimen/checkboxWidth"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/tvTieneAveriaPuertaPrincipal"
+                app:layout_constraintBottom_toBottomOf="@id/tvTieneAveriaPuertaPrincipal"
+                app:layout_constraintEnd_toStartOf="@id/tvNoPuertaPrincipal"
+                android:buttonTint="@color/primaryLightColor"
+                android:layout_marginRight="@dimen/common_padding_default"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/si"
+                app:layout_constraintTop_toTopOf="@id/cbPuertaPrincipal"
+                app:layout_constraintBottom_toBottomOf="@id/cbPuertaPrincipal"
+                app:layout_constraintEnd_toStartOf="@id/cbPuertaPrincipal"
+                />
+
+            <LinearLayout
+                android:id="@+id/detallePuertaPrincipal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                app:layout_constraintTop_toBottomOf="@id/tvTieneAveriaPuertaPrincipal">
+                <FrameLayout
+                    android:id="@+id/framePuertaPrincipal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+
+            <!-- Radomo-->
+            <TextView
+                android:id="@+id/tvRadomo"
+                android:justificationMode="inter_word"
+                android:layout_width="@dimen/dimen_260"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detallePuertaPrincipal"
+                android:layout_marginTop="@dimen/common_padding_default"
+                android:text="@string/checkRadomo"
+                android:textColor="@color/primaryColor"
+                android:textSize="@dimen/text_13"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/tvTieneAveriaRadomo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/presenta_danios"
+                app:layout_constraintTop_toBottomOf="@id/tvRadomo"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/dimen_12"
+                android:textSize="@dimen/text_13"
+                android:textColor="@color/black"
+                />
+
+            <CheckBox
+                android:id="@+id/cbNoAveriaRadomo"
+                android:layout_width="@dimen/checkboxWidth"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/tvTieneAveriaRadomo"
+                app:layout_constraintBottom_toBottomOf="@id/tvTieneAveriaRadomo"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:buttonTint="@color/primaryLightColor"
+                />
+
+            <TextView
+                android:id="@+id/tvNoRadomo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no"
+                app:layout_constraintTop_toTopOf="@id/cbNoAveriaRadomo"
+                app:layout_constraintBottom_toBottomOf="@id/cbNoAveriaRadomo"
+                app:layout_constraintEnd_toStartOf="@id/cbNoAveriaRadomo"
+                />
+
+            <CheckBox
+                android:id="@+id/cbRadomo"
+                android:layout_width="@dimen/checkboxWidth"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/tvTieneAveriaRadomo"
+                app:layout_constraintBottom_toBottomOf="@id/tvTieneAveriaRadomo"
+                app:layout_constraintEnd_toStartOf="@id/tvNoRadomo"
+                android:buttonTint="@color/primaryLightColor"
+                android:layout_marginRight="@dimen/common_padding_default"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/si"
+                app:layout_constraintTop_toTopOf="@id/cbRadomo"
+                app:layout_constraintBottom_toBottomOf="@id/cbRadomo"
+                app:layout_constraintEnd_toStartOf="@id/cbRadomo"
+                />
+
+            <LinearLayout
+                android:id="@+id/detalleRadomo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                app:layout_constraintTop_toBottomOf="@id/tvTieneAveriaRadomo">
+                <FrameLayout
+                    android:id="@+id/frameRadomo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+
+            <!-- Compartimiento de carga delantero-->
+            <TextView
+                android:id="@+id/tvCompCargaDelantero"
+                android:justificationMode="inter_word"
+                android:layout_width="@dimen/dimen_260"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detalleRadomo"
+                android:layout_marginTop="@dimen/common_padding_default"
+                android:text="@string/checkCompCargaDelantero"
+                android:textColor="@color/primaryColor"
+                android:textSize="@dimen/text_13"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/tvTieneAveriaCompCargaDelantero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/presenta_danios"
+                app:layout_constraintTop_toBottomOf="@id/tvCompCargaDelantero"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/dimen_12"
+                android:textSize="@dimen/text_13"
+                android:textColor="@color/black"
+                />
+
+            <CheckBox
+                android:id="@+id/cbNoAveriaCompCargaDelantero"
+                android:layout_width="@dimen/checkboxWidth"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/tvTieneAveriaCompCargaDelantero"
+                app:layout_constraintBottom_toBottomOf="@id/tvTieneAveriaCompCargaDelantero"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:buttonTint="@color/primaryLightColor"
+                />
+
+            <TextView
+                android:id="@+id/tvNoCompCargaDelantero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no"
+                app:layout_constraintTop_toTopOf="@id/cbNoAveriaCompCargaDelantero"
+                app:layout_constraintBottom_toBottomOf="@id/cbNoAveriaCompCargaDelantero"
+                app:layout_constraintEnd_toStartOf="@id/cbNoAveriaCompCargaDelantero"
+                />
+
+            <CheckBox
+                android:id="@+id/cbCompCargaDelantero"
+                android:layout_width="@dimen/checkboxWidth"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/tvTieneAveriaCompCargaDelantero"
+                app:layout_constraintBottom_toBottomOf="@id/tvTieneAveriaCompCargaDelantero"
+                app:layout_constraintEnd_toStartOf="@id/tvNoCompCargaDelantero"
+                android:buttonTint="@color/primaryLightColor"
+                android:layout_marginRight="@dimen/common_padding_default"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/si"
+                app:layout_constraintTop_toTopOf="@id/cbCompCargaDelantero"
+                app:layout_constraintBottom_toBottomOf="@id/cbCompCargaDelantero"
+                app:layout_constraintEnd_toStartOf="@id/cbCompCargaDelantero"
+                />
+
+            <LinearLayout
+                android:id="@+id/detalleCompCargaDelantero"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                app:layout_constraintTop_toBottomOf="@id/tvTieneAveriaCompCargaDelantero">
+                <FrameLayout
+                    android:id="@+id/frameCompCargaDelantero"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+
+            <!-- Compartimiento interior delantero-->
+            <TextView
+                android:id="@+id/tvCompIntDelantero"
+                android:justificationMode="inter_word"
+                android:layout_width="@dimen/dimen_260"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detalleCompCargaDelantero"
+                android:layout_marginTop="@dimen/common_padding_default"
+                android:text="@string/checkCompIntDelantero"
+                android:textColor="@color/primaryColor"
+                android:textSize="@dimen/text_13"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/tvTieneAveriaCompIntDelantero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/presenta_danios"
+                app:layout_constraintTop_toBottomOf="@id/tvCompIntDelantero"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/dimen_12"
+                android:textSize="@dimen/text_13"
+                android:textColor="@color/black"
+                />
+
+            <CheckBox
+                android:id="@+id/cbNoAveriaCompIntDelantero"
+                android:layout_width="@dimen/checkboxWidth"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/tvTieneAveriaCompIntDelantero"
+                app:layout_constraintBottom_toBottomOf="@id/tvTieneAveriaCompIntDelantero"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:buttonTint="@color/primaryLightColor"
+                />
+
+            <TextView
+                android:id="@+id/tvNoCompIntDelantero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no"
+                app:layout_constraintTop_toTopOf="@id/cbNoAveriaCompIntDelantero"
+                app:layout_constraintBottom_toBottomOf="@id/cbNoAveriaCompIntDelantero"
+                app:layout_constraintEnd_toStartOf="@id/cbNoAveriaCompIntDelantero"
+                />
+
+            <CheckBox
+                android:id="@+id/cbCompIntDelantero"
+                android:layout_width="@dimen/checkboxWidth"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/tvTieneAveriaCompIntDelantero"
+                app:layout_constraintBottom_toBottomOf="@id/tvTieneAveriaCompIntDelantero"
+                app:layout_constraintEnd_toStartOf="@id/tvNoCompIntDelantero"
+                android:buttonTint="@color/primaryLightColor"
+                android:layout_marginRight="@dimen/common_padding_default"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/si"
+                app:layout_constraintTop_toTopOf="@id/cbCompIntDelantero"
+                app:layout_constraintBottom_toBottomOf="@id/cbCompIntDelantero"
+                app:layout_constraintEnd_toStartOf="@id/cbCompIntDelantero"
+                />
+
+            <LinearLayout
+                android:id="@+id/detalleCompIntDelantero"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                app:layout_constraintTop_toBottomOf="@id/tvTieneAveriaCompIntDelantero">
+                <FrameLayout
+                    android:id="@+id/frameCompIntDelantero"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+
+            <!-- Semiala derecha-->
+            <TextView
+                android:id="@+id/tvSemialaDer"
+                android:justificationMode="inter_word"
+                android:layout_width="@dimen/dimen_260"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detalleCompIntDelantero"
+                android:layout_marginTop="@dimen/common_padding_default"
+                android:text="@string/checkSemialaDer"
+                android:textColor="@color/primaryColor"
+                android:textSize="@dimen/text_13"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/tvTieneAveriaSemialaDer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/presenta_danios"
+                app:layout_constraintTop_toBottomOf="@id/tvSemialaDer"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/dimen_12"
+                android:textSize="@dimen/text_13"
+                android:textColor="@color/black"
+                />
+
+            <CheckBox
+                android:id="@+id/cbNoAveriaSemialaDer"
+                android:layout_width="@dimen/checkboxWidth"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/tvTieneAveriaSemialaDer"
+                app:layout_constraintBottom_toBottomOf="@id/tvTieneAveriaSemialaDer"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:buttonTint="@color/primaryLightColor"
+                />
+
+            <TextView
+                android:id="@+id/tvNoSemialaDer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no"
+                app:layout_constraintTop_toTopOf="@id/cbNoAveriaSemialaDer"
+                app:layout_constraintBottom_toBottomOf="@id/cbNoAveriaSemialaDer"
+                app:layout_constraintEnd_toStartOf="@id/cbNoAveriaSemialaDer"
+                />
+
+            <CheckBox
+                android:id="@+id/cbSemialaDer"
+                android:layout_width="@dimen/checkboxWidth"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/tvTieneAveriaSemialaDer"
+                app:layout_constraintBottom_toBottomOf="@id/tvTieneAveriaSemialaDer"
+                app:layout_constraintEnd_toStartOf="@id/tvNoSemialaDer"
+                android:buttonTint="@color/primaryLightColor"
+                android:layout_marginRight="@dimen/common_padding_default"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/si"
+                app:layout_constraintTop_toTopOf="@id/cbSemialaDer"
+                app:layout_constraintBottom_toBottomOf="@id/cbSemialaDer"
+                app:layout_constraintEnd_toStartOf="@id/cbSemialaDer"
+                />
+
+            <LinearLayout
+                android:id="@+id/detalleSemialaDer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                app:layout_constraintTop_toBottomOf="@id/tvTieneAveriaSemialaDer">
+                <FrameLayout
+                    android:id="@+id/frameSemialaDer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+
+
+            <!-- Compartimiento de carga trasero -->
+            <TextView
+                android:id="@+id/tvCompCargaTrasero"
+                android:justificationMode="inter_word"
+                android:layout_width="@dimen/dimen_260"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detalleSemialaDer"
+                android:layout_marginTop="@dimen/common_padding_default"
+                android:text="@string/checkCompCargaTrasero"
+                android:textColor="@color/primaryColor"
+                android:textSize="@dimen/text_13"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/tvTieneAveriaCompCargaTrasero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/presenta_danios"
+                app:layout_constraintTop_toBottomOf="@id/tvCompCargaTrasero"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/dimen_12"
+                android:textSize="@dimen/text_13"
+                android:textColor="@color/black"
+                />
+
+            <CheckBox
+                android:id="@+id/cbNoAveriaCompCargaTrasero"
+                android:layout_width="@dimen/checkboxWidth"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/tvTieneAveriaCompCargaTrasero"
+                app:layout_constraintBottom_toBottomOf="@id/tvTieneAveriaCompCargaTrasero"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:buttonTint="@color/primaryLightColor"
+                />
+
+            <TextView
+                android:id="@+id/tvNoCompCargaTrasero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no"
+                app:layout_constraintTop_toTopOf="@id/cbNoAveriaCompCargaTrasero"
+                app:layout_constraintBottom_toBottomOf="@id/cbNoAveriaCompCargaTrasero"
+                app:layout_constraintEnd_toStartOf="@id/cbNoAveriaCompCargaTrasero"
+                />
+
+            <CheckBox
+                android:id="@+id/cbCompCargaTrasero"
+                android:layout_width="@dimen/checkboxWidth"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/tvTieneAveriaCompCargaTrasero"
+                app:layout_constraintBottom_toBottomOf="@id/tvTieneAveriaCompCargaTrasero"
+                app:layout_constraintEnd_toStartOf="@id/tvNoCompCargaTrasero"
+                android:buttonTint="@color/primaryLightColor"
+                android:layout_marginRight="@dimen/common_padding_default"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/si"
+                app:layout_constraintTop_toTopOf="@id/cbCompCargaTrasero"
+                app:layout_constraintBottom_toBottomOf="@id/cbCompCargaTrasero"
+                app:layout_constraintEnd_toStartOf="@id/cbCompCargaTrasero"
+                />
+
+            <LinearLayout
+                android:id="@+id/detalleCompCargaTrasero"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                app:layout_constraintTop_toBottomOf="@id/tvTieneAveriaCompCargaTrasero">
+                <FrameLayout
+                    android:id="@+id/frameCompCargaTrasero"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+
+            <!-- Compartimiento interior trasero-->
+            <TextView
+                android:id="@+id/tvCompIntTrasero"
+                android:justificationMode="inter_word"
+                android:layout_width="@dimen/dimen_260"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detalleCompCargaTrasero"
+                android:layout_marginTop="@dimen/common_padding_default"
+                android:text="@string/checkCompIntTrasero"
+                android:textColor="@color/primaryColor"
+                android:textSize="@dimen/text_13"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/tvTieneAveriaCompIntTrasero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/presenta_danios"
+                app:layout_constraintTop_toBottomOf="@id/tvCompIntTrasero"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/dimen_12"
+                android:textSize="@dimen/text_13"
+                android:textColor="@color/black"
+                />
+
+            <CheckBox
+                android:id="@+id/cbNoAveriaCompIntTrasero"
+                android:layout_width="@dimen/checkboxWidth"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/tvTieneAveriaCompIntTrasero"
+                app:layout_constraintBottom_toBottomOf="@id/tvTieneAveriaCompIntTrasero"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:buttonTint="@color/primaryLightColor"
+                />
+
+            <TextView
+                android:id="@+id/tvNoCompIntTrasero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no"
+                app:layout_constraintTop_toTopOf="@id/cbNoAveriaCompIntTrasero"
+                app:layout_constraintBottom_toBottomOf="@id/cbNoAveriaCompIntTrasero"
+                app:layout_constraintEnd_toStartOf="@id/cbNoAveriaCompIntTrasero"
+                />
+
+            <CheckBox
+                android:id="@+id/cbCompIntTrasero"
+                android:layout_width="@dimen/checkboxWidth"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/tvTieneAveriaCompIntTrasero"
+                app:layout_constraintBottom_toBottomOf="@id/tvTieneAveriaCompIntTrasero"
+                app:layout_constraintEnd_toStartOf="@id/tvNoCompIntTrasero"
+                android:buttonTint="@color/primaryLightColor"
+                android:layout_marginRight="@dimen/common_padding_default"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/si"
+                app:layout_constraintTop_toTopOf="@id/cbCompIntTrasero"
+                app:layout_constraintBottom_toBottomOf="@id/cbCompIntTrasero"
+                app:layout_constraintEnd_toStartOf="@id/cbCompIntTrasero"
+                />
+
+            <LinearLayout
+                android:id="@+id/detalleCompIntTrasero"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                app:layout_constraintTop_toBottomOf="@id/tvTieneAveriaCompIntTrasero">
+                <FrameLayout
+                    android:id="@+id/frameCompIntTrasero"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+
+            <!-- Separación de dos pulgadas-->
+            <TextView
+                android:id="@+id/tvSepDosIn"
+                android:justificationMode="inter_word"
+                android:layout_width="@dimen/dimen_260"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detalleCompIntTrasero"
+                android:layout_marginTop="@dimen/common_padding_default"
+                android:text="@string/checkSepDosIn"
+                android:textColor="@color/primaryColor"
+                android:textSize="@dimen/text_13"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/tvTieneAveriaSepDosIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" "
+                app:layout_constraintTop_toBottomOf="@id/tvSepDosIn"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/dimen_12"
+                android:textSize="@dimen/text_13"
+                android:textColor="@color/black"
+                />
+
+            <CheckBox
+                android:id="@+id/cbNoAveriaSepDosIn"
+                android:layout_width="@dimen/checkboxWidth"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/tvTieneAveriaSepDosIn"
+                app:layout_constraintBottom_toBottomOf="@id/tvTieneAveriaSepDosIn"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:buttonTint="@color/primaryLightColor"
+                />
+
+            <TextView
+                android:id="@+id/tvNoSepDosIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no"
+                app:layout_constraintTop_toTopOf="@id/cbNoAveriaSepDosIn"
+                app:layout_constraintBottom_toBottomOf="@id/cbNoAveriaSepDosIn"
+                app:layout_constraintEnd_toStartOf="@id/cbNoAveriaSepDosIn"
+                />
+
+            <CheckBox
+                android:id="@+id/cbSepDosIn"
+                android:layout_width="@dimen/checkboxWidth"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/tvTieneAveriaSepDosIn"
+                app:layout_constraintBottom_toBottomOf="@id/tvTieneAveriaSepDosIn"
+                app:layout_constraintEnd_toStartOf="@id/tvNoSepDosIn"
+                android:buttonTint="@color/primaryLightColor"
+                android:layout_marginRight="@dimen/common_padding_default"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/si"
+                app:layout_constraintTop_toTopOf="@id/cbSepDosIn"
+                app:layout_constraintBottom_toBottomOf="@id/cbSepDosIn"
+                app:layout_constraintEnd_toStartOf="@id/cbSepDosIn"
+                />
+
+            <LinearLayout
+                android:id="@+id/detalleSepDosIn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                app:layout_constraintTop_toBottomOf="@id/tvTieneAveriaSepDosIn">
+                <FrameLayout
+                    android:id="@+id/frameSepDosIn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+
+            <!-- Separación redes o seguros-->
+            <TextView
+                android:id="@+id/tvColocacionRedes"
+                android:justificationMode="inter_word"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detalleSepDosIn"
+                android:layout_marginTop="@dimen/common_padding_default"
+                android:text="@string/checkColocacionRedes"
+                android:textColor="@color/primaryColor"
+                android:textSize="@dimen/text_13"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/tvTieneAveriaColocacionRedes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/presenta_danios"
+                app:layout_constraintTop_toBottomOf="@id/tvColocacionRedes"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/dimen_12"
+                android:textSize="@dimen/text_13"
+                android:textColor="@color/black"
+                />
+
+            <CheckBox
+                android:id="@+id/cbNoAveriaColocacionRedes"
+                android:layout_width="@dimen/checkboxWidth"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/tvTieneAveriaColocacionRedes"
+                app:layout_constraintBottom_toBottomOf="@id/tvTieneAveriaColocacionRedes"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:buttonTint="@color/primaryLightColor"
+                />
+
+            <TextView
+                android:id="@+id/tvNoColocacionRedes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no"
+                app:layout_constraintTop_toTopOf="@id/cbNoAveriaColocacionRedes"
+                app:layout_constraintBottom_toBottomOf="@id/cbNoAveriaColocacionRedes"
+                app:layout_constraintEnd_toStartOf="@id/cbNoAveriaColocacionRedes"
+                />
+
+            <CheckBox
+                android:id="@+id/cbColocacionRedes"
+                android:layout_width="@dimen/checkboxWidth"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/tvTieneAveriaColocacionRedes"
+                app:layout_constraintBottom_toBottomOf="@id/tvTieneAveriaColocacionRedes"
+                app:layout_constraintEnd_toStartOf="@id/tvNoColocacionRedes"
+                android:buttonTint="@color/primaryLightColor"
+                android:layout_marginRight="@dimen/common_padding_default"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/si"
+                app:layout_constraintTop_toTopOf="@id/cbColocacionRedes"
+                app:layout_constraintBottom_toBottomOf="@id/cbColocacionRedes"
+                app:layout_constraintEnd_toStartOf="@id/cbColocacionRedes"
+                />
+
+            <LinearLayout
+                android:id="@+id/detalleColocacionRedes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                app:layout_constraintTop_toBottomOf="@id/tvTieneAveriaColocacionRedes">
+                <FrameLayout
+                    android:id="@+id/frameColocacionRedes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+
+            <!-- Servicio de agua potable-->
+            <TextView
+                android:id="@+id/tvAguaPotable"
+                android:justificationMode="inter_word"
+                android:layout_width="@dimen/dimen_260"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detalleColocacionRedes"
+                android:layout_marginTop="@dimen/common_padding_default"
+                android:text="@string/checkAguaPotable"
+                android:textColor="@color/primaryColor"
+                android:textSize="@dimen/text_13"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/tvTieneAveriaAguaPotable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/presenta_danios"
+                app:layout_constraintTop_toBottomOf="@id/tvAguaPotable"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/dimen_12"
+                android:textSize="@dimen/text_13"
+                android:textColor="@color/black"
+                />
+
+            <CheckBox
+                android:id="@+id/cbNoAveriaAguaPotable"
+                android:layout_width="@dimen/checkboxWidth"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/tvTieneAveriaAguaPotable"
+                app:layout_constraintBottom_toBottomOf="@id/tvTieneAveriaAguaPotable"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:buttonTint="@color/primaryLightColor"
+                />
+
+            <TextView
+                android:id="@+id/tvNoAguaPotable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no"
+                app:layout_constraintTop_toTopOf="@id/cbNoAveriaAguaPotable"
+                app:layout_constraintBottom_toBottomOf="@id/cbNoAveriaAguaPotable"
+                app:layout_constraintEnd_toStartOf="@id/cbNoAveriaAguaPotable"
+                />
+
+            <CheckBox
+                android:id="@+id/cbAguaPotable"
+                android:layout_width="@dimen/checkboxWidth"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/tvTieneAveriaAguaPotable"
+                app:layout_constraintBottom_toBottomOf="@id/tvTieneAveriaAguaPotable"
+                app:layout_constraintEnd_toStartOf="@id/tvNoAguaPotable"
+                android:buttonTint="@color/primaryLightColor"
+                android:layout_marginRight="@dimen/common_padding_default"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/si"
+                app:layout_constraintTop_toTopOf="@id/cbAguaPotable"
+                app:layout_constraintBottom_toBottomOf="@id/cbAguaPotable"
+                app:layout_constraintEnd_toStartOf="@id/cbAguaPotable"
+                />
+
+            <LinearLayout
+                android:id="@+id/detalleAguaPotable"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                app:layout_constraintTop_toBottomOf="@id/tvTieneAveriaAguaPotable">
+                <FrameLayout
+                    android:id="@+id/frameAguaPotable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+
+            <!-- Servicio de agua negra-->
+            <TextView
+                android:id="@+id/tvAguaNegra"
+                android:justificationMode="inter_word"
+                android:layout_width="@dimen/dimen_260"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detalleAguaPotable"
+                android:layout_marginTop="@dimen/common_padding_default"
+                android:text="@string/checkAguaNegra"
+                android:textColor="@color/primaryColor"
+                android:textSize="@dimen/text_13"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/tvTieneAveriaAguaNegra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/presenta_danios"
+                app:layout_constraintTop_toBottomOf="@id/tvAguaNegra"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/dimen_12"
+                android:textSize="@dimen/text_13"
+                android:textColor="@color/black"
+                />
+
+            <CheckBox
+                android:id="@+id/cbNoAveriaAguaNegra"
+                android:layout_width="@dimen/checkboxWidth"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/tvTieneAveriaAguaNegra"
+                app:layout_constraintBottom_toBottomOf="@id/tvTieneAveriaAguaNegra"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:buttonTint="@color/primaryLightColor"
+                />
+
+            <TextView
+                android:id="@+id/tvNoAguaNegra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no"
+                app:layout_constraintTop_toTopOf="@id/cbNoAveriaAguaNegra"
+                app:layout_constraintBottom_toBottomOf="@id/cbNoAveriaAguaNegra"
+                app:layout_constraintEnd_toStartOf="@id/cbNoAveriaAguaNegra"
+                />
+
+            <CheckBox
+                android:id="@+id/cbAguaNegra"
+                android:layout_width="@dimen/checkboxWidth"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/tvTieneAveriaAguaNegra"
+                app:layout_constraintBottom_toBottomOf="@id/tvTieneAveriaAguaNegra"
+                app:layout_constraintEnd_toStartOf="@id/tvNoAguaNegra"
+                android:buttonTint="@color/primaryLightColor"
+                android:layout_marginRight="@dimen/common_padding_default"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/si"
+                app:layout_constraintTop_toTopOf="@id/cbAguaNegra"
+                app:layout_constraintBottom_toBottomOf="@id/cbAguaNegra"
+                app:layout_constraintEnd_toStartOf="@id/cbAguaNegra"
+                />
+
+            <LinearLayout
+                android:id="@+id/detalleAguaNegra"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                app:layout_constraintTop_toBottomOf="@id/tvTieneAveriaAguaNegra">
+                <FrameLayout
+                    android:id="@+id/frameAguaNegra"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+
+            <!-- Servicio Trasera-->
+            <TextView
+                android:id="@+id/tvServicioTrasera"
+                android:justificationMode="inter_word"
+                android:layout_width="@dimen/dimen_260"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detalleAguaNegra"
+                android:layout_marginTop="@dimen/common_padding_default"
+                android:text="@string/checkServicioTrasera"
+                android:textColor="@color/primaryColor"
+                android:textSize="@dimen/text_13"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/tvTieneAveriaServicioTrasera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/presenta_danios"
+                app:layout_constraintTop_toBottomOf="@id/tvServicioTrasera"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/dimen_12"
+                android:textSize="@dimen/text_13"
+                android:textColor="@color/black"
+                />
+
+            <CheckBox
+                android:id="@+id/cbNoAveriaServicioTrasera"
+                android:layout_width="@dimen/checkboxWidth"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/tvTieneAveriaServicioTrasera"
+                app:layout_constraintBottom_toBottomOf="@id/tvTieneAveriaServicioTrasera"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:buttonTint="@color/primaryLightColor"
+                />
+
+            <TextView
+                android:id="@+id/tvNoServicioTrasera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no"
+                app:layout_constraintTop_toTopOf="@id/cbNoAveriaServicioTrasera"
+                app:layout_constraintBottom_toBottomOf="@id/cbNoAveriaServicioTrasera"
+                app:layout_constraintEnd_toStartOf="@id/cbNoAveriaServicioTrasera"
+                />
+
+            <CheckBox
+                android:id="@+id/cbServicioTrasera"
+                android:layout_width="@dimen/checkboxWidth"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/tvTieneAveriaServicioTrasera"
+                app:layout_constraintBottom_toBottomOf="@id/tvTieneAveriaServicioTrasera"
+                app:layout_constraintEnd_toStartOf="@id/tvNoServicioTrasera"
+                android:buttonTint="@color/primaryLightColor"
+                android:layout_marginRight="@dimen/common_padding_default"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/si"
+                app:layout_constraintTop_toTopOf="@id/cbServicioTrasera"
+                app:layout_constraintBottom_toBottomOf="@id/cbServicioTrasera"
+                app:layout_constraintEnd_toStartOf="@id/cbServicioTrasera"
+                />
+
+            <LinearLayout
+                android:id="@+id/detalleServicioTrasera"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                app:layout_constraintTop_toBottomOf="@id/tvTieneAveriaServicioTrasera">
+                <FrameLayout
+                    android:id="@+id/frameServicioTrasera"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+            <!-- Compartimiento bulk -->
+            <TextView
+                android:id="@+id/tvCompCargaBulk"
+                android:justificationMode="inter_word"
+                android:layout_width="@dimen/dimen_260"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detalleServicioTrasera"
+                android:layout_marginTop="@dimen/common_padding_default"
+                android:text="@string/checkCompCargaBulk"
+                android:textColor="@color/primaryColor"
+                android:textSize="@dimen/text_13"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/tvTieneAveriaCompCargaBulk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/presenta_danios"
+                app:layout_constraintTop_toBottomOf="@id/tvCompCargaBulk"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/dimen_12"
+                android:textSize="@dimen/text_13"
+                android:textColor="@color/black"
+                />
+
+            <CheckBox
+                android:id="@+id/cbNoAveriaCompCargaBulk"
+                android:layout_width="@dimen/checkboxWidth"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/tvTieneAveriaCompCargaBulk"
+                app:layout_constraintBottom_toBottomOf="@id/tvTieneAveriaCompCargaBulk"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:buttonTint="@color/primaryLightColor"
+                />
+
+            <TextView
+                android:id="@+id/tvNoCompCargaBulk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no"
+                app:layout_constraintTop_toTopOf="@id/cbNoAveriaCompCargaBulk"
+                app:layout_constraintBottom_toBottomOf="@id/cbNoAveriaCompCargaBulk"
+                app:layout_constraintEnd_toStartOf="@id/cbNoAveriaCompCargaBulk"
+                />
+
+            <CheckBox
+                android:id="@+id/cbCompCargaBulk"
+                android:layout_width="@dimen/checkboxWidth"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/tvTieneAveriaCompCargaBulk"
+                app:layout_constraintBottom_toBottomOf="@id/tvTieneAveriaCompCargaBulk"
+                app:layout_constraintEnd_toStartOf="@id/tvNoCompCargaBulk"
+                android:buttonTint="@color/primaryLightColor"
+                android:layout_marginRight="@dimen/common_padding_default"
+                />
+
+            <TextView
+                android:id="@+id/tvSiCompCargaBulk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/si"
+                app:layout_constraintTop_toTopOf="@id/cbCompCargaBulk"
+                app:layout_constraintBottom_toBottomOf="@id/cbCompCargaBulk"
+                app:layout_constraintEnd_toStartOf="@id/cbCompCargaBulk"
+                />
+
+            <LinearLayout
+                android:id="@+id/detalleCompCargaBulk"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                app:layout_constraintTop_toBottomOf="@id/tvTieneAveriaCompCargaBulk">
+                <FrameLayout
+                    android:id="@+id/frameCompCargaBulk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+
+            <!-- Compartimiento interior bulk-->
+            <TextView
+                android:id="@+id/tvCompIntBulk"
+                android:justificationMode="inter_word"
+                android:layout_width="@dimen/dimen_260"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detalleCompCargaBulk"
+                android:layout_marginTop="@dimen/common_padding_default"
+                android:text="@string/checkCompIntBulk"
+                android:textColor="@color/primaryColor"
+                android:textSize="@dimen/text_13"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/tvTieneAveriaCompIntBulk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/presenta_danios"
+                app:layout_constraintTop_toBottomOf="@id/tvCompIntBulk"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/dimen_12"
+                android:textSize="@dimen/text_13"
+                android:textColor="@color/black"
+                />
+
+            <CheckBox
+                android:id="@+id/cbNoAveriaCompIntBulk"
+                android:layout_width="@dimen/checkboxWidth"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/tvTieneAveriaCompIntBulk"
+                app:layout_constraintBottom_toBottomOf="@id/tvTieneAveriaCompIntBulk"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:buttonTint="@color/primaryLightColor"
+                />
+
+            <TextView
+                android:id="@+id/tvNoCompIntBulk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no"
+                app:layout_constraintTop_toTopOf="@id/cbNoAveriaCompIntBulk"
+                app:layout_constraintBottom_toBottomOf="@id/cbNoAveriaCompIntBulk"
+                app:layout_constraintEnd_toStartOf="@id/cbNoAveriaCompIntBulk"
+                />
+
+            <CheckBox
+                android:id="@+id/cbCompIntBulk"
+                android:layout_width="@dimen/checkboxWidth"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/tvTieneAveriaCompIntBulk"
+                app:layout_constraintBottom_toBottomOf="@id/tvTieneAveriaCompIntBulk"
+                app:layout_constraintEnd_toStartOf="@id/tvNoCompIntBulk"
+                android:buttonTint="@color/primaryLightColor"
+                android:layout_marginRight="@dimen/common_padding_default"
+                />
+
+            <TextView
+                android:id="@+id/tvSiCompIntBulk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/si"
+                app:layout_constraintTop_toTopOf="@id/cbCompIntBulk"
+                app:layout_constraintBottom_toBottomOf="@id/cbCompIntBulk"
+                app:layout_constraintEnd_toStartOf="@id/cbCompIntBulk"
+                />
+
+            <LinearLayout
+                android:id="@+id/detalleCompIntBulk"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                app:layout_constraintTop_toBottomOf="@id/tvTieneAveriaCompIntBulk">
+                <FrameLayout
+                    android:id="@+id/frameCompIntBulk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+
+
+
+
+
+            <!-- Semiala izquierda-->
+            <TextView
+                android:id="@+id/tvSemialaIzq"
+                android:justificationMode="inter_word"
+                android:layout_width="@dimen/dimen_260"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detalleCompIntBulk"
+                android:layout_marginTop="@dimen/common_padding_default"
+                android:text="@string/checkSemialaIzq"
+                android:textColor="@color/primaryColor"
+                android:textSize="@dimen/text_13"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/tvTieneAveriaSemialaIzq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/presenta_danios"
+                app:layout_constraintTop_toBottomOf="@id/tvSemialaIzq"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/dimen_12"
+                android:textSize="@dimen/text_13"
+                android:textColor="@color/black"
+                />
+
+            <CheckBox
+                android:id="@+id/cbNoAveriaSemialaIzq"
+                android:layout_width="@dimen/checkboxWidth"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/tvTieneAveriaSemialaIzq"
+                app:layout_constraintBottom_toBottomOf="@id/tvTieneAveriaSemialaIzq"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:buttonTint="@color/primaryLightColor"
+                />
+
+            <TextView
+                android:id="@+id/tvNoSemialaIzq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no"
+                app:layout_constraintTop_toTopOf="@id/cbNoAveriaSemialaIzq"
+                app:layout_constraintBottom_toBottomOf="@id/cbNoAveriaSemialaIzq"
+                app:layout_constraintEnd_toStartOf="@id/cbNoAveriaSemialaIzq"
+                />
+
+            <CheckBox
+                android:id="@+id/cbSemialaIzq"
+                android:layout_width="@dimen/checkboxWidth"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/tvTieneAveriaSemialaIzq"
+                app:layout_constraintBottom_toBottomOf="@id/tvTieneAveriaSemialaIzq"
+                app:layout_constraintEnd_toStartOf="@id/tvNoSemialaIzq"
+                android:buttonTint="@color/primaryLightColor"
+                android:layout_marginRight="@dimen/common_padding_default"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/si"
+                app:layout_constraintTop_toTopOf="@id/cbSemialaIzq"
+                app:layout_constraintBottom_toBottomOf="@id/cbSemialaIzq"
+                app:layout_constraintEnd_toStartOf="@id/cbSemialaIzq"
+                />
+
+            <LinearLayout
+                android:id="@+id/detalleSemialaIzq"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                app:layout_constraintTop_toBottomOf="@id/tvTieneAveriaSemialaIzq">
+                <FrameLayout
+                    android:id="@+id/frameSemialaIzq"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+
+            <!--Sección ADICIONALES (OTROS)-->
+
+            <TextView
+                android:id="@+id/tvOtros"
+                android:justificationMode="inter_word"
+                android:layout_width="@dimen/dimen_260"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detalleSemialaIzq"
+                android:layout_marginTop="@dimen/common_padding_default"
+                android:text="@string/checkOtros"
+                android:textColor="@color/primaryColor"
+                android:textSize="@dimen/text_13"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/tvTieneAveriaOtros"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/presenta_danios"
+                app:layout_constraintTop_toBottomOf="@id/tvOtros"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/dimen_12"
+                android:textSize="@dimen/text_13"
+                android:textColor="@color/black"
+                />
+
+
+            <CheckBox
+                android:id="@+id/cbNoAveriaOtros"
+                android:layout_width="@dimen/checkboxWidth"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/tvTieneAveriaOtros"
+                app:layout_constraintBottom_toBottomOf="@id/tvTieneAveriaOtros"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:buttonTint="@color/primaryLightColor"
+                />
+
+            <TextView
+                android:id="@+id/tvNoOtros"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no"
+                app:layout_constraintTop_toTopOf="@id/cbNoAveriaOtros"
+                app:layout_constraintBottom_toBottomOf="@id/cbNoAveriaOtros"
+                app:layout_constraintEnd_toStartOf="@id/cbNoAveriaOtros"
+                />
+
+            <CheckBox
+                android:id="@+id/cbOtros"
+                android:layout_width="@dimen/checkboxWidth"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/tvTieneAveriaOtros"
+                app:layout_constraintBottom_toBottomOf="@id/tvTieneAveriaOtros"
+                app:layout_constraintEnd_toStartOf="@id/tvNoOtros"
+                android:buttonTint="@color/primaryLightColor"
+                android:layout_marginRight="@dimen/common_padding_default"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/si"
+                app:layout_constraintTop_toTopOf="@id/cbOtros"
+                app:layout_constraintBottom_toBottomOf="@id/cbOtros"
+                app:layout_constraintEnd_toStartOf="@id/cbOtros"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilNombreOtro"
+                app:layout_constraintTop_toBottomOf="@id/tvTieneAveriaOtros"
+                android:layout_marginTop="@dimen/common_padding_default"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hintNombreOtro"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:visibility="gone"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etNombreOtro"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:textSize="@dimen/text_12"
+                    android:padding="0dp"
+                    android:maxLength="100"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/detalleOtro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tilNombreOtro"
+                >
+                <FrameLayout
+                    android:id="@+id/frameOtro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+
+            <!--Mensajes de error-->
+            <TextView
+                android:id="@+id/tvErrorInspeccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/detalles_inspec_aeronave_faltantes"
+                android:textColor="#ff4d4d"
+                app:layout_constraintTop_toBottomOf="@id/detalleOtro"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/common_padding_default"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/tvErrorCompCarga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/foto_marco_comp_faltante"
+                android:textColor="#ff4d4d"
+                app:layout_constraintTop_toBottomOf="@id/tvErrorInspeccion"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/common_padding_default"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/tvErrorChecksFaltantes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/check_inspec_aeronave_faltante"
+                android:textColor="#ff4d4d"
+                app:layout_constraintTop_toBottomOf="@id/tvErrorCompCarga"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/common_padding_default"
+                android:visibility="gone"
+                />
+
+
+            <TextView
+                android:id="@+id/tvErrorLlegadaSalida"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/error_llegada_salida"
+                android:textColor="#ff4d4d"
+                app:layout_constraintTop_toBottomOf="@id/tvErrorChecksFaltantes"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/common_padding_default"
+                android:visibility="gone"
+                />
+
+
+            <!--Siguiente-->
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSiguiente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvErrorLlegadaSalida"
+                app:icon="@drawable/ic_baseline_arrow_forward"
+                app:iconGravity="end"
+                android:text="@string/siguiente"
+                android:backgroundTint="#2d5986"
+                android:textSize="@dimen/text_12"
+                android:layout_marginTop="@dimen/common_padding_default"
+                />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/txt_averia"
+        android:layout_width="@dimen/dimen_260"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_8"
+        android:justificationMode="inter_word"
+        android:text="@string/checkPuertaPrincipal"
+        android:textColor="@color/primaryColor"
+        android:textSize="@dimen/text_13"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTieneAveriaPuertaPrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_12"
+        android:text="@string/presenta_danios"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_averia" />
+
+    <TextView
+        android:id="@+id/tv_NA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="N/A"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/check_na"
+        app:layout_constraintEnd_toStartOf="@+id/check_na"
+        app:layout_constraintTop_toTopOf="@+id/check_na" />
+
+    <CheckBox
+        android:id="@+id/check_na"
+        android:layout_width="@dimen/checkboxWidth"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        android:buttonTint="@color/primaryLightColor"
+        app:layout_constraintBottom_toBottomOf="@id/check_false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/check_false" />
+
+    <CheckBox
+        android:id="@+id/check_false"
+        android:layout_width="@dimen/checkboxWidth"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/dimen_16"
+        android:buttonTint="@color/primaryLightColor"
+        app:layout_constraintBottom_toBottomOf="@id/tvTieneAveriaPuertaPrincipal"
+        app:layout_constraintEnd_toStartOf="@+id/tv_NA"
+        app:layout_constraintTop_toTopOf="@id/tvTieneAveriaPuertaPrincipal" />
+
+    <TextView
+        android:id="@+id/tvNoPuertaPrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no"
+        app:layout_constraintBottom_toBottomOf="@id/check_false"
+        app:layout_constraintEnd_toStartOf="@id/check_false"
+        app:layout_constraintTop_toTopOf="@id/check_false" />
+
+    <CheckBox
+        android:id="@+id/check_true"
+        android:layout_width="@dimen/checkboxWidth"
+        android:layout_height="0dp"
+        android:layout_marginRight="@dimen/common_padding_default"
+        android:buttonTint="@color/primaryLightColor"
+        app:layout_constraintBottom_toBottomOf="@id/tvTieneAveriaPuertaPrincipal"
+        app:layout_constraintEnd_toStartOf="@id/tvNoPuertaPrincipal"
+        app:layout_constraintTop_toTopOf="@id/tvTieneAveriaPuertaPrincipal" />
+
+    <TextView
+        android:id="@+id/labelSI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/si"
+        app:layout_constraintBottom_toBottomOf="@id/check_true"
+        app:layout_constraintEnd_toStartOf="@id/check_true"
+        app:layout_constraintTop_toTopOf="@id/check_true" />
+
+    <TextView
+        android:id="@+id/tvImagenMandatoria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/inspec_aeronave_foto_mandatoria"
+        android:textColor="@color/primaryColor"
+        android:textSize="@dimen/text_11"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTieneAveriaPuertaPrincipal" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tit_only_number"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_4"
+        android:layout_marginTop="@dimen/common_padding_default"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:hint="@string/introduce_una_cantidad"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/tvImagenMandatoria">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_number"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:inputType="numberSigned"
+            android:maxLength="1"
+            android:padding="0dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:textSize="@dimen/text_12" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tit_area"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_4"
+        android:layout_marginTop="@dimen/common_padding_default"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:hint="@string/hintNombreOtro"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/tit_only_number">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_area"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:maxLength="250"
+            android:padding="0dp"
+            android:textSize="@dimen/text_12" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tit_detalle"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_4"
+        android:layout_marginTop="@dimen/common_padding_default"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:hint="@string/hintNotaDaño"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/tit_area">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_detalle"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:maxLength="250"
+            android:padding="0dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:textSize="@dimen/text_12" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAbrirCamara"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_padding_default"
+        android:layout_marginBottom="@dimen/common_padding_middle"
+        android:text="@string/btnTomarFoto"
+        android:textColor="@color/primaryLightColor"
+        android:textSize="@dimen/text_11"
+        app:icon="@drawable/ic_add"
+        app:iconGravity="textEnd"
+        app:iconTint="@color/primaryLightColor"
+        app:layout_constraintTop_toBottomOf="@id/replace_photo" />
+
+    <include
+        android:id="@+id/foto_uno"
+        layout="@layout/item_foto_inspec_aeronave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAbrirCamara" />
+
+    <include
+        android:id="@+id/foto_dos"
+        layout="@layout/item_foto_inspec_aeronave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foto_uno" />
+
+    <include
+        android:id="@+id/foto_tres"
+        layout="@layout/item_foto_inspec_aeronave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foto_dos" />
+
+    <include
+        android:id="@+id/foto_cuatro"
+        layout="@layout/item_foto_inspec_aeronave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foto_tres" />
+
+    <include
+        android:id="@+id/foto_cinco"
+        layout="@layout/item_foto_inspec_aeronave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foto_cuatro" />
+
+    <TextView
+        android:id="@+id/replace_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_padding_middle"
+        android:layout_marginBottom="@dimen/common_padding_middle"
+        android:drawableRight="@drawable/ic_eye"
+        android:drawableTint="@color/gray_text"
+        android:text="@string/ver_foto"
+        android:textColor="@color/gray_text"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tit_detalle" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/common_padding_default"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:background="@color/color_divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnAbrirCamara" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

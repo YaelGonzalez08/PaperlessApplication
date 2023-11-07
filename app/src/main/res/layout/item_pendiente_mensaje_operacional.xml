@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen_110"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/common_padding_min"
+        android:paddingEnd="@dimen/common_padding_min">
+
+        <TextView
+            android:id="@+id/tvtextFechaVuelo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:text="Fecha del vuelo"
+            android:textStyle="bold"
+            android:textColor="@color/primaryColor"
+            android:layout_marginLeft="@dimen/common_padding_min"
+            app:layout_constraintEnd_toStartOf="@id/cbBorrarPendMO"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvAerolinea"/>
+
+        <TextView
+            android:id="@+id/tvNumVuelo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:textStyle="bold"
+            android:textColor="@color/primaryColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tvGuion"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+            android:id="@+id/tvGuion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:textStyle="bold"
+            android:textColor="@color/primaryColor"
+            app:layout_constraintStart_toEndOf="@id/tvNumVuelo"
+            app:layout_constraintEnd_toEndOf="@id/tvAerolinea"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <TextView
+            android:id="@+id/tvAerolinea"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="AMX"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:textStyle="bold"
+            android:textColor="@color/primaryColor"
+            app:layout_constraintStart_toEndOf="@id/tvGuion"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <TextView
+            android:id="@+id/textoOrigen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/origen"
+            android:layout_marginTop="@dimen/common_padding_default"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/tvNumVuelo"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvOrigen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MEX"
+            android:layout_marginTop="@dimen/common_padding_default"
+            android:paddingStart="@dimen/common_padding_min"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/textoOrigen"
+            app:layout_constraintTop_toBottomOf="@id/tvGuion"/>
+
+        <TextView
+            android:id="@+id/textoMatricula"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/matricula"
+            android:layout_marginTop="@dimen/common_padding_min"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/textoOrigen"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+        <TextView
+            android:id="@+id/textoDestino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/destino"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="@id/tvOrigen"
+            app:layout_constraintStart_toStartOf="@id/textoEquipo"/>
+        <TextView
+            android:id="@+id/textoEquipo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/equipo"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            android:textStyle="bold"
+            android:layout_marginLeft="@dimen/dp35"
+            app:layout_constraintTop_toTopOf="@id/textoMatricula"
+            app:layout_constraintStart_toEndOf="@id/tvtMatricula"/>
+
+
+        <TextView
+            android:id="@+id/tvtMatricula"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="XADGBD"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            android:textStyle="bold"
+            android:paddingLeft="@dimen/common_padding_min"
+            app:layout_constraintStart_toEndOf="@id/textoMatricula"
+            app:layout_constraintTop_toTopOf="@id/textoMatricula"/>
+
+        <TextView
+            android:id="@+id/tvDestino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            android:textStyle="bold"
+            android:text="CDG"
+            android:paddingLeft="@dimen/common_padding_min"
+            app:layout_constraintStart_toEndOf="@id/textoDestino"
+            app:layout_constraintTop_toTopOf="@id/textoDestino"/>
+        <TextView
+            android:id="@+id/tvEquipo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            android:textStyle="bold"
+            android:text="B737-800"
+            android:paddingLeft="@dimen/common_padding_min"
+            app:layout_constraintStart_toEndOf="@id/textoEquipo"
+            app:layout_constraintTop_toTopOf="@id/textoEquipo"/>
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/cbBorrarPendMO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/ic_delete"
+            android:buttonTint="@color/color_rojo_carmin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvtextFechaVuelo"
+            app:layout_constraintStart_toEndOf="@id/tvtextFechaVuelo"/>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

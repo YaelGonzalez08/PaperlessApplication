@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_inspecion_aeronave"
+    app:startDestination="@id/inspecionAeronaveMainFragment">
+
+    <fragment
+        android:id="@+id/inspecionAeronaveMainFragment"
+        android:name="com.aeromexico.aeropuertos.paperlessmobile.inspeccionAeronave.InspecionAeronaveMainFragment"
+        android:label="fragment_inspecion_aeronave_main"
+        tools:layout="@layout/fragment_inspecion_aeronave_main" >
+
+        <argument
+            android:name="vuelo"
+            app:argType="com.aeromexico.aeropuertos.paperlessmobile.webService.Responses.Vuelos" />
+        <action
+            android:id="@+id/action_inspecionAeronaveMainFragment_to_signatureFragment2"
+            app:destination="@id/signatureFragment2" />
+
+        <action
+            android:id="@+id/action_inspecionAeronaveMainFragment_to_buscarVueloFragment"
+            app:destination="@id/buscarVueloFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/signatureFragment2"
+        android:name="com.aeromexico.aeropuertos.paperlessmobile.SilkySignature.SignatureFragment"
+        android:label="signature_fragment"
+        tools:layout="@layout/signature_fragment" />
+
+    <fragment
+        android:id="@+id/buscarVueloFragment"
+        android:name="com.aeromexico.aeropuertos.paperlessmobile.busquedaVuelo.BuscarVueloFragment"
+        android:label="buscar_vuelo"
+        tools:layout="@layout/buscar_vuelo_fragment" />
+
+
+</navigation>

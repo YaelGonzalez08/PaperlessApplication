@@ -1,0 +1,330 @@
+<resources>
+    <string name="app_name" translatable="false">Paperless</string>
+    <string name="login">Ingresar</string>
+    <string name="password">Contraseña</string>
+    <string name="email">Usuario</string>
+    <string name="sufijoEmail">\@aeromexico.com</string>
+    <string name="inspeccion_de_aeronave">Inspección \nde Aeronave</string>
+    <string name="inspeccion_de_aeronave_form">Inspección de Aeronave</string>
+
+    <string name="mensajes_operacionales">Mensajes Operacionales</string>
+    <string name="mensajes_operacionales_menu">Mensajes\nOperacionales</string>
+    <string name="menu">Menú</string>
+
+    <string name="origen">Origen</string>
+    <string name="matricula">Matrícula: </string>
+    <string name="etd" translatable="false">ETD: </string>
+    <string name="destino">Destino</string>
+    <string name="Equipment">Equipo</string>
+    <string name="eta" translatable="false">ETA: </string>
+
+    <string name="numero_de_vuelo">Número de vuelo</string>
+    <string name="fecha_de_vuelo">Fecha de vuelo</string>
+    <string name="ruta">Ruta</string>
+    <string name="selecciona">Selecciona</string>
+    <string name="buscar">Buscar</string>
+    <string name="buscar_un_vuelo">Buscar un vuelo</string>
+
+    <!--   Inspección de aeronave-->
+    <string name="tvConDaño">Con daño</string>
+    <string name="checkRadomo">Radomo</string>
+
+    <string name="tvSeccionCarga">Marco de compartimento</string>
+    <string name="checkCompCargaDelantero">Área compartimento de carga delantero</string>
+    <string name="checkCompCargaTrasero">Área compartimento de carga trasero</string>
+    <string name="checkCompCargaBulk">Área compartimento bulk</string>
+
+    <string name="tvSeccionInterior">Interior</string>
+    <string name="checkCompIntDelantero">Interior de compartimento de carga delantero</string>
+    <string name="checkCompIntTrasero">Interior de compartimento de carga trasero</string>
+    <string name="checkCompIntBulk">Compartimento bulk</string>
+
+    <string name="tvSeccionSemiala">Semiala</string>
+    <string name="checkSemialaIzq">Semiala izquierda</string>
+    <string name="checkSemialaDer">Semiala derecha</string>
+
+    <string name="tvSeccionAreas">Áreas</string>
+    <string name="checkAguaPotable">Área de servicio de agua potable</string>
+    <string name="checkAguaNegra">Área de servicio de agua negra</string>
+
+    <string name="checkPuertaPrincipal">Área puerta principal</string>
+    <string name="checkServicioTrasera">Área de servicio trasera</string>
+    <string name="tvSeccioncompartimentos">Compartimentos</string>
+    <string name="checkSepDosIn">¿La estiba excede las 2 pulgadas de separación con el techo del compartimento?</string>
+    <string name="checkColocacionRedes">Se verificó la colocación de redes y/o seguros en compartimentos</string>
+
+    <string name="hintNotaDaño">Descripción del daño</string>
+    <string name="btnTomarFoto">Agregar foto  </string>
+    <string name="btnReintentarFoto">Reintentar foto  </string>
+    <string name="msg_exito_inspeccion_aeronave">El reporte de inspección de aeronave se ha enviado de forma exitosa</string>
+    <string name="exito">Éxito</string>
+
+
+    <string name="parametros">Parámetros</string>
+    <string name="requerido">Requerido</string>
+    <string name="pendientes">Pendientes</string>
+    <string name="label_iniciar_sesion">Iniciar sesión</string>
+    <string name="label_olvidaste_tu_contrasena">¿Olvidaste tu contraseña?</string>
+    <string name="error_campo_invalido">Campo Inválido</string>
+    <string name="informacion_de_vuelo">Información de vuelo</string>
+
+    <string name="inspeccion_de_equipo">Checklist\nde equipo</string>
+    <string name="lectura_de_credenciales">Lectura de credenciales</string>
+    <string name="operador">Operador</string>
+    <string name="escanea_c_digo_de_barras_credencial_de_empleado">Escanea código de barras credencial del empleado</string>
+    <string name="no_de_empleado">No. de empleado</string>
+    <string name="nombre_del_recurso_autom_tico">Nombre del recurso (automático)</string>
+    <string name="txt_supervisor">Supervisor</string>
+    <string name="escanea_c_digo_qr_del_equipo">Escanea código QR del equipo</string>
+    <string name="tittle_checklist_diario">Checklist equipo</string>
+    <string name="text_tipo">Tipo:</string>
+    <string name="text_no_econ_mico">No. Económico:</string>
+    <string name="text_estaci_n">Estación</string>
+    <string name="observaciones">Observaciones</string>
+    <string name="foto">Foto</string>
+    <string name="n_a" translatable="false">N/A</string>
+    <string name="mal">Mal</string>
+    <string name="bien">Bien</string>
+    <string name="regresar">Regresar</string>
+    <string name="continuar">Continuar</string>
+    <string name="verificaci_n">Verificación</string>
+    <string name="estado">Estado</string>
+    <!-- AppInformacionFragment -->
+    <string name="informacion">Información</string>
+    <string name="icon_aeromexico">Logo Aeromexico</string>
+    <string name="log_out">Cerrar sesión</string>
+    <string name="empleado_incorrecto">Empleado incorrecto</string>
+    <string name="reintentar_firma">Reintentar firma</string>
+
+    <string name="credenciales">Credenciales</string>
+    <string name="n_mero_de_empleado_operador">No. empleado: </string>
+    <string name="nombre_del_operador">Nombre: </string>
+    <string name="n_mero_de_empleado_supervisor">No. empleado: </string>
+    <string name="nombre_del_supervisor">Nombre: </string>
+    <string name="message_reporte_exitoso">El checklist de equipo diario se ha enviado de forma exitosa.</string>
+    <string name="toolbar_title_first_flight">Primer vuelo</string>
+    <string name="check_plane_firts_flying_day">Primer vuelo del día</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="manual_flight">Vuelo Manual</string>
+    <string name="espere">Espere un momento</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="cerrar">Cerrar</string>
+    <string name="no_de_empleado_del_oficial_de_rampa">No. de empleado del Oficial de rampa</string>
+    <string name="nombre_del_oficial_de_rampa">Nombre del oficial de rampa</string>
+    <string name="buscar_empleado">Buscar empleado</string>
+    <string name="firmar">Firmar</string>
+    <string name="no_de_empleado_del_oficial_de_despacho">No. de empleado del Oficial de Despacho</string>
+    <string name="nombre_del_oficial_de_despacho">Nombre del oficial de despacho</string>
+    <string name="remarks" translatable="false">Remarks</string>
+    <string name="enviar">Enviar</string>
+    <string name="company">Compañia</string>
+    <string name="flight">Vuelo:</string>
+    <string name="select_company"><i>---</i></string>
+    <string name="cargando">Cargando</string>
+    <string name="el_mensaje_ya_ha_sido_firmado">El mensaje ya ha sido firmado</string>
+    <string name="tvSeccionOtros">Adicionales</string>
+    <string name="checkOtros">Otros</string>
+    <string name="hintNombreOtro">Área que presenta el daño</string>
+    <string name="cancel">Cancelar</string>
+    <string name="busqueda_mnual">Busqueda manual</string>
+    <string name="a_cabina_de_pilotos">Cabina de Pilotos</string>
+    <string name="bien_mal">(Bien/Mal)</string>
+    <string name="_1_piso_y_techo">1. Piso y techo</string>
+    <string name="_2_debajo_de_asientos_de_pilotos">2. Debajo de asientos de Pilotos</string>
+    <string name="_3_alojamientos_que_no_est_n_sellados">3. Alojamientos que no estén sellados</string>
+    <string name="_4_repisa_antideslumbrante">4. Repisa antideslumbrante</string>
+    <string name="consentimiento">Consentimiento</string>
+    <string name="dsicrepacias_detectadas">Discrepancias detectadas</string>
+    <string name="discrepacias_detectadas_aqui">Discrepancias detectadas aqui</string>
+    <string name="nombre_del_oficial_de_operaciones">Nombre del oficial de operaciones</string>
+    <string name="dialog_mal_selected">"Acciones para seguir en caso de identificar objetos sospechosos:
+        \n1. No tocarlo.\n2. Recordar las características del objeto.\n3. Dejar una marca en el lugar donde se encontró el objeto."</string>
+    <string name="primer_vuelo">Primer Vuelo</string>
+    <string name="borrar_pendiente_pregunta">¿Borrar pendiente?</string>
+    <string name="enviar_pendiente_pregunta">¿Enviar pendiente?</string>
+    <string name="error_al_enviar_a_la_web">Error al enviar a la web</string>
+    <string name="el_detalle_del_mensaje_se_ha_guardado_para_su_envio_posterior">El detalle del mensaje se ha guardado para su envío posterior</string>
+    <string name="mensaje_enviado">Mensaje Enviado</string>
+    <string name="el_mensaje_se_envio_con_exito">El mensaje se envió con éxito</string>
+    <string-array name="modulosArray">
+        <item>Mensajes Operacionales</item>
+        <item>Inspección de Aeronave</item>
+        <item>Primer Vuelo</item>
+        <item>Checklist diario</item>
+        <item>Deshielo</item>
+        <item>Carga Combustible</item>
+        <item>Notoc</item>
+    </string-array>
+    <string name="_1_puertas">1. Puertas</string>
+    <string name="_2_piso_y_techo">2. Piso y techo</string>
+    <string name="_3_bolsas_de_respaldos_y_debajo_de_n_asientosd_de_pasajeros">3. Bolsas de respaldos y debajo de\nasientos de pasajeros</string>
+    <string name="_4_chaleco_salvavidas">4. Chaleco salvavidas</string>
+    <string name="nombre_del_piloto">Nombre del piloto</string>
+    <string name="discrepancias_detectadas">Discrepancias detectadas</string>
+    <string name="discrepancias_detetctadas">Discrepancias detectadas</string>
+    <string name="b_cabina_de_pasajeros">Cabina de pasajeros</string>
+    <string name="_5_alojamientos_superiores_de_equipajes">5. Alojamientos superiores de equipajes</string>
+    <string name="c_cocinas">Cocinas</string>
+    <string name="d_ba_os">Baños</string>
+    <string name="nombre_del_sobrecargo">No. de empleado Sobrecargo</string>
+    <string name="folio">Folio:</string>
+    <string name="firma_requerida">Firma requerida</string>
+    <string name="empleado_requerido">Empleado requerido</string>
+    <string name="empleado_rampa_requerido">Empleado rampa requerido</string>
+    <string name="firma_despacho_requerida">Firma Despacho requerida</string>
+    <string name="firma_rampa_requerida">Firma rampa requerida</string>
+    <string name="empleado_despacho_requerido">Empleado despacho requerido</string>
+    <string name="selecciona_un_mensaje_valido">Selecciona un mensaje valido</string>
+    <string name="introducir_remarks">Introducir remarks</string>
+    <string name="error_conexion">Error Revisa tu conexion!</string>
+    <string name="fecha_de_revision">Fecha de revision:</string>
+    <string name="titulo_lista_equipo_duario_pendiente_tab">Lista de Checks de Equipo diario Pendientes por subir</string>
+    <string name="buscando_empleado">Buscando empleado</string>
+    <string name="equipo">Equipo: </string>
+    <string name="consultar">Consultar</string>
+    <string name="compartimentos_de_carga">Compartimentos de carga</string>
+    <string name="alojamientos_que_no_estan_sellados">2. Alojamientos que no están sellados</string>
+    <string name="bolsa_dearpel_y_de_comail_comat">3. Bolsa de ARPEL y de COMAIL/COMAT</string>
+    <string name="f_areas_externas">Áreas externas</string>
+    <string name="fosos_del_tren_de_aterrisaje_de_nariz_y_nprincipal">1. Fosos del tren de aterrizaje de nariz y principal</string>
+    <string name="_2_tomas_de_estatica_tubos_pitos_puerto_nde_ventilaci_n_antenas">2. Tomas de estática, tubos pitot, puerto de ventilación y antenas</string>
+    <string name="_3_tableros_de_servico">3. Tableros de servico de agua potable, aguas negras, recarga de combustible y compartimentos electrónicos.</string>
+    <string name="_4_botes_de_basura_y_su_alojamiento">4. Botes de basura y su alojamiento</string>
+
+    <string name="pendientes_para_enviar">Pendientes para enviar</string>
+    <string name="no_hay_pendientes_de_mensajes_operacionales">No hay pendientes de Mensajes Operacioales.</string>
+    <string name="error_al_buscar_vuelo">Error al buscar vuelo</string>
+    <string name="verifica_la_informacion_proporcionada_o_intenta_con_otro_vuelo">Verifica la información proporcionada o intenta con otro vuelo</string>
+    <string name="buscando">Buscando....</string>
+    <string name="numero_de_empleado">No. de empleado Piloto</string>
+    <string name="numero_empleado">No. de empleado O.O./AAR</string>
+    <string name="no_hay_mensajes_disponibles">No hay mensajes disponibles</string>
+    <string name="verifique_su_conexion_e_intente_de_nuevo">Verifique su conexión e intente de nuevo</string>
+    <string name="cambio_idioma_label">Cambio de Idioma</string>
+    <string name="question_cambio_idioma">Para Aplicar los cambios es necesario Reiniciar la app, pulsa Aceptar para reiniciar ahora</string>
+
+    <string name="confirmar">Confirmar</string>
+    <string name="find_pilot">Buscar piloto</string>
+    <string name="guardar_formulario">Guardar</string>
+
+    <string name="numero_de_empleado_requerido">Número de empelado requerido</string>
+
+    <string name="confirma_envio_inpec_aeronave">Este reporte será generado y enviado.</string>
+    <string name="msg_error_inspec_aeronave">"El reporte ha sido guardado localmente y podrá ser enviado en otro momento."</string>
+    <string name="msg_error_inspec_aeronave_pendiente">Ha ocurrido un error al enviar el reporte.</string>
+    <string name="msg_exito_inspeccion_aeronave_pendiente">El reporta ha sido creado exitosamente con el folio #</string>
+    <string name="siguiente">Siguiente</string>
+    <string name="detalles_inspec_aeronave_faltantes">Por favor ingresa los detalles del daño y la foto de evidencia para todos los elementos con daño.</string>
+    <string name="foto_marco_comp_faltante">Algunos elementos requieren una foto de evidencia de forma obligatoria.</string>
+    <string name="descripcion_pernocta_inspec_aeronave">Activar si se trata de un vuelo de pernocta</string>
+    <string name="pernocta">Pernocta</string>
+    <string name="instrucciones_inspec_aeronave">Indica si los siguientes elementos presentan o no daño.</string>
+    <string name="txt_ingles">Inglés</string>
+    <string name="txt_spanish">Español</string>
+    <string name="revision_equipo">Checklist de equipo</string>
+    <string name="label_si">SI</string>
+    <string name="label_no">No</string>
+    <string name="revisa_todos_los_estados">SELECCIONA ESTATUS: </string>
+    <string name="no_motorizado">No Motorizado</string>
+    <string name="error_checlist_to_bd">Se guardara LOCALMENTE el Checklist, ¡Recuerda despues subirlo manualmente desde la pantalla de la campanita!</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="no_pendientes_check_list_enviar">No hay Check List de equipo Diario Pendientes a Enviar</string>
+    <string name="ingresa_no_emp_y_firma">Ingresar número de empleado y firma.</string>
+    <string name="ingresa_nombre_emp_y_firma">Ingresa número de empleado, nombre completo y firma.</string>
+    <string name="oficial_de_rampa">Oficial de Rampa</string>
+    <string name="empleado_externo">Empleado externo</string>
+    <string name="oficial_de_despacho">Oficial de Despacho</string>
+    <string name="reintentar">Reintentar</string>
+    <string name="txt_deshielo">Deshielo</string>
+    <string name="interno">Empleado externo</string>
+    <string name="nombre_oficial">Nombre O.O./AAR</string>
+    <string name="tipo_de_fluido">Tipo de fluido</string>
+    <string name="mezcla_de_fluido">Mezcla de fluido</string>
+    <string name="mezcla_de_fluido_percent">% Mezcla de fluido</string>
+    <string name="hora_de_comienzo">Hora de comienzo</string>
+    <string name="hora_de_termino">Hora de termino</string>
+    <string name="temperatura_ambiente">Temperatura ambiente</string>
+    <string name="temperatura_congelamiento_de_fluido">Temperatura congelamiento de fluido</string>
+    <string name="holdover_time">Holdover time</string>
+    <string name="deshielo_manual">Deshielo Manual</string>
+    <string name="hielo">Hielo</string>
+    <string name="lluvia_sobre_enfriada">Lluvia sobre enfriada</string>
+    <string name="nevada_fuerte">Nevada fuerte</string>
+    <string name="nevada_ligera">Nevada ligera</string>
+    <string name="congelamiento_escarcha_sin_precipitacion">Congelamiento / Escarcha (sin precipitacion)</string>
+    <string name="nota_es_responsabilidad_final_del_comandante_de_la_aeronave_verificar_las_semialas_superficies_de_control_y_fuselaje_para_determinar_que_el_avi_n_haya_sido_descontaminado_de_nieve_hielo_o_agua_nieve_satisfactoriamente_asimismo_es_su_responsabilidad_calcular_el_holdover_time">NOTA: Es responsabilidad final del comandante de la Aeronave verificar las semialas, superficies de control y fuselaje para determinar que el avión haya sido descontaminado de nieve, hielo o agua-nieve satisfactoriamente. Asimismo es su responsabilidad calcular el Holdover Time.</string>
+    <string name="nombre_de_capitan">Nombre de Capitan</string>
+    <string name="ingresar_n_mero_de_empleado">Ingresar número de empleado</string>
+    <string name="nombre_del_aplicador">Nombre del Aplicador</string>
+    <string name="resultados_de_la_busqueda">Resultados de la búsqueda:</string>
+    <string name="ingresa_parametros_de_busqueda">Ingresa parámetros de búsqueda:</string>
+    <string name="ruta_card">Ruta:</string>
+    <string name="editar">Editar</string>
+    <string name="sesion_por_expirar">SESIÓN POR EXPIRAR</string>
+    <string name="desea_continuar_con_la_sesion_activa">¿Desea continuar con la sesión activa?</string>
+    <string name="sesion_expirada">Sesión Expirada</string>
+    <string name="tiempo_agotado_debes_volver_a_iniciar_sesion">Tiempo Agotado debes volver a iniciar sesión</string>
+    <string name="text_finalizar_btn">Finalizar</string>
+    <string name="fecha_de_vencimiento">Fecha de Vencimiento</string>
+    <string name="tipo_cabina">Tipo de cabina</string>
+    <string name="no_empleado">No. de empleado</string>
+    <string name="no_economico">No. económico</string>
+    <string name="nombre_del_empleado">Nombre del empleado</string>
+    <string name="presenta_danios">¿Presenta daños?</string>
+    <string name="no">No</string>
+    <string name="si">Si</string>
+    <string name="check_inspec_aeronave_faltante">Por favor especifica si todos los elementos presentan o no daño.</string>
+    <string name="agregar">Agregar</string>
+    <!-- String for Orden de carga de combustible -->
+    <string name="orden_carga_combustible">Orden de carga</string>
+    <string name="combustible">Combustible</string>
+    <string name="temperatura">Temperatura</string>
+    <string name="densidad">Densidad</string>
+    <string name="combustible_antes_de_cargar">Combustible antes de cargar</string>
+    <string name="tanque">Tanque</string>
+    <string name="combustible_requerido">Combustible</string>
+    <string name="combustible_final">Combustible Final</string>
+    <string name="informacion_de_combustible">Información de combustible</string>
+    <string name="consentimiento_combustible">     Consentimiento</string>
+    <string name="mec_nico">Mecánico</string>
+    <string name="selecciona_una_opci_n">Selecciona una opción</string>
+    <string name="hora_llegada_mecanico">Llegada</string>
+    <string name="menu_principal">Menu Principal</string>
+    <string name="metar">Metar</string>
+    <string name="orden_de_carga_de_combustible">Orden de carga \nde combustible</string>
+    <string name="search_list">Searchlist</string>
+    <string name="tool_bar_title_search_list">Search list</string>
+    <string name="route_fligth">"%1$s-%2$s"</string>
+    <string name="fosos_de_los_trenes_de_aterrizaje">Fosos de los trenes de aterrizaje</string>
+    <string name="areas_visibles">Áreas visibles</string>
+    <string name="registros_cavidades_exteriores">Registros, cavidades exteriores</string>
+    <string name="compartimentos_de_carga_por_objetos_extra_os_antes_de_estibar_carga">Compartimentos de carga por objetos extraños, antes de estibar carga</string>
+    <string name="tomas_de_aire_y_ductos_de_gases_de_escape_de_los_motores">Tomas de aire y ductos de gases de escape de los motores</string>
+    <string name="tomas_de_est_tica_tubos_pilot_puertos_de_ventilaci_n_y_otrtas_cavidades">Tomas de estática, tubos pitot, puertos de ventilación y otras cavidades</string>
+    <string name="selecciona_una_fuente">Selecciona una fuente</string>
+    <string name="tomar_fotografia">Tomar Fotografia</string>
+    <string name="seleccionar_de_galeria">Seleccionar de Galeria</string>
+    <string name="imagen">Imágen #</string>
+    <string name="warning_llegada">Si ya existe una inspección de \'Llegada\' para este vuelo, los datos serán reemplazados.</string>
+    <string name="warning_salida">Si ya existe una inspección de \'Salida\' para este vuelo, los datos serán reemplazados.</string>
+    <string name="inspec_aeronave_foto_mandatoria">* La foto de evidencia es mandatoria para este elemento.</string>
+    <string name="error_llegada_salida">Por favor indica si se trata de un vuelo de llegada o salida.</string>
+    <string name="salida">Salida</string>
+    <string name="llegada">Llegada</string>
+    <string name="llegada_o_salida">¿Llegada o salida?</string>
+    <string name="tipo_de_vuelo">Tipo de vuelo</string>
+    <string name="ver_foto">Ver foto</string>
+    <string name="msj_selecciona_hora">Selecciona una hora</string>
+    <string name="ups">¡Ups! Ocurrio Un ¡Error!</string>
+    <string name="no_hay_pendientes_notoc">No hay pendientes de Notoc.</string>
+    <string name="manifiesto_carga">Manifiesto de Carga</string>
+    <string name="no_hay_informacion_disponible">No hay información disponible</string>
+    <string name="select_domian">Selecciona un dominio</string>
+    <string name="field">Selecciona un dominio valido</string>
+    <string name="intente_de_nuevo_mas_tarde">Intente de nuevo más tarde</string>
+    <string name="introduce_una_cantidad">Introduce una cantidad</string>
+    <string-array name="extrafuelUno">
+        <item>"Solicitud del capitan por"</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="@dimen/dimen_4"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:padding="@dimen/dimen_4">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contenedorHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="@dimen/dimen_8">
+            <TextView
+                android:id="@+id/tituloHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Número de guía aérea:"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:textSize="@dimen/text_14"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <TextView
+                android:id="@+id/tvGuiaAereaTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_2"
+                android:text="000000"
+                android:textAlignment="center"
+                android:textColor="@color/primaryLightColor"
+                android:textSize="@dimen/text_14"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                app:layout_constraintStart_toEndOf="@id/tituloHeader"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <TextView
+                android:id="@+id/btn_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_arrow_down"
+                android:backgroundTint="@color/primaryLightColor"
+                android:padding="4dp"
+                android:textSize="@dimen/text_12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/contenedorDown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/operadorHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mercancías Peligrosas"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                    android:textSize="@dimen/text_16"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+                <TextView
+                    android:id="@+id/btn_down_in"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_arrow_down"
+                    android:backgroundTint="@color/primaryLightColor"
+                    android:padding="4dp"
+                    android:textSize="@dimen/text_12"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_4"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_8">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Número de guía aérea:"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                    android:textSize="@dimen/text_14"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tvGuiaAerea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_2"
+                    android:text="000000"
+                    android:textAlignment="center"
+                    android:textColor="@color/primaryLightColor"
+                    android:textSize="@dimen/text_14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_4"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_8">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nombre apropiado\n de expedición:"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                    android:textSize="@dimen/text_14"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tvNombreApropiadoExpedicion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_2"
+                    android:text="000000"
+                    android:textAlignment="center"
+                    android:textColor="@color/primaryLightColor"
+                    android:textSize="@dimen/text_14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_4"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_8">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Clase o división:"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                    android:textSize="@dimen/text_14"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tvClaseODivision"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_2"
+                    android:text="000000"
+                    android:textAlignment="center"
+                    android:textColor="@color/primaryLightColor"
+                    android:textSize="@dimen/text_14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_4"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_8">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ONU o ID:"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                    android:textSize="@dimen/text_14"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tvOnuId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_2"
+                    android:text="000000"
+                    android:textAlignment="center"
+                    android:textColor="@color/primaryLightColor"
+                    android:textSize="@dimen/text_14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_4"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_8">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Riesgo secundario:"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                    android:textSize="@dimen/text_14"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tvRiesgoSecundario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_2"
+                    android:text="000000"
+                    android:textAlignment="center"
+                    android:textColor="@color/primaryLightColor"
+                    android:textSize="@dimen/text_14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_4"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_8">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cantidad de bultos:"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                    android:textSize="@dimen/text_14"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tvCantidadBultos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_2"
+                    android:text="000000"
+                    android:textAlignment="center"
+                    android:textColor="@color/primaryLightColor"
+                    android:textSize="@dimen/text_14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_4"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_8">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Grupo de embalaje:"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                    android:textSize="@dimen/text_14"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tvGrupoEmbalaje"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_2"
+                    android:text="000000"
+                    android:textAlignment="center"
+                    android:textColor="@color/primaryLightColor"
+                    android:textSize="@dimen/text_14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_4"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_8">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SHC:"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                    android:textSize="@dimen/text_14"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tvCodigo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_2"
+
+                    android:text="000000"
+                    android:textAlignment="center"
+                    android:textColor="@color/primaryLightColor"
+                    android:textSize="@dimen/text_14" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_4"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_8">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CRE:"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                    android:textSize="@dimen/text_14"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tvCRE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_2"
+
+                    android:text="000000"
+                    android:textAlignment="center"
+                    android:textColor="@color/primaryLightColor"
+                    android:textSize="@dimen/text_14" />
+            </LinearLayout>
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_4"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_8">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SHC:"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                    android:textSize="@dimen/text_14"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tvSHC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_2"
+
+                    android:text="000000"
+                    android:textAlignment="center"
+                    android:textColor="@color/primaryLightColor"
+                    android:textSize="@dimen/text_14" />
+            </LinearLayout>-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_16"
+                android:text="Radiactivos"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:textSize="@dimen/text_16"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_4"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_8">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cantidad neta o Índice de transporte:"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                    android:textSize="@dimen/text_14"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tvCantidadNetaIndiceTransporte"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_2"
+                    android:text="000000"
+                    android:textAlignment="center"
+                    android:textColor="@color/primaryLightColor"
+                    android:textSize="@dimen/text_14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_4"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_8">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Categoría:"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                    android:textSize="@dimen/text_14"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tvCategoria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_2"
+                    android:text="000000"
+                    android:textAlignment="center"
+                    android:textColor="@color/primaryLightColor"
+                    android:textSize="@dimen/text_14" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_16"
+                android:text="Estibado"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:textSize="@dimen/text_16"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_4"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_8">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ID del ULD:"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                    android:textSize="@dimen/text_14"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tvIdUld"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_2"
+                    android:text="000000"
+                    android:textAlignment="center"
+                    android:textColor="@color/primaryLightColor"
+                    android:textSize="@dimen/text_14" />
+            </LinearLayout>
+
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_4"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_8">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Posición:"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                    android:textSize="@dimen/text_14"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_2"
+                    android:text="000000"
+                    android:textAlignment="center"
+                    android:textColor="@color/primaryLightColor"
+                    android:textSize="@dimen/text_14" />
+
+            </LinearLayout>-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/contenerdorPosicion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_4"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_8">
+
+                <TextView
+                    android:id="@+id/tvPosicion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Posición:"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                    android:textSize="@dimen/text_14"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <!--<TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_2"
+                    android:text="000000"
+                    android:textAlignment="center"
+                    android:textColor="@color/primaryLightColor"
+                    android:textSize="@dimen/text_14" />-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilPosicion"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/selecciona"
+                    android:layout_marginStart="@dimen/common_padding_default"
+                    app:hintTextAppearance="@style/TextAppearance.AppCompat.Body2"
+                    app:layout_constraintStart_toEndOf="@id/tvPosicion"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/actvPosicion"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="none"
+                        android:textAppearance="?attr/textAppearanceListItem" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_4"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_8">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No existe evidencia de que algún paquete dañado o con fuga conteniendo mercancías peligrosas ha sido abordado en la aeronave:"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                    android:textSize="@dimen/text_14"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+        <!--<TextView
+            android:id="@+id/tvNumGuiaAerea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Número de Guía:"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+            android:textSize="@dimen/text_14"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/numGuia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_2"
+            android:text="000000"
+            android:textAlignment="center"
+            android:textColor="@color/primaryLightColor"
+            android:textSize="@dimen/text_14"
+            app:layout_constraintStart_toEndOf="@id/tvNumGuiaAerea"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/btnVer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_eye"
+            android:backgroundTint="@color/primaryLightColor"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/numGuia"
+            />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

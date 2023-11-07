@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_opt_bdm"
+    app:startDestination="@id/optBdmFragment2">
+
+    <fragment
+        android:id="@+id/optBdmFragment2"
+        android:name="com.aeromexico.aeropuertos.paperlessmobile.optBdm.OptBdmFragment"
+        android:label="opt_bdm_fragment"
+        tools:layout="@layout/opt_bdm_fragment">
+        <argument
+            android:name="vuelo"
+            app:argType="com.aeromexico.aeropuertos.paperlessmobile.webService.Responses.Vuelos" />
+    </fragment>
+</navigation>

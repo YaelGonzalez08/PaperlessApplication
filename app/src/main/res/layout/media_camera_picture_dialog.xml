@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/close_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/backgroud_outline"
+        android:src="@drawable/ic_baseline_close_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/color_rojo_carmin" />
+
+    <TextView
+        android:id="@+id/btn_take_camera"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_4"
+        android:layout_marginTop="@dimen/dimen_8"
+        android:background="@drawable/button_consultar"
+        android:clickable="true"
+        android:drawableStart="@drawable/ic_round_camera"
+        android:drawableTint="@color/white"
+        android:elevation="@dimen/dimen_8"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/tomar_fotografia"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/close_dialog" />
+
+    <TextView
+        android:id="@+id/btn_take_galeria"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_4"
+        android:layout_marginTop="@dimen/dimen_8"
+        android:background="@drawable/button_consultar"
+        android:clickable="true"
+        android:drawableStart="@drawable/ic_baseline_attach_file_24"
+        android:drawableTint="@color/white"
+        android:elevation="@dimen/dimen_8"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/seleccionar_de_galeria"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_take_camera" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/contend_photo"
+        android:layout_width="200dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="@dimen/dimen_8"
+
+        android:background="@drawable/border_for_image_view_signature"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_take_galeria">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_2"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btn_Aceptar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_8"
+        android:text="@string/aceptar"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contend_photo" />
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/selecciona_una_fuente"
+        app:layout_constraintStart_toStartOf="@+id/btn_take_camera"
+        app:layout_constraintTop_toTopOf="@+id/close_dialog" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

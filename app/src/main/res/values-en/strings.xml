@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Comunes Dialogos alertas mensajes -->
+    <string name="confirmar">Confirm</string>
+    <string name="aceptar">Accept</string>
+    <string name="cerrar">Close</string>
+    <string name="error_campo_invalido">Invalid field</string>
+    <string name="error_conexion">Error! Please Check your connection!</string>
+    <string name="espere">Wait a moment!</string>
+
+    <!-- Pantalla cerrar Session -->
+    <string name="cambio_idioma_label">Change language</string>
+    <string name="question_cambio_idioma">To apply changes, restarting the app, if you want aplly now, press acept</string>
+    <string name="log_out">Log out</string>
+    <string name="txt_ingles">English</string>
+    <string name="txt_spanish">Spanish</string>
+
+    <!-- Check List Equipo Diario -->
+    <string name="inspeccion_de_equipo">Equipment inspection</string>
+    <string name="lectura_de_credenciales">Scan credentials</string>
+    <string name="operador">Operator</string>
+    <string name="escanea_c_digo_de_barras_credencial_de_empleado">Scan bar code</string>
+    <string name="no_de_empleado">Employee number</string>
+    <string name="nombre_del_recurso_autom_tico">name of resource (automatic)</string>
+    <string name="txt_supervisor">Supervisor</string>
+    <string name="escanea_c_digo_qr_del_equipo">Scan Equipment QR  </string>
+    <string name="tittle_checklist_diario">Checklist daily equipment inspection</string>
+    <string name="text_tipo">Type:</string>
+    <string name="text_no_econ_mico">Econonomic number:</string>
+    <string name="text_estaci_n">Estation</string>
+    <string name="observaciones">Observations</string>
+    <string name="foto">Photo</string>
+    <string name="mal">Bad</string>
+    <string name="bien">Right</string>
+    <string name="regresar">Back</string>
+    <string name="continuar">Continue</string>
+    <string name="verificaci_n">Verification</string>
+    <string name="estado">State</string>
+    <string name="Equipment">Equipment:</string>
+    <string name="credenciales">Authorization by</string>
+    <string name="n_mero_de_empleado_operador">Operator employee number: </string>
+    <string name="nombre_del_operador">Operator name: </string>
+    <string name="n_mero_de_empleado_supervisor">Supervisor employee number: </string>
+    <string name="nombre_del_supervisor">Supervisor name: </string>
+    <string name="revision_equipo">Equipment inspection</string>
+    <string name="consentimiento">Consent</string>
+    <string name="label_no">No</string>
+    <string name="label_si">Yes</string>
+    <string name="revisa_todos_los_estados">All states is requiered</string>
+    <string name="no_motorizado">No Motorizado</string>
+    <string name="error_checlist_to_bd">The Checklist will be saved LOCALLY, remember later to upload it manually from the pending screen.</string>
+    <string name="message_reporte_exitoso">The equipment inspection report has been sent successfully</string>
+
+    <!-- Login -->
+    <string name="label_iniciar_sesion">Welcome</string>
+    <string name="login">Log in</string>
+    <string name="password">Password</string>
+    <string name="email">User</string>
+    <!-- item mensaje exitoso enviado-->
+    <string name="folio">Serial Number#:</string>
+
+    <!-- Pendiente Tab Equipo Diario  -->
+    <string name="eliminar">Delete</string>
+    <string name="enviar">Send</string>
+    <string name="no_pendientes_check_list_enviar">No hay Check List de equipo Diario Pendientes a Enviar</string>
+
+    <string name="sufijoEmail">\@aeromexico.com</string>
+    <string name="inspeccion_de_aeronave">Aircraft Inspection</string>
+    <string name="inspeccion_de_aeronave_form">Inspección de Aeronave</string>
+    <string name="mensajes_operacionales">Operational Messages</string>
+    <string name="menu">Menu</string>
+    <string name="origen">Departure</string>
+    <string name="destino">Arrival</string>
+    <string name="matricula">Registration: </string>
+    <string name="equipo">Aircraft type: </string>
+    <string name="numero_de_vuelo">Flight Number</string>
+    <string name="fecha_de_vuelo">Flight Date</string>
+    <string name="ruta">Path:</string>
+    <string name="selecciona">Select</string>
+    <string name="buscar">Search</string>
+    <string name="buscar_un_vuelo">Search Flight</string>
+    <string name="checkSemialaIzq">Left</string>
+    <string name="checkSemialaDer">Right</string>
+    <string name="btnTomarFoto">Take picture</string>
+    <string name="parametros">Parameters</string>
+    <string name="requerido">Required</string>
+    <string name="label_olvidaste_tu_contrasena">Forgot your password?</string>
+    <string name="informacion_de_vuelo">Flight Information</string>
+    <string name="informacion">Information</string>
+    <string name="empleado_incorrecto">Wrong Employee</string>
+    <string name="exito">Success</string>
+    <string name="manual_flight">Manual Flight</string>
+    <string name="flight">Flight:</string>
+    <string name="cargando">Loading</string>
+    <string name="cancel">Cancel</string>
+    <string name="busqueda_mnual">Manual Search</string>
+    <string name="mensaje_enviado">Message sent</string>
+    <string name="el_mensaje_se_envio_con_exito">The message has been successfully sent</string>
+    <string name="selecciona_un_mensaje_valido">Select a valid message</string>
+    <string name="introducir_remarks">Enter remarks</string>
+    <string name="buscando_empleado">Searching employee</string>
+    <string name="find_pilot">Search pilot</string>
+    <string name="guardar_formulario">Save</string>
+    <string name="numero_de_empleado_requerido">Employee number is required</string>
+    <string name="siguiente">Next</string>
+    <string name="buscando">Searching...</string>
+    <string name="resultados_de_la_busqueda">Search results:</string>
+    <string name="ingresa_parametros_de_busqueda">Enter search parameters:</string>
+    <string name="ruta_card">"Path: "</string>
+    <string name="presenta_danios">¿Presenta daños?</string>
+    <string name="check_inspec_aeronave_faltante">Por favor especifica si todos los elementos presentan o no daño.</string>
+    <string name="agregar">Agregar</string>
+    <string name="selecciona_una_fuente">Choose an option</string>
+    <string name="tomar_fotografia">Take a Camera</string>
+    <string name="seleccionar_de_galeria">Choose from File</string>
+    <string name="imagen">Imágen #</string>
+    <string name="warning_llegada">Si ya existe una inspección de \'Llegada\' para este vuelo, los datos serán reemplazados.</string>
+    <string name="warning_salida">Si ya existe una inspección de \'Salida\' para este vuelo, los datos serán reemplazados.</string>
+    <string name="inspec_aeronave_foto_mandatoria">* La foto de evidencia es mandatoria para este elemento.</string>
+    <string name="error_llegada_salida">Por favor indica si se trata de un vuelo de llegada o salida.</string>
+    <string name="llegada">Llegada</string>
+    <string name="llegada_o_salida">¿Llegada o salida?</string>
+    <string name="tipo_de_vuelo">Tipo de vuelo</string>
+    <string name="ver_foto">Ver foto</string>
+    <string name="select_domian">Select a domain</string>
+    <string name="field">Select a valid domain </string>
+
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_manifiesto_carga"
+    app:startDestination="@id/manifiestoCargaFragment2">
+
+    <fragment
+        android:id="@+id/manifiestoCargaFragment2"
+        android:name="com.aeromexico.aeropuertos.paperlessmobile.manifiestoCarga.ManifiestoCargaFragment"
+        android:label="manifiesto_carga_fragment"
+        tools:layout="@layout/manifiesto_carga_fragment" >
+        <argument
+            android:name="vuelo"
+            app:argType="com.aeromexico.aeropuertos.paperlessmobile.webService.Responses.Vuelos" />
+    </fragment>
+</navigation>

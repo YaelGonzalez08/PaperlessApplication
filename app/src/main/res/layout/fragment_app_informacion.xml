@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryColor"
+    tools:context=".home.AppInformacionFragment">
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_aeromexico_logo_svg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/icon_aeromexico" />
+
+    <TextView
+        android:id="@+id/tvInformation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/informacion"
+        android:textAppearance="@style/textViewWhite"
+        app:layout_constraintBottom_toBottomOf="@+id/ivLogo"
+        app:layout_constraintEnd_toEndOf="@+id/ivLogo"
+        app:layout_constraintStart_toStartOf="@+id/ivLogo" />
+
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_30"
+        android:text="@string/app_name"
+        android:textAppearance="@style/textViewWhite"
+        app:layout_constraintEnd_toEndOf="@+id/tvInformation"
+        app:layout_constraintStart_toStartOf="@+id/tvInformation"
+        app:layout_constraintTop_toBottomOf="@+id/tvInformation" />
+
+    <TextView
+        android:id="@+id/tvVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/textViewWhite"
+        app:layout_constraintEnd_toEndOf="@+id/appName"
+        app:layout_constraintStart_toStartOf="@+id/appName"
+        app:layout_constraintTop_toBottomOf="@+id/appName"
+        tools:text="1.0.0"/>
+    <TextView
+        android:id="@+id/tvAmbient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/textViewWhite"
+        app:layout_constraintEnd_toEndOf="@+id/tvVersion"
+        app:layout_constraintStart_toStartOf="@+id/tvVersion"
+        app:layout_constraintTop_toBottomOf="@+id/tvVersion"
+        tools:text="ambiente"/>
+    <TextView
+        android:id="@+id/tvCompilationDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/textViewWhite"
+        app:layout_constraintEnd_toEndOf="@+id/tvAmbient"
+        app:layout_constraintStart_toStartOf="@+id/tvAmbient"
+        app:layout_constraintTop_toBottomOf="@+id/tvAmbient"
+        tools:text="informacion de compilacion" />
+
+    <TextView
+        android:id="@+id/tvSupportInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/textViewWhite"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tvCompilationDate"
+        app:layout_constraintStart_toStartOf="@+id/tvCompilationDate"
+        app:layout_constraintTop_toBottomOf="@+id/tvCompilationDate"
+        tools:text="Informacion de soporte" />
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/textViewWhite"
+        app:layout_constraintEnd_toEndOf="@+id/tvSupportInfo"
+        app:layout_constraintStart_toStartOf="@+id/tvSupportInfo"
+        app:layout_constraintTop_toBottomOf="@+id/tvSupportInfo"
+        tools:text="Mensaje de 4488" />
+
+    <TextView
+        android:id="@+id/tvGroupForTicketText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/textViewWhite"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tvMessage"
+        app:layout_constraintStart_toStartOf="@+id/tvMessage"
+        app:layout_constraintTop_toBottomOf="@+id/tvMessage"
+        tools:text="Grupo para levantar ticket" />
+
+    <TextView
+        android:id="@+id/tvGroupForTicket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/textViewWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvGroupForTicketText"
+        tools:text="grupo" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLogOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/secondaryColor"
+        android:text="@string/log_out"
+        android:textAllCaps="false"
+        android:layout_marginTop="@dimen/margin_30"
+        app:layout_constraintEnd_toEndOf="@+id/tvGroupForTicket"
+        app:layout_constraintStart_toStartOf="@+id/tvGroupForTicket"
+        app:layout_constraintTop_toBottomOf="@+id/tvGroupForTicket" />
+
+    <!--<com.google.android.material.button.MaterialButton
+        android:id="@+id/btnIngles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="@color/secondaryColor"
+        android:text="@string/txt_ingles"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogOut" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnEs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="@color/secondaryColor"
+        android:text="@string/txt_spanish"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="@+id/btnIngles"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnIngles"
+        app:layout_constraintVertical_bias="0.0" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

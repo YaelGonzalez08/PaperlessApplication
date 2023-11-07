@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".optBdm.OptBdmFragment"
+    android:padding="@dimen/common_padding_min">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/include_detalle_vuelo"
+            layout="@layout/detalles_vuelo"
+            />
+        <TextView
+            android:id="@+id/tvOptEdm"
+            style="@style/textViewFormTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_padding_min"
+            android:gravity="center"
+            android:text="OPT/EDM"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/include_detalle_vuelo" />
+
+        <TextView
+            android:id="@+id/tvZFW"
+            style="@style/textViewFormTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:gravity="center"
+            android:text="ZFW:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tvZFWInfo"
+            app:layout_constraintTop_toBottomOf="@id/tvOptEdm" />
+
+        <TextView
+            android:id="@+id/tvZFWInfo"
+            style="@style/textViewFormTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:gravity="center"
+            android:text=""
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvZFW"
+            app:layout_constraintTop_toBottomOf="@id/tvOptEdm" />
+        <TextView
+            android:id="@+id/tvCG"
+            style="@style/textViewFormTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:gravity="center"
+            android:text="CG:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tvZFWInfo"
+            app:layout_constraintTop_toBottomOf="@id/tvZFW" />
+
+        <TextView
+            android:id="@+id/tvCGInfo"
+            style="@style/textViewFormTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:gravity="center"
+            android:text=""
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvZFW"
+            app:layout_constraintTop_toBottomOf="@id/tvZFWInfo" />
+
+        <TextView
+            android:id="@+id/tvFirmado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:gravity="center"
+            android:text="Ya está firmado"
+            android:textColor="@color/color_rojo_carmin"
+            android:textStyle="italic"
+            android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCGInfo"
+            style="@style/TextAppearance.MaterialComponents.Headline5"/>
+        <TextView
+            android:id="@+id/tvNoInfoOpt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:gravity="center"
+            android:text="No hay información"
+            android:textColor="@color/color_rojo_carmin"
+            android:textStyle="italic"
+            android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCGInfo"
+            style="@style/TextAppearance.MaterialComponents.Headline5"/>
+
+        <!--<androidx.core.widget.NestedScrollView
+            android:id="@+id/ns"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginTop="@dimen/common_padding_min"
+            android:padding="@dimen/common_padding_min"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvOptEdm">
+            <TextView
+                android:id="@+id/tvMensaje"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text=""/>
+        </androidx.core.widget.NestedScrollView>-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/moduloFirmaOpt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCGInfo">
+
+
+
+        <TextView
+            android:id="@+id/tvPiloto"
+            style="@style/textViewFormTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:gravity="center"
+            android:text="Piloto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilNumPiloto"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="@dimen/margin_0"
+            android:layout_height="wrap_content"
+            android:hint="@string/numero_de_empleado"
+            android:layout_marginTop="@dimen/dimen_8"
+            app:prefixText="AM"
+            app:layout_constraintEnd_toStartOf="@+id/btnConsultarPiloto"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPiloto"
+            app:startIconDrawable="@drawable/ic_person">
+
+            <AutoCompleteTextView
+                android:id="@+id/tvIdPiloto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:maxLength="10"
+                android:paddingHorizontal="@dimen/dimen_8"
+                android:textSize="@dimen/text_14" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/btnConsultarPiloto"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_40"
+            android:layout_marginStart="@dimen/dimen_8"
+            android:layout_marginTop="@dimen/dimen_8"
+            android:background="@drawable/white_button_outlined"
+            android:drawableTint="@color/primaryColor"
+            android:elevation="@dimen/dimen_16"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:drawableStartCompat="@drawable/ic_search"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tilNumPiloto"
+            app:layout_constraintStart_toEndOf="@id/tilNumPiloto"/>
+
+        <TextView
+            android:id="@+id/tvNombrePiloto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilNumPiloto" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilRemarkPiloto"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/remarks"
+                android:visibility="visible"
+                android:layout_marginTop="@dimen/dimen_16"
+                app:endIconMode="clear_text"
+                app:layout_constraintTop_toBottomOf="@+id/tvNombrePiloto"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etRemarksPilotoValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ .,/-0123456789_:"
+                    android:inputType="textPersonName"
+                    android:paddingHorizontal="@dimen/dimen_8"
+                    android:maxLength="90"
+                    android:textSize="@dimen/text_14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/ivFirmaPilotos"
+            android:layout_width="@dimen/damagePreviewWidth"
+            android:layout_height="@dimen/damagePreviewHeight"
+            android:layout_marginTop="@dimen/text_14"
+            android:background="@drawable/border_for_image_view_signature"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilRemarkPiloto" />
+
+        <TextView
+            android:id="@+id/btnFirmarPiloto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_4"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:background="@drawable/button_consultar"
+            android:clickable="true"
+            android:drawableTint="@color/white"
+            android:elevation="@dimen/dimen_8"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:visibility="gone"
+            app:drawableStartCompat="@drawable/ic_pencil"
+            app:layout_constraintEnd_toEndOf="@+id/ivFirmaPilotos"
+            app:layout_constraintStart_toStartOf="@+id/ivFirmaPilotos"
+            app:layout_constraintTop_toBottomOf="@+id/ivFirmaPilotos" />
+
+        <TextView
+            android:id="@+id/tvPlanificador"
+            style="@style/textViewFormTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:gravity="center"
+            android:text="Planificador de peso"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnFirmarPiloto" />
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/swEmpExterno"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:checked="false"
+            android:text="@string/empleado_externo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPlanificador"/>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilNumSobrecargo"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="@dimen/margin_0"
+            android:layout_height="wrap_content"
+            android:hint="@string/no_de_empleado"
+            android:layout_marginTop="@dimen/dimen_8"
+            app:prefixText="AM"
+            app:layout_constraintEnd_toStartOf="@+id/btnConsultarEmpleado"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/swEmpExterno"
+            app:startIconDrawable="@drawable/ic_person">
+
+            <AutoCompleteTextView
+                android:id="@+id/tvIdSobrecargo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:maxLength="10"
+                android:paddingHorizontal="@dimen/dimen_8"
+                android:textSize="@dimen/text_14" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/btnConsultarEmpleado"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_40"
+            android:layout_marginStart="@dimen/dimen_8"
+            android:layout_marginTop="@dimen/dimen_8"
+            android:background="@drawable/white_button_outlined"
+            android:drawableTint="@color/primaryColor"
+            android:elevation="@dimen/dimen_16"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:drawableStartCompat="@drawable/ic_search"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tilNumSobrecargo"
+            app:layout_constraintStart_toEndOf="@id/tilNumSobrecargo"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilNombreSobrecargoManual"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:hint="@string/nombre_del_empleado"
+            android:visibility="gone"
+            app:startIconDrawable="@drawable/ic_person"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilNumSobrecargo">
+
+            <AutoCompleteTextView
+                android:id="@+id/actvOficialNombreOficial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="text"
+                android:maxLength="60"
+                android:paddingHorizontal="@dimen/dimen_8"
+                android:textSize="@dimen/text_14" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:id="@+id/tvNombreSobrecargo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilNombreSobrecargoManual" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilRemarkPlanificador"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/remarks"
+                android:visibility="visible"
+                app:endIconMode="clear_text"
+                android:layout_marginTop="@dimen/dimen_16"
+                app:layout_constraintTop_toBottomOf="@+id/tvNombreSobrecargo">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etRemarksPlanificadorValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ .,/-0123456789_:"
+                    android:inputType="textPersonName"
+                    android:maxLength="90"
+                    android:paddingHorizontal="@dimen/dimen_8"
+                    android:textSize="@dimen/text_14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/ivFirmaSobrecargo"
+            android:layout_width="@dimen/damagePreviewWidth"
+            android:layout_height="@dimen/damagePreviewHeight"
+            android:layout_marginTop="@dimen/text_14"
+            android:background="@drawable/border_for_image_view_signature"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilRemarkPlanificador" />
+
+        <TextView
+            android:id="@+id/btnFirmarSobrecargo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_4"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:background="@drawable/button_consultar"
+            android:clickable="true"
+            android:drawableTint="@color/white"
+            android:elevation="@dimen/dimen_8"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:visibility="gone"
+            app:drawableStartCompat="@drawable/ic_pencil"
+            app:layout_constraintEnd_toEndOf="@+id/ivFirmaSobrecargo"
+            app:layout_constraintStart_toStartOf="@+id/ivFirmaSobrecargo"
+            app:layout_constraintTop_toBottomOf="@+id/ivFirmaSobrecargo" />
+
+            <TextView
+                android:id="@+id/btnGuardarLocal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_4"
+                android:background="@drawable/background_logout_button"
+                android:clickable="true"
+                android:drawableStart="@drawable/ic_save"
+                android:drawablePadding="@dimen/dimen_4"
+                android:drawableTint="@color/white"
+                android:elevation="@dimen/dimen_8"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="@string/guardar_formulario"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_14"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/dimen_8"
+                app:layout_constraintEnd_toEndOf="@id/btnFirmarSobrecargo"
+                app:layout_constraintStart_toStartOf="@id/btnFirmarSobrecargo"
+                app:layout_constraintTop_toBottomOf="@+id/btnFirmarSobrecargo" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

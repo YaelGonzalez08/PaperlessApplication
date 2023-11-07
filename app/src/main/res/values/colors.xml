@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+<!--    Colores aeromexico-->
+    <color name="primaryColor">#002b5c</color>
+    <color name="primaryLightColor">#3b538a</color>
+    <color name="primaryDarkColor">#000032</color>
+<!--    <color name="secondaryColor">#e91b2f</color>-->
+    <color name="secondaryColor">#ae0008</color>
+    <color name="secondaryLightColor">#ff5e59</color>
+    <color name="secondaryDarkColor">#ae0008</color>
+    <color name="primaryTextColor">#ffffff</color>
+    <color name="secondaryTextColor">#ffffff</color>
+    <color name="color_divider">#1e000000</color>
+    <color name="color_barra_color">#A3B5DAEC</color>
+    <color name="gray_text">#C8575757</color>
+<!--    <color name="color_verde">#8BC34A</color> -->
+    <color name="color_verde">#4CAF50</color>
+    <color name="color_gray_white_background_checklist">#E2DFDEDE</color>
+    <color name="color_gray_white_background_checklist_faded">#F8F8F8</color>
+<!--    <color name="color_rojo_carmin">#E62828</color>-->
+    <color name="color_rojo_carmin">#ae0008</color>
+<!--    <color name="verde_success">#006600</color>-->
+    <color name="verde_success">#4CAF50</color>
+<!--    <color name="color_green_success">#1ebe07</color>-->
+    <color name="color_green_success">#4CAF50</color>
+    <color name="azul_pregunta">#9fbfdf</color>
+    <color name="azul_boton_siguiente">#2d5986</color>
+    <color name="amarillo_mensaje_aviso">#ffab17</color>
+    <color name="transparente">#00000000</color>
+    <color name="white_light">#F2F2F7</color>
+
+</resources>

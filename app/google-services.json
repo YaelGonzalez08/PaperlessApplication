@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "45995175441",
+    "project_id": "paperless-mobile",
+    "storage_bucket": "paperless-mobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:45995175441:android:65f39307126eed7a00cbb0",
+        "android_client_info": {
+          "package_name": "com.aeromexico.aeropuertos.paperlessmobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "45995175441-aeodlti46iateikgrd2194vbjlukpn7j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOgieYduS1_YMnHlbj6ES9a6k3hiGKpj8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "45995175441-aeodlti46iateikgrd2194vbjlukpn7j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

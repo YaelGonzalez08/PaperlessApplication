@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/color_gray_white_background_checklist_faded"
+    tools:context=".notoc.tabs.infoOtraCargaFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_8">
+
+        <TextView
+            android:id="@+id/operadorHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Otra carga especial"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+            android:textSize="@dimen/text_16"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="@dimen/dimen_8">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Número de guía aérea:"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:textSize="@dimen/text_14"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/tvGuiaAerea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_2"
+                android:text="000000"
+                android:textAlignment="center"
+                android:textColor="@color/primaryLightColor"
+                android:textSize="@dimen/text_14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="@dimen/dimen_8">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contenido y descripción:"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:textSize="@dimen/text_14"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/tvContenidoDescripcion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_2"
+                android:text="000000"
+                android:textAlignment="center"
+                android:textColor="@color/primaryLightColor"
+                android:textSize="@dimen/text_14" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            android:layout_marginTop="@dimen/common_padding_min"
+            android:clipToPadding="false"
+            android:paddingStart="@dimen/common_padding_none"
+            android:paddingEnd="@dimen/common_padding_min"
+            android:paddingBottom="@dimen/common_padding_min"
+            tools:listitem="@layout/item_bultos" />
+
+
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="@dimen/dimen_8">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Números de bultos:"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:textSize="@dimen/text_14"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_2"
+                android:text="000000"
+                android:textAlignment="center"
+                android:textColor="@color/primaryLightColor"
+                android:textSize="@dimen/text_14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="@dimen/dimen_8">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cantidad por bulto:"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:textSize="@dimen/text_14"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_2"
+                android:text="000000"
+                android:textAlignment="center"
+                android:textColor="@color/primaryLightColor"
+                android:textSize="@dimen/text_14" />
+        </LinearLayout>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="@dimen/dimen_8">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Información complementaria:"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:textSize="@dimen/text_14"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/tvInfoComplementaria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_2"
+                android:text="000000"
+                android:textAlignment="center"
+                android:textColor="@color/primaryLightColor"
+                android:textSize="@dimen/text_14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="@dimen/dimen_8">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Código:"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:textSize="@dimen/text_14"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/tvCodigo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_2"
+
+                android:text="000000"
+                android:textAlignment="center"
+                android:textColor="@color/primaryLightColor"
+                android:textSize="@dimen/text_14" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_16"
+            android:text="Estibado"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+            android:textSize="@dimen/text_16"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="@dimen/dimen_8">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ID del ULD:"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:textSize="@dimen/text_14"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/tvIdUld"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_2"
+                android:text="000000"
+                android:textAlignment="center"
+                android:textColor="@color/primaryLightColor"
+                android:textSize="@dimen/text_14" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="@dimen/dimen_8">
+
+            <TextView
+                android:id="@+id/tvPosicion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Posición:"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:textSize="@dimen/text_14"
+                android:textStyle="normal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <!--<TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_2"
+                android:text="000000"
+                android:textAlignment="center"
+                android:textColor="@color/primaryLightColor"
+                android:textSize="@dimen/text_14" />-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilPosicion"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/selecciona"
+                android:layout_marginStart="@dimen/common_padding_default"
+                app:hintTextAppearance="@style/TextAppearance.AppCompat.Body2"
+                app:layout_constraintStart_toEndOf="@id/tvPosicion"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <AutoCompleteTextView
+                    android:id="@+id/actvPosicion"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="none"
+                    android:textAppearance="?attr/textAppearanceListItem" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>

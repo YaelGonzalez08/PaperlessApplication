@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/dimen_4"
+    android:background="@drawable/border_for_image_view_signature_gray"
+    android:padding="@dimen/dimen_4">
+
+    <TextView
+        android:id="@+id/tvtitleObservaciones"
+        style="@style/textViewFormTitle"
+        android:layout_width="@dimen/dimen_110"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="Nombre del pasajero"
+        android:textSize="@dimen/text_11"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_nombre_apellido"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txt_nombre_apellido" />
+
+    <TextView
+        android:id="@+id/txt_nombre_apellido"
+        android:layout_width="@dimen/dimen_200"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_rectangle_rounded"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="nombre y apellido pellido2"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_12"
+        app:layout_constraintStart_toEndOf="@+id/tvtitleObservaciones"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/btn_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_arrow_down"
+        android:backgroundTint="@color/primaryLightColor"
+        android:padding="4dp"
+        android:textSize="@dimen/text_12"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_nombre_apellido"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/contenedor_down"
+        android:layout_marginTop="@dimen/dimen_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_nombre_apellido">
+
+        <TextView
+            android:id="@+id/txt_numero"
+            style="@style/textViewFormTitle"
+            android:layout_width="@dimen/dimen_110"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="Número de etiqueta:"
+            android:textSize="@dimen/text_11"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_numero_etiqueta"
+            android:layout_width="@dimen/dimen_200"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_rectangle_rounded"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="546854654 /468468468"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_12"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_numero"
+            app:layout_constraintStart_toEndOf="@+id/txt_numero"
+            app:layout_constraintTop_toTopOf="@+id/txt_numero" />
+
+        <TextView
+            android:id="@+id/til_piezas"
+            style="@style/textViewFormTitle"
+            android:layout_width="@dimen/dimen_55"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:gravity="start"
+            android:text="Piezas:"
+            android:textSize="@dimen/text_12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_numero" />
+
+        <TextView
+            android:id="@+id/text_piezas"
+            android:layout_width="@dimen/dimen_70"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_rectangle_rounded"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="546/1235"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_12"
+            app:layout_constraintBottom_toBottomOf="@+id/til_piezas"
+            app:layout_constraintStart_toEndOf="@+id/til_piezas"
+            app:layout_constraintTop_toTopOf="@+id/til_piezas" />
+
+        <TextView
+            android:id="@+id/til_control"
+            style="@style/textViewFormTitle"
+            android:layout_width="@dimen/dimen_70"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_4"
+            android:gravity="start"
+            android:text="Control:"
+            android:textSize="@dimen/text_12"
+            app:layout_constraintBottom_toBottomOf="@+id/til_piezas"
+            app:layout_constraintStart_toEndOf="@+id/text_piezas"
+            app:layout_constraintTop_toTopOf="@+id/til_piezas" />
+
+        <TextView
+            android:id="@+id/text_control"
+            android:layout_width="@dimen/dimen_70"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_rectangle_rounded"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="546/1235"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_12"
+            app:layout_constraintBottom_toBottomOf="@+id/til_control"
+            app:layout_constraintStart_toEndOf="@+id/til_control"
+            app:layout_constraintTop_toTopOf="@+id/til_control" />
+
+        <TextView
+            android:id="@+id/til_destino"
+            style="@style/textViewFormTitle"
+            android:layout_width="@dimen/dimen_55"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:gravity="start"
+            android:text="Destino:"
+            android:textSize="@dimen/text_12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_piezas" />
+
+        <TextView
+            android:id="@+id/text_destino"
+            android:layout_width="@dimen/dimen_70"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_rectangle_rounded"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="546/1235"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_12"
+            app:layout_constraintBottom_toBottomOf="@+id/til_destino"
+            app:layout_constraintStart_toEndOf="@+id/til_destino"
+            app:layout_constraintTop_toTopOf="@+id/til_destino" />
+
+        <TextView
+            android:id="@+id/til_conexion"
+            style="@style/textViewFormTitle"
+            android:layout_width="@dimen/dimen_70"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_4"
+            android:gravity="start"
+            android:text="Conexión:"
+            android:textSize="@dimen/text_12"
+            app:layout_constraintBottom_toBottomOf="@+id/text_destino"
+            app:layout_constraintStart_toEndOf="@+id/text_destino"
+            app:layout_constraintTop_toTopOf="@+id/text_destino" />
+
+        <TextView
+            android:id="@+id/text_conexion"
+            android:layout_width="@dimen/dimen_70"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_rectangle_rounded"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="546/1235"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_12"
+            app:layout_constraintBottom_toBottomOf="@+id/til_conexion"
+            app:layout_constraintStart_toEndOf="@+id/til_conexion"
+            app:layout_constraintTop_toTopOf="@+id/til_conexion" />
+
+        <TextView
+            android:id="@+id/btn_ARPL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_2"
+            android:background="@drawable/border_for_image_view_signature_gray"
+            android:drawableStart="@drawable/minigun"
+            android:paddingHorizontal="@dimen/dimen_10"
+            android:paddingVertical="@dimen/dimen_6"
+            android:text=" ARPL"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_destino" />
+
+        <TextView
+            android:id="@+id/btn_avih"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_2"
+            android:background="@drawable/border_for_image_view_signature_gray"
+            android:drawableStart="@drawable/miniperrito"
+            android:paddingHorizontal="@dimen/dimen_10"
+            android:paddingVertical="@dimen/dimen_6"
+            android:text=" AVIH"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/btn_ARPL"
+            app:layout_constraintTop_toBottomOf="@+id/til_destino" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_Cancelado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:backgroundTint="@color/color_rojo_carmin"
+            android:enabled="true"
+            android:visibility="gone"
+            android:text="Cancelado"
+            android:textSize="@dimen/text_10"
+            app:icon="@drawable/ic_baseline_close_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_add_evidencia_photo" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mbEnviar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/verde_success"
+            android:enabled="true"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:text="confirmar descarga"
+            android:textSize="@dimen/text_10"
+            app:icon="@drawable/ic_palomita_con_circulo"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_Cancelado"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_add_evidencia_photo" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/btn_add_evidencia_photo"
+            android:layout_width="@dimen/dimen_70"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen_4"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/text_conexion"
+            app:layout_constraintTop_toTopOf="@+id/text_conexion">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="@dimen/dimen_30"
+                android:layout_height="@dimen/dimen_30"
+                android:background="@drawable/ic_camera"
+                android:backgroundTint="@color/primaryDarkColor"
+                android:elevation="@dimen/dimen_8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/isPhotoCaptured"
+                android:layout_width="@dimen/dimen_20"
+                android:layout_height="@dimen/dimen_20"
+                android:background="@drawable/ic_palomita_con_circulo"
+                android:backgroundTint="@color/verde_success"
+                android:elevation="@dimen/dimen_8"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/textView9"
+                app:layout_constraintEnd_toEndOf="@+id/textView9"
+                app:layout_constraintStart_toEndOf="@+id/textView9" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Evidencia"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:textSize="@dimen/text_10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

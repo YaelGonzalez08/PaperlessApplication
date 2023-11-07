@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/dimen_8"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/close_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:background="@drawable/backgroud_outline"
+        android:src="@drawable/ic_baseline_close_24"
+        app:tint="@color/color_rojo_carmin" />
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="textStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/close_dialog" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/conts_only_number"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_padding_default"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:hint="@string/introduce_una_cantidad"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView29">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_number"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:inputType="numberSigned"
+            android:maxLength="1"
+            android:padding="0dp"
+            android:textSize="@dimen/text_12" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/conts_area"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_4"
+        android:layout_marginTop="@dimen/common_padding_default"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:hint="@string/hintNombreOtro"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/conts_only_number">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_area"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:maxLength="250"
+            android:padding="0dp"
+            android:textSize="@dimen/text_12" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/cont_detalle"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_padding_default"
+        android:layout_marginHorizontal="@dimen/dimen_4"
+        android:hint="@string/hintNotaDaño"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/conts_area">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_detalle"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:maxLength="250"
+            android:padding="0dp"
+            android:textSize="@dimen/text_12" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:id="@+id/btn_Aceptar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:text="@string/aceptar"
+        android:visibility="gone"
+        android:layout_gravity="end"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cont_detalle" />
+</LinearLayout>

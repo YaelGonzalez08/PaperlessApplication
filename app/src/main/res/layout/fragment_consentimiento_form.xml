@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".inspeccionAeronave.InspeccionForm.InspeccionFormFragment"
+    android:background="@color/white"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/common_padding_default"
+        >
+
+
+        <TextView
+            android:id="@+id/tvOficialOperaciones"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="Oficial de Operaciones"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:textSize="@dimen/text_17"
+
+            />
+
+        <TextView
+            android:id="@+id/tvEsAm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/empleado_externo"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/tvOficialOperaciones"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/common_padding_min"
+            android:textSize="@dimen/text_13"
+            />
+
+        <Switch
+            android:id="@+id/switchEsAM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvOficialOperaciones"
+            />
+
+        <TextView
+            android:id="@+id/tvNotaOfOperacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvEsAm"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="Ingresar número de empleado y firma."
+            android:layout_marginTop="@dimen/common_padding_default"
+            android:textColor="@color/primaryLightColor"
+            android:textSize="@dimen/text_13"
+            />
+
+
+
+       <!-- Contenedor principal interno / externo-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/containerOfOp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvNotaOfOperacion"
+            >
+
+            <!--INTERNO-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/containerOfOpInterno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:visibility="visible"
+                >
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnBuscarEmpleadoOfOperaciones"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    app:icon="@drawable/ic_search"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    app:iconGravity="textEnd"
+                    app:iconTint="@color/primaryLightColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@id/tilOficialOperacion"
+                    android:layout_marginTop="@dimen/common_padding_default"
+                    />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilOficialOperacion"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/btnBuscarEmpleadoOfOperaciones"
+                    android:layout_marginTop="@dimen/common_padding_default"
+                    android:layout_marginRight="@dimen/common_padding_min"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="No. de empleado"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    app:prefixText="AM"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etNoEmpOfialOperacion"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:textSize="@dimen/text_12"
+                        android:padding="0dp"
+                        android:inputType="number"
+
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <TextView
+                    android:id="@+id/tvNombreOfOperaciones"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tilOficialOperacion"
+                    android:layout_marginTop="@dimen/common_padding_default"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:visibility="gone"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--EXTERNO-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/containerOfOpExterno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:visibility="gone">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilOficialOperacionExterno"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="@dimen/common_padding_default"
+                    android:layout_marginRight="@dimen/common_padding_min"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="No. de empleado"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etNoEmpOfialOperacionExterno"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:textSize="@dimen/text_12"
+                        android:padding="0dp"
+                        android:inputType="text"
+                        android:maxLength="20"
+
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilOficialNombreOperacionExterno"
+                    app:layout_constraintTop_toBottomOf="@id/tilOficialOperacionExterno"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="@dimen/common_padding_default"
+                    android:layout_marginRight="@dimen/common_padding_min"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Nombre completo"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etOfialNombreOperacionExterno"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:textSize="@dimen/text_12"
+                        android:padding="0dp"
+                        android:inputType="text"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Vista previa de firma (visible en ambos casos)-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/containerFirmaOfOperaciones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/containerOfOp"
+            >
+
+            <ImageView
+                android:id="@+id/ivOfOperaciones"
+                android:layout_width="@dimen/damagePreviewWidth"
+                android:layout_height="@dimen/damagePreviewHeight"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="@dimen/common_padding_min"
+                android:layout_marginBottom="@dimen/common_padding_middle"
+                android:visibility="gone"
+                />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFirmarOfOperaciones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/ivOfOperaciones"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="Firmar  "
+                android:layout_marginTop="@dimen/common_padding_middle"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:icon="@drawable/ic_draw"
+                app:iconGravity="textEnd"
+                app:iconTint="@color/primaryLightColor"
+                android:visibility="gone"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/color_divider"
+            android:layout_marginTop="@dimen/common_padding_middle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/containerFirmaOfOperaciones"/>
+
+        <TextView
+            android:id="@+id/tvTecnicoMantenimiento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/divider1"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="Técnico de Mantenimiento"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_marginTop="@dimen/common_padding_middle"
+            android:textSize="@dimen/text_17"
+            />
+
+        <TextView
+            android:id="@+id/tvEsAmTecMant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/empleado_externo"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/tvTecnicoMantenimiento"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/common_padding_min"
+            android:textSize="@dimen/text_13"
+            />
+
+        <Switch
+            android:id="@+id/switchEsAMTecMant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTecnicoMantenimiento"
+            />
+
+        <TextView
+            android:id="@+id/tvNotaTecnicoMantenimiento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvEsAmTecMant"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="Ingresar número de empleado y firma."
+            android:layout_marginTop="@dimen/common_padding_default"
+            android:textColor="@color/primaryLightColor"
+            android:textSize="@dimen/text_13"
+            />
+
+
+
+
+        <!-- Contenedor principal interno / externo-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/containerTecMant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvNotaTecnicoMantenimiento"
+            >
+
+            <!--INTERNO-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/containerTecMantInterno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:visibility="visible"
+                >
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnBuscarEmpleadoTecMantenimiento"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    app:icon="@drawable/ic_search"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    app:iconGravity="textEnd"
+                    app:iconTint="@color/primaryLightColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@id/tilTecnicoMantenimiento"
+                    android:layout_marginTop="@dimen/common_padding_default"
+                    />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilTecnicoMantenimiento"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/btnBuscarEmpleadoTecMantenimiento"
+                    android:layout_marginTop="@dimen/common_padding_default"
+                    android:layout_marginRight="@dimen/common_padding_min"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="No. de empleado"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    app:prefixText="AM"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etNoEmpTecnicoMantenimiento"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:textSize="@dimen/text_12"
+                        android:padding="0dp"
+                        android:inputType="number"
+
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <TextView
+                    android:id="@+id/tvNombreTecMantenimiento"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tilTecnicoMantenimiento"
+                    android:layout_marginTop="@dimen/common_padding_default"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:visibility="gone"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--EXTERNO-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/containerTecMantExterno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:visibility="gone">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilTecnicoMantenimientoExterno"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="@dimen/common_padding_default"
+                    android:layout_marginRight="@dimen/common_padding_min"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="No. de empleado"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etNoEmpTecnicoMantenimientoExterno"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:textSize="@dimen/text_12"
+                        android:padding="0dp"
+                        android:inputType="text"
+                        android:maxLength="15"
+
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilTecnicoNombreMantenimientoExterno"
+                    app:layout_constraintTop_toBottomOf="@id/tilTecnicoMantenimientoExterno"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="@dimen/common_padding_default"
+                    android:layout_marginRight="@dimen/common_padding_min"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Nombre completo"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etTecnicoNombreMantenimientoExterno"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:textSize="@dimen/text_12"
+                        android:padding="0dp"
+                        android:inputType="text"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Vista previa de firma (visible en ambos casos)-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/containerFirmaTecnicoMantenimiento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/containerTecMant"
+            >
+
+            <ImageView
+                android:id="@+id/ivTecnicoMantenimiento"
+                android:layout_width="@dimen/damagePreviewWidth"
+                android:layout_height="@dimen/damagePreviewHeight"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="@dimen/common_padding_min"
+                android:layout_marginBottom="@dimen/common_padding_middle"
+                android:visibility="gone"
+                />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFirmarTecMantenimiento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/ivTecnicoMantenimiento"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="Firmar  "
+                android:layout_marginTop="@dimen/common_padding_middle"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:icon="@drawable/ic_draw"
+                app:iconGravity="textEnd"
+                app:iconTint="@color/primaryLightColor"
+                android:visibility="gone"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/color_divider"
+            android:layout_marginTop="@dimen/common_padding_middle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/containerFirmaTecnicoMantenimiento"/>
+
+        <TextView
+            android:id="@+id/tvResponsablesEstiba"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/divider2"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="Responsables de Estiba"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_marginTop="@dimen/common_padding_middle"
+            android:textSize="@dimen/text_17"
+
+            />
+
+        <TextView
+            android:id="@+id/tvEsAmRespEstiba"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/empleado_externo"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/tvResponsablesEstiba"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/common_padding_min"
+            android:textSize="@dimen/text_13"
+            />
+
+        <Switch
+            android:id="@+id/switchEsAMRespEstiba"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvResponsablesEstiba"
+            />
+
+        <TextView
+            android:id="@+id/tvNotaResponsablesEstiba"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvEsAmRespEstiba"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="Se permite registrar hasta 6 responsables de estiba."
+            android:layout_marginTop="@dimen/common_padding_default"
+            android:textColor="@color/primaryLightColor"
+            android:textSize="@dimen/text_13"
+            />
+
+        <!-- Contenedor principal interno / externo-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/containerRespEstiba"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvNotaResponsablesEstiba"
+            >
+
+            <!--INTERNO-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/containerRespEstibaInterno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:visibility="visible"
+                >
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnNuevoResponsableEstiba"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    app:icon="@drawable/ic_add"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    app:iconGravity="textEnd"
+                    app:iconTint="@color/primaryLightColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@id/tilResponsableEstiba"
+                    android:layout_marginTop="@dimen/common_padding_default"
+                    />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilResponsableEstiba"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/btnNuevoResponsableEstiba"
+                    android:layout_marginTop="@dimen/common_padding_default"
+                    android:layout_marginRight="@dimen/common_padding_min"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="No. de empleado"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etResponsableEstiba"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:textSize="@dimen/text_12"
+                        android:padding="0dp"
+                        android:inputType="number"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--EXTERNO-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/containerRespEstibaExterno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:visibility="gone">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilRespEstibaExterno"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="@dimen/common_padding_default"
+                    android:layout_marginRight="@dimen/common_padding_min"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="No. de empleado"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etNoEmpRespEstibaExterno"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:textSize="@dimen/text_12"
+                        android:padding="0dp"
+                        android:inputType="text"
+                        android:maxLength="20"
+
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilNombreRespEstibaExterno"
+                    app:layout_constraintTop_toBottomOf="@id/tilRespEstibaExterno"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="@dimen/common_padding_default"
+                    android:layout_marginRight="@dimen/common_padding_min"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Nombre completo"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etNombreRespEstibaExterno"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:textSize="@dimen/text_12"
+                        android:padding="0dp"
+                        android:inputType="text"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnNuevoResponsableEstibaExterno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:icon="@drawable/ic_add"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    app:iconGravity="textEnd"
+                    app:iconTint="@color/primaryLightColor"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tilNombreRespEstibaExterno"
+                    android:layout_marginTop="@dimen/common_padding_default"
+                    android:text="@string/agregar"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewRespEstiba"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            app:layout_constraintTop_toBottomOf="@id/containerRespEstiba"
+            tools:layout_editor_absoluteX="32dp"
+            tools:listitem="@layout/item_responsable_estiba" />
+
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/color_divider"
+            android:layout_marginTop="@dimen/common_padding_middle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recyclerViewRespEstiba"/>
+
+        <TextView
+            android:id="@+id/tvErrorOfOperaciones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Se requiere número de empleado y firma del Oficial de Operaciones"
+            android:textColor="#ff4d4d"
+            app:layout_constraintTop_toBottomOf="@id/divider3"
+            android:layout_marginTop="@dimen/common_padding_default"
+            android:visibility="gone"
+
+            />
+
+
+        <TextView
+            android:id="@+id/tvErrorTecMantenimiento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Se requiere número de empleado y firma del Técnico de Mantenimiento"
+            android:textColor="#ff4d4d"
+            app:layout_constraintTop_toBottomOf="@id/tvErrorOfOperaciones"
+            android:layout_marginTop="@dimen/common_padding_default"
+            android:visibility="gone"
+            />
+        <TextView
+
+            android:id="@+id/tvErrorRespEstiba"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Se requiere ingresar al menos un Responsable de Estiba"
+            android:textColor="#ff4d4d"
+            app:layout_constraintTop_toBottomOf="@id/tvErrorTecMantenimiento"
+            android:layout_marginTop="@dimen/common_padding_default"
+            android:visibility="gone"
+
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnFinalizar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvErrorRespEstiba"
+            android:layout_marginTop="@dimen/common_padding_default"
+            app:icon="@drawable/ic_check"
+            app:iconGravity="end"
+            android:text="Finalizar"
+            android:backgroundTint="#006600"
+            android:textSize="@dimen/text_13"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAnterior"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvErrorRespEstiba"
+            android:layout_marginTop="@dimen/common_padding_default"
+            app:icon="@drawable/ic_baseline_arrow_back"
+            app:iconGravity="start"
+            android:text="Anterior"
+            android:backgroundTint="#2d5986"
+            android:layout_marginRight="@dimen/common_padding_min"
+            android:textSize="@dimen/text_13"
+            />
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>

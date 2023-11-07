@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/txt_titulo"
+        style="@style/TextAppearance.MaterialComponents.Headline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Oficial de Operaciones"
+        android:textSize="@dimen/text_17"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/swEmpExterno"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:checked="false"
+        android:text="@string/empleado_externo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilNumEmpleado"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="@dimen/margin_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:hint="@string/no_de_empleado"
+        app:layout_constraintEnd_toStartOf="@id/btnConsultarEmpleado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_titulo"
+        app:prefixText="AM"
+        app:startIconDrawable="@drawable/ic_person">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_NumEmpleado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="10"
+            android:paddingHorizontal="@dimen/dimen_8"
+            android:textSize="@dimen/text_14" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/btnConsultarEmpleado"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen_40"
+        android:layout_marginStart="@dimen/dimen_8"
+        android:background="@drawable/white_button_outlined"
+        android:drawableTint="@color/primaryColor"
+        android:elevation="@dimen/dimen_16"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:drawableStartCompat="@drawable/ic_search"
+        app:layout_constraintBottom_toBottomOf="@+id/tilNumEmpleado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tilNumEmpleado"
+        app:layout_constraintTop_toTopOf="@id/tilNumEmpleado"
+        app:layout_goneMarginTop="@dimen/dimen_4" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilNombreEmpleadoManual"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/nombre_del_empleado"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilNumEmpleado"
+        app:startIconDrawable="@drawable/ic_person">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/actvOficialNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:enabled="false"
+            android:inputType="textPersonName"
+            android:maxLength="30"
+            android:paddingHorizontal="@dimen/dimen_8"
+            android:textSize="@dimen/text_14" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/iv_firma"
+        android:layout_width="@dimen/damagePreviewWidth"
+        android:layout_height="@dimen/damagePreviewHeight"
+        android:layout_marginTop="@dimen/dimen_8"
+        android:background="@drawable/border_for_image_view_signature"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilNombreEmpleadoManual" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_Firma"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_8"
+        android:text="@string/firmar"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:backgroundTint="@color/primaryLightColor"
+        app:icon="@drawable/ic_draw"
+        app:iconTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_firma" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

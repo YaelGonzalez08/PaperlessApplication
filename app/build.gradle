@@ -1,0 +1,168 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+    id 'androidx.navigation.safeargs.kotlin'
+    id 'kotlin-parcelize'
+}
+def ChangeNote= "ackTimeStamp"
+//def ambient = "prod"
+def ambient = "dev"
+
+android {
+    compileSdkVersion 33
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.aeromexico.aeropuertos.paperlessmobile"
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode 42
+        versionName "1.16.4"
+
+        setProperty("archivesBaseName", "PPL_${ambient}_${ChangeNote.trim()}_${versionName}")
+        manifestPlaceholders = [ "webAuthenticationRedirectScheme": "com.okta.dev-95080594:/callback", "appAuthRedirectScheme": "com.okta.dev-95080594" ]
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            if (ambient == "dev") {
+                //API DESARROLLO
+
+                buildConfigField "String", "PAPERLESS_AMBIENT", '"dev"'
+               // buildConfigField "String", "PAPERLESS_URL_API", '"https://furostest.aeromexico.com/api/"'
+                buildConfigField "String", "PAPERLESS_URL_API", '"https://0qdxh9tpza.execute-api.us-east-1.amazonaws.com/"'
+            } else {
+                //PROD
+                buildConfigField "String", "PAPERLESS_AMBIENT", '"prod"'
+                buildConfigField "String", "PAPERLESS_URL_API", '"https://paperlessmobile.aeromexico.com/"'
+            }
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    dexOptions {
+        incremental true
+        javaMaxHeapSize "4g"
+    }
+
+
+    buildFeatures{
+        viewBinding = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+def room_version = "2.2.4"
+def anko_version = "0.10.8"
+def lifecycle_version = "2.4.0"
+dependencies {
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    // Anko Commons
+    implementation "org.jetbrains.anko:anko-commons:$anko_version"
+    // ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
+
+    //Volley
+    implementation 'com.android.volley:volley:1.2.0'
+
+    //Gson
+    implementation 'com.google.code.gson:gson:2.8.6'
+    //Room
+    implementation "androidx.room:room-runtime:$room_version"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.0'
+    implementation 'com.google.firebase:firebase-crashlytics:17.4.1'
+    implementation 'com.google.firebase:firebase-analytics:18.0.2'
+    implementation 'androidx.annotation:annotation:1.1.0'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.3'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.3'
+    implementation 'androidx.drawerlayout:drawerlayout:1.1.1'
+    implementation 'androidx.test:core-ktx:1.3.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    kapt "androidx.room:room-compiler:$room_version"
+    implementation "androidx.room:room-ktx:2.3.0"
+    androidTestImplementation "androidx.room:room-testing:2.3.0"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.3.1"
+
+    // Import the BoM for the Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:26.6.0')
+
+    //SilkySignature
+    implementation 'com.williamww:silky-signature:0.1.0'
+
+    //Stepper TEST
+    implementation 'com.github.acefalobi:android-stepper:0.2.1'
+    implementation 'com.github.softcomoss:android-utils:0.1.0'
+
+    apply plugin: "androidx.navigation.safeargs.kotlin"
+
+    // Declare the dependencies for the Crashlytics and Analytics libraries
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-crashlytics-ktx'
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    //okta
+    //  implementation 'com.okta.android:oidc-androidx:1.0.17'
+      implementation 'com.okta.android:okta-oidc-android:1.3.4'
+    // implementation 'com.okta.android:okta-oidc-android:1.0.18'
+
+    // Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.7.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.0'
+    // datasotrage
+    implementation "androidx.datastore:datastore-preferences:1.0.0-alpha04"
+    // picsasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    //CircleImageView
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    //toolargetool
+    implementation 'com.gu.android:toolargetool:0.3.0'
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.0.0")
+    //
+    implementation 'com.github.ksoichiro:android-observablescrollview:1.5.0'
+    //  AdvancedWebView
+    implementation 'com.github.delight-im:Android-AdvancedWebView:v3.2.1'
+    //pdf viewer
+    // visor pdf
+    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
+
+    implementation 'io.github.pilgr:paperdb:2.7.1'
+    //Runtime permissions
+    implementation 'com.afollestad.assent:core:3.0.0-RC4'
+    // tabButtons view nice
+    implementation 'com.github.rahimlis:badgedtablayout:v1.2'
+    // scale image zoom
+    implementation 'com.davemorrissey.labs:subsampling-scale-image-view-androidx:3.10.0'
+    //Gif image
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.22'
+}

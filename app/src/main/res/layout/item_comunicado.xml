@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_4"
+        android:background="@drawable/white_button_outlined"
+        android:backgroundTint="@color/white"
+        android:elevation="@dimen/dimen_16"
+        android:padding="@dimen/dimen_4">
+
+        <TextView
+            android:id="@+id/tittle_comunicado"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_4"
+            android:layout_marginTop="@dimen/dimen_8"
+            android:text="TITULO"
+            android:textSize="@dimen/text_14"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView222"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/fecha_valido"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_8"
+            android:text="00/00/0000"
+            android:textSize="@dimen/text_14"
+            app:layout_constraintEnd_toStartOf="@+id/textView22"
+            app:layout_constraintTop_toBottomOf="@+id/tittle_comunicado" />
+
+        <TextView
+            android:id="@+id/contenido"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:justificationMode="inter_word"
+            android:text="TextVieasdf asdfasf sfasf asf ssafsdfasdfasfsafasfsafsafsagfsfgsafsafasfsadfsaffsdafasdfasdfsadfasfas \n \asdafasdfsadfsadfsafw"
+            android:textColor="@color/badge_text_color"
+            android:textSize="@dimen/text_12"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textView22"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fecha_valido" />
+
+        <TextView
+            android:id="@+id/textView222"
+            android:layout_width="@dimen/dimen_20"
+            android:layout_height="@dimen/dimen_20"
+            android:background="@drawable/ic_error"
+            android:backgroundTint="@color/secondaryLightColor"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/tittle_comunicado"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tittle_comunicado" />
+
+        <TextView
+            android:id="@+id/ee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_baseline_navigate_next_24"
+            android:backgroundTint="@color/gray_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/textView22"
+            layout="@layout/item_view_document"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="@dimen/dimen_4"
+            app:layout_constraintBottom_toBottomOf="@+id/ee"
+            app:layout_constraintEnd_toStartOf="@+id/ee"
+            app:layout_constraintTop_toTopOf="@+id/ee" />
+
+        <TextView
+            android:id="@+id/textView36"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:justificationMode="inter_word"
+            android:text="Leer"
+            android:textColor="@color/azul_boton_siguiente"
+            app:layout_constraintEnd_toEndOf="@+id/textView22"
+            app:layout_constraintStart_toStartOf="@+id/textView22"
+            app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/dimen_2"
+            android:background="@color/color_divider"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contenido" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

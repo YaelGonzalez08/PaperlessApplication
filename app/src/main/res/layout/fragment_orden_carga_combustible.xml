@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:padding="@dimen/dimen_4"
+    tools:context=".ordenCargaCombustibles.views.OrdenCargaCombustible">
+
+    <TextView
+        android:id="@+id/flightDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fecha_de_vuelo"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_12"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/fligthID"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/fligthID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/numero_de_vuelo"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_12"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/route"
+        app:layout_constraintStart_toEndOf="@+id/flightDate"
+        app:layout_constraintTop_toTopOf="@+id/flightDate" />
+
+    <TextView
+        android:id="@+id/route"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ruta"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_12"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/tvEnrollment"
+        app:layout_constraintStart_toEndOf="@+id/fligthID"
+        app:layout_constraintTop_toTopOf="@+id/fligthID" />
+
+    <TextView
+        android:id="@+id/tvEnrollment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/matricula"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_12"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/route"
+        app:layout_constraintTop_toTopOf="@+id/route" />
+
+    <TextView
+        android:id="@+id/tvDateFlightValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLength="10"
+        android:textColor="@color/primaryLightColor"
+        android:textSize="@dimen/text_12"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/flightDate"
+        app:layout_constraintStart_toStartOf="@+id/flightDate"
+        app:layout_constraintTop_toBottomOf="@+id/flightDate"
+        tools:text="95/05/60" />
+
+    <TextView
+        android:id="@+id/tvFlightNumberValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/primaryLightColor"
+        android:textSize="@dimen/text_12"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/fligthID"
+        app:layout_constraintStart_toStartOf="@+id/fligthID"
+        app:layout_constraintTop_toBottomOf="@+id/fligthID"
+        tools:text="688" />
+
+    <TextView
+        android:id="@+id/tvRouteValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/primaryLightColor"
+        android:textSize="@dimen/text_12"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/route"
+        app:layout_constraintStart_toStartOf="@+id/route"
+        app:layout_constraintTop_toBottomOf="@+id/route"
+        tools:text="MEX-CUN" />
+
+    <TextView
+        android:id="@+id/tvEnrollmentValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/primaryLightColor"
+        android:textSize="@dimen/text_12"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tvEnrollment"
+        app:layout_constraintStart_toStartOf="@+id/tvEnrollment"
+        app:layout_constraintTop_toBottomOf="@+id/tvEnrollment"
+        tools:text="XAMIA" />
+
+    <View
+        android:id="@+id/dividerTop"
+        android:layout_width="@dimen/margin_0"
+        android:layout_height="@dimen/dimen_1"
+        android:layout_marginTop="@dimen/dimen_8"
+        android:background="@color/gray_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFlightNumberValue" />
+
+    <include
+        android:id="@+id/btnInformacionCombustible"
+        layout="@layout/button_whit_number_and_check_img"
+        android:layout_width="@dimen/margin_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_2"
+        app:layout_constraintEnd_toStartOf="@+id/btn_concentimiento"
+        app:layout_constraintStart_toStartOf="@+id/dividerTop"
+        app:layout_constraintTop_toBottomOf="@+id/dividerTop" />
+
+    <include
+        android:id="@+id/btn_concentimiento"
+        layout="@layout/button_whit_number_and_check_img"
+        android:layout_width="@dimen/margin_0"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/dimen_8"
+        app:layout_constraintEnd_toStartOf="@+id/percnota"
+        app:layout_constraintStart_toStartOf="@+id/tvRouteValue"
+        app:layout_constraintTop_toTopOf="@+id/btnInformacionCombustible" />
+
+    <ImageView
+        android:id="@+id/percnota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/ic_moon"
+        android:elevation="1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_concentimiento"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_concentimiento" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vpOrdenCarga"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dimen_2"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/percnota" />
+
+
+    <include
+        android:id="@+id/exitoso_message"
+        layout="@layout/item_reporte_exitoso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnInformacionCombustible" />
+
+    <include
+        android:id="@+id/excedido_message"
+        layout="@layout/item_reporte_ordencarga_excedida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnInformacionCombustible" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/btn_regresar"
+        android:layout_width="@dimen/dimen_150"
+        android:layout_height="@dimen/dimen_35"
+        android:background="@drawable/background_gris_cuadrado_esquinasredondas"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/dimen_8"
+        android:text="@string/regresar"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_continuar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_continuar" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/btn_continuar"
+        android:layout_width="@dimen/dimen_150"
+        android:layout_height="@dimen/dimen_35"
+        android:layout_marginTop="@dimen/dimen_8"
+        android:background="@drawable/background_azul_cuadrado_esquinasredondas"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/dimen_8"
+        android:text="@string/siguiente"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_regresar"
+        app:layout_constraintTop_toBottomOf="@id/vpOrdenCarga" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/item_campana"
+        android:icon="@drawable/ic_notifications"
+        android:title="@string/pendientes"
+        android:iconTint="@color/white"
+        app:actionLayout="@layout/custom_action_item_layout"
+        app:showAsAction="always"/>
+
+
+
+    <item
+        android:id="@+id/logOut"
+        android:icon="@drawable/ic_log_out"
+        android:title="@string/pendientes"
+        android:iconTint="@color/white"
+        android:contentDescription="@string/buscar_un_vuelo"
+        app:showAsAction="ifRoom"/>
+</menu>

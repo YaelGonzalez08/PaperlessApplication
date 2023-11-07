@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".inspeccionAeronave.DetalleAveria.DetalleAveria"
+    >
+
+    <TextView
+        android:id="@+id/tvImagenMandatoria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/inspec_aeronave_foto_mandatoria"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/primaryColor"
+        android:layout_marginTop="@dimen/common_padding_default"
+        android:textSize="@dimen/text_11"
+        android:visibility="visible"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilDetalleAveria"
+        android:layout_marginHorizontal="@dimen/dimen_4"
+        app:layout_constraintTop_toBottomOf="@id/tvImagenMandatoria"
+        android:layout_marginTop="@dimen/common_padding_default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hintNotaDaño"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:visibility="visible"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etDetalleAveria"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:textSize="@dimen/text_12"
+            android:padding="0dp"
+            android:maxLength="250"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAbrirCamara"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btnTomarFoto"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:textColor="@color/primaryLightColor"
+        app:layout_constraintTop_toBottomOf="@id/mImageView"
+        app:icon="@drawable/ic_add"
+        app:iconGravity="textEnd"
+        app:iconTint="@color/primaryLightColor"
+        android:layout_marginTop="@dimen/common_padding_default"
+        android:layout_marginBottom="@dimen/common_padding_middle"
+        android:textSize="@dimen/text_11"
+        />
+
+
+    <TextView
+        android:id="@+id/mImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ver_foto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tilDetalleAveria"
+        android:layout_marginBottom="@dimen/common_padding_middle"
+        android:textColor="@color/gray_text"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/common_padding_middle"
+        android:drawableRight="@drawable/ic_eye"
+        android:drawableTint="@color/gray_text"
+        android:visibility="visible"
+        />
+
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/color_divider"
+        android:layout_marginTop="@dimen/common_padding_default"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnAbrirCamara"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

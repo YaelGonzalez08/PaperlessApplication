@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/dimen_8"
+    tools:context=".inspeccionAeronavePrimerVuelo.view.InformacionManualVueloFragment">
+
+    <TextView
+        android:id="@+id/flightInformation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/informacion_de_vuelo"
+        android:textColor="@color/primaryColor"
+        android:textSize="@dimen/text_18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/lineDivider1"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dimen_1"
+        android:layout_marginTop="@dimen/dimen_8"
+        android:background="@color/color_gray_white_background_checklist"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flightInformation" />
+
+    <ScrollView
+        android:id="@+id/flightInformationContainer1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_0"
+        android:paddingBottom="@dimen/dimen_8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lineDivider1">
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:paddingVertical="@dimen/dimen_8">
+
+           <androidx.constraintlayout.widget.ConstraintLayout
+               android:id="@+id/flightInformationContainer"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:padding="@dimen/dimen_8"
+               app:layout_constraintTop_toTopOf="parent"
+               tools:layout_editor_absoluteX="-4dp">
+
+               <com.google.android.material.textfield.TextInputLayout
+                   android:id="@+id/tvDateFlight"
+                   style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                   android:layout_width="@dimen/margin_0"
+                   android:layout_height="wrap_content"
+                   android:layout_marginHorizontal="@dimen/dimen_28"
+                   android:clickable="false"
+                   android:focusable="false"
+                   android:hint="@string/fecha_de_vuelo"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent"
+                   app:startIconDrawable="@drawable/ic_calendar">
+
+                   <com.google.android.material.textfield.TextInputEditText
+                       android:id="@+id/tvDateFlightValue"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:clickable="false"
+                       android:focusable="false"
+                       android:inputType="date"
+                       android:textSize="@dimen/text_14" />
+               </com.google.android.material.textfield.TextInputLayout>
+
+               <com.google.android.material.textfield.TextInputLayout
+                   android:id="@+id/tvFlightNumber"
+                   style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginHorizontal="@dimen/dimen_8"
+                   android:layout_marginTop="@dimen/dimen_8"
+                   android:hint="@string/numero_de_vuelo"
+                   app:endIconMode="clear_text"
+                   app:layout_constraintTop_toBottomOf="@+id/tvDateFlight"
+                   app:startIconDrawable="@drawable/ic_number_flight">
+
+                   <com.google.android.material.textfield.TextInputEditText
+                       android:id="@+id/etFlightValue"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:inputType="number"
+                       android:maxLength="6"
+                       android:textSize="@dimen/text_14" />
+               </com.google.android.material.textfield.TextInputLayout>
+
+               <com.google.android.material.textfield.TextInputLayout
+                   android:id="@+id/tvCompany"
+                   style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                   android:layout_width="@dimen/margin_0"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="@dimen/dimen_8"
+                   android:hint="@string/company"
+                   app:layout_constraintEnd_toEndOf="@+id/tvFlightNumber"
+                   app:layout_constraintStart_toStartOf="@+id/tvFlightNumber"
+                   app:layout_constraintTop_toBottomOf="@+id/tvFlightNumber"
+                   app:startIconDrawable="@drawable/ic_company">
+
+                   <AutoCompleteTextView
+                       android:id="@+id/spinCompany"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:inputType="none"
+                       android:paddingHorizontal="@dimen/dimen_8"
+                       android:textSize="@dimen/text_14" />
+               </com.google.android.material.textfield.TextInputLayout>
+
+               <com.google.android.material.textfield.TextInputLayout
+                   android:id="@+id/tvNombreOficial"
+                   style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                   android:layout_width="@dimen/margin_0"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="@dimen/dimen_8"
+                   android:hint="@string/origen"
+                   app:layout_constraintEnd_toEndOf="@+id/tvFlightNumber"
+                   app:layout_constraintStart_toStartOf="@+id/tvFlightNumber"
+                   app:layout_constraintTop_toBottomOf="@+id/tvCompany"
+                   app:startIconDrawable="@drawable/ic_flight">
+
+                   <AutoCompleteTextView
+                       android:id="@+id/spinOrigin"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:completionThreshold="1"
+                       android:maxLength="3"
+                       android:inputType="textAutoComplete"
+                       android:completionHint="Selecciona un origen"
+                       android:paddingHorizontal="@dimen/dimen_8"
+                       android:textSize="@dimen/text_14" />
+               </com.google.android.material.textfield.TextInputLayout>
+
+               <com.google.android.material.textfield.TextInputLayout
+                   android:id="@+id/tvDestiny"
+                   style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                   android:layout_width="@dimen/margin_0"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="@dimen/dimen_8"
+                   android:hint="@string/destino"
+                   app:layout_constraintEnd_toEndOf="@+id/tvFlightNumber"
+                   app:layout_constraintStart_toStartOf="@+id/tvFlightNumber"
+                   app:layout_constraintTop_toBottomOf="@+id/tvNombreOficial"
+                   app:startIconDrawable="@drawable/ic_land">
+
+                   <AutoCompleteTextView
+                       android:id="@+id/spinDestiny"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:completionThreshold="1"
+                       android:maxLength="3"
+                       android:inputType="textAutoComplete"
+                       android:completionHint="Selecciona un origen"
+                       android:paddingHorizontal="@dimen/dimen_8"
+                       android:textSize="@dimen/text_14" />
+               </com.google.android.material.textfield.TextInputLayout>
+
+               <com.google.android.material.textfield.TextInputLayout
+                   android:id="@+id/tvEnrollment"
+                   style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                   android:layout_width="@dimen/margin_0"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="@dimen/dimen_8"
+                   android:hint="@string/matricula"
+                   app:layout_constraintEnd_toEndOf="@+id/tvNombreOficial"
+                   app:layout_constraintStart_toStartOf="@+id/tvNombreOficial"
+                   app:layout_constraintTop_toBottomOf="@+id/tvDestiny"
+                   app:startIconDrawable="@drawable/ic_enrollment">
+
+                   <AutoCompleteTextView
+                       android:id="@+id/actvEnrollment"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:completionHint="Selecciona una matricula"
+                       android:completionThreshold="1"
+                       android:inputType="textAutoComplete"
+                       android:maxLength="10"
+                       android:paddingHorizontal="@dimen/dimen_8"
+                       android:textSize="@dimen/text_14" />
+               </com.google.android.material.textfield.TextInputLayout>
+
+               <com.google.android.material.textfield.TextInputLayout
+                   android:id="@+id/tvEquipment"
+                   style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"                  android:layout_width="@dimen/margin_0"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="@dimen/dimen_8"
+                   android:hint="@string/equipo"
+                   app:layout_constraintEnd_toEndOf="@+id/tvFlightNumber"
+                   app:layout_constraintStart_toStartOf="@+id/tvFlightNumber"
+                   app:layout_constraintTop_toBottomOf="@+id/tvEnrollment"
+                   app:startIconDrawable="@drawable/ic_equip">
+
+                   <AutoCompleteTextView
+                       android:id="@+id/actvEquip"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:inputType="none"
+                       android:clickable="false"
+                       android:focusable="false"
+                       android:paddingHorizontal="@dimen/dimen_8"
+                       android:textSize="@dimen/text_14" />
+               </com.google.android.material.textfield.TextInputLayout>
+
+               <com.google.android.material.textfield.TextInputLayout
+                   android:id="@+id/tvTipoCabina"
+                   style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"                  android:layout_width="@dimen/margin_0"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="@dimen/dimen_8"
+                   android:hint="@string/tipo_cabina"
+                   app:layout_constraintEnd_toEndOf="@+id/tvFlightNumber"
+                   app:layout_constraintStart_toStartOf="@+id/tvFlightNumber"
+                   app:layout_constraintTop_toBottomOf="@+id/tvEquipment"
+                   app:startIconDrawable="@drawable/ic_plane">
+
+                   <AutoCompleteTextView
+                       android:id="@+id/actvTipoCabina"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:inputType="none"
+                       android:clickable="false"
+                       android:focusable="false"
+                       android:paddingHorizontal="@dimen/dimen_8"
+                       android:textSize="@dimen/text_14" />
+               </com.google.android.material.textfield.TextInputLayout>
+
+               <com.google.android.material.textfield.TextInputLayout
+                   android:id="@+id/tvETD"
+                   style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                   android:layout_width="@dimen/margin_0"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="@dimen/dimen_8"
+                   android:hint="@string/etd"
+                   android:layout_marginEnd="@dimen/dimen_4"
+                   app:layout_constraintStart_toStartOf="@+id/tvTipoCabina"
+                   app:layout_constraintTop_toBottomOf="@+id/tvTipoCabina"
+                   app:startIconDrawable="@drawable/ic_calendar"
+                   app:layout_constraintEnd_toStartOf="@+id/tilETDHour">
+
+                   <com.google.android.material.textfield.TextInputEditText
+                       android:id="@+id/tietETDDate"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:clickable="false"
+                       android:focusable="false"
+                       android:inputType="date"
+                       android:textSize="@dimen/text_14" />
+               </com.google.android.material.textfield.TextInputLayout>
+
+               <com.google.android.material.textfield.TextInputLayout
+                   android:id="@+id/tilETDHour"
+                   style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                   android:layout_width="@dimen/margin_0"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="@dimen/dimen_4"
+                   android:clickable="false"
+                   android:focusable="false"
+                   android:hint="@string/etd"
+                   app:startIconDrawable="@drawable/ic_clock"
+                   app:layout_constraintEnd_toEndOf="@+id/tvEquipment"
+                   app:layout_constraintStart_toEndOf="@+id/tvETD"
+                   app:layout_constraintTop_toTopOf="@+id/tvETD">
+
+                   <com.google.android.material.textfield.TextInputEditText
+                       android:id="@+id/tietETDHour"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:clickable="false"
+                       android:focusable="false"
+                       android:inputType="time"
+                       android:textSize="@dimen/text_14" />
+
+               </com.google.android.material.textfield.TextInputLayout>
+
+               <com.google.android.material.textfield.TextInputLayout
+                   android:id="@+id/tilETADate"
+                   style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                   android:layout_width="@dimen/margin_0"
+                   android:layout_height="wrap_content"
+                   android:hint="@string/eta"
+                   android:layout_marginTop="@dimen/dimen_8"
+                   android:layout_marginEnd="@dimen/dimen_4"
+                   app:layout_constraintStart_toStartOf="@+id/tvETD"
+                   app:layout_constraintTop_toBottomOf="@+id/tvETD"
+                   app:layout_constraintEnd_toStartOf="@id/tilETAHour"
+                   app:startIconDrawable="@drawable/ic_calendar">
+
+                   <com.google.android.material.textfield.TextInputEditText
+                       android:id="@+id/tietETADate"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:clickable="false"
+                       android:focusable="false"
+                       android:inputType="date"
+                       android:textSize="@dimen/text_14" />
+               </com.google.android.material.textfield.TextInputLayout>
+
+               <com.google.android.material.textfield.TextInputLayout
+                   android:id="@+id/tilETAHour"
+                   style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                   android:layout_width="@dimen/margin_0"
+                   android:layout_height="wrap_content"
+                   android:hint="@string/eta"
+                   android:layout_marginStart="@dimen/dimen_4"
+                   app:layout_constraintEnd_toEndOf="@+id/tilETDHour"
+                   app:layout_constraintStart_toEndOf="@+id/tilETADate"
+                   app:layout_constraintTop_toTopOf="@+id/tilETADate"
+                   app:startIconDrawable="@drawable/ic_clock">
+
+                   <com.google.android.material.textfield.TextInputEditText
+                       android:id="@+id/tietETAHour"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:clickable="false"
+                       android:focusable="false"
+                       android:inputType="time"
+                       android:textSize="@dimen/text_14" />
+
+               </com.google.android.material.textfield.TextInputLayout>
+           </androidx.constraintlayout.widget.ConstraintLayout>
+
+           <TextView
+               android:id="@+id/btnContinue"
+               android:layout_width="@dimen/margin_0"
+               android:layout_height="wrap_content"
+               android:layout_marginHorizontal="@dimen/dimen_4"
+               android:layout_marginTop="@dimen/dimen_20"
+               android:background="@drawable/green_background_rounded"
+               android:clickable="true"
+               android:elevation="@dimen/dimen_8"
+               android:focusable="true"
+               android:foreground="?android:attr/selectableItemBackground"
+               android:gravity="center_horizontal|center_vertical"
+               android:text="@string/continuar"
+               android:textColor="@color/white"
+               android:textSize="@dimen/text_14"
+               app:layout_constraintEnd_toEndOf="@+id/flightInformationContainer"
+               app:layout_constraintStart_toEndOf="@+id/btnBack"
+               app:layout_constraintTop_toBottomOf="@+id/flightInformationContainer" />
+
+           <TextView
+               android:id="@+id/btnBack"
+               android:layout_width="@dimen/margin_0"
+               android:layout_height="wrap_content"
+               android:layout_marginHorizontal="@dimen/dimen_4"
+               android:background="@drawable/green_background_rounded"
+               android:backgroundTint="@color/gray_text"
+               android:clickable="true"
+               android:elevation="@dimen/dimen_8"
+               android:focusable="true"
+               android:foreground="?android:attr/selectableItemBackground"
+               android:gravity="center_horizontal|center_vertical"
+               android:text="@string/cancel"
+               android:textColor="@color/white"
+               android:textSize="@dimen/text_14"
+               app:layout_constraintEnd_toStartOf="@+id/btnContinue"
+               app:layout_constraintStart_toStartOf="@+id/flightInformationContainer"
+               app:layout_constraintTop_toTopOf="@+id/btnContinue" />
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

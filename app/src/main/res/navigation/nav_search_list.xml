@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_search_list"
+    app:startDestination="@id/messageLPDFragment">
+
+    <fragment
+        android:id="@+id/searchListFragment"
+        android:name="com.aeromexico.aeropuertos.paperlessmobile.searchList.view.SearchListFragment"
+        android:label="fragment_search_list"
+        tools:layout="@layout/fragment_search_list" >
+        <argument
+            android:name="vuelo"
+            android:defaultValue="@null"
+            app:nullable="true"
+            app:argType="com.aeromexico.aeropuertos.paperlessmobile.webService.Responses.Vuelos" />
+        <argument
+            android:name="lpd"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/messageLPDFragment"
+        android:name="com.aeromexico.aeropuertos.paperlessmobile.searchList.view.MessageLPDFragment"
+        android:label="fragment_message_l_p_d"
+        tools:layout="@layout/fragment_message_l_p_d" >
+        <argument
+            android:name="vuelo"
+            android:defaultValue="@null"
+            app:nullable="true"
+            app:argType="com.aeromexico.aeropuertos.paperlessmobile.webService.Responses.Vuelos" />
+        <action
+            android:id="@+id/action_messageLPDFragment_to_searchListFragment"
+            app:destination="@id/searchListFragment" >
+            <argument
+                android:name="vuelo"
+                android:defaultValue="@null"
+                app:nullable="true"
+                app:argType="com.aeromexico.aeropuertos.paperlessmobile.webService.Responses.Vuelos" />
+            <argument
+                android:name="lpd"
+                app:argType="boolean" />
+        </action>
+    </fragment>
+</navigation>

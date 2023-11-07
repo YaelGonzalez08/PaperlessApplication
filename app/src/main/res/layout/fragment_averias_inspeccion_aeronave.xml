@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".inspeccionAeronaveREF.view.AveriasInspeccionAeronaveFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--Switch de pernocta-->
+        <Switch
+            android:id="@+id/switchPernocta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvPernocta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/common_padding_default"
+            android:text="@string/pernocta"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@id/switchPernocta"
+            app:layout_constraintEnd_toStartOf="@id/switchPernocta"
+            app:layout_constraintTop_toTopOf="@id/switchPernocta" />
+
+        <!--LLegada o Salida-->
+
+        <TextView
+            android:id="@+id/tvSeccionVuelo"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_padding_middle"
+            android:text="@string/tipo_de_vuelo"
+            android:textColor="@color/primaryColor"
+            android:textSize="@dimen/text_17"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPernocta" />
+
+
+        <TextView
+            android:id="@+id/tvLlegadaoSalida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_padding_default"
+            android:layout_marginRight="@dimen/common_padding_min"
+            android:text="@string/llegada_o_salida"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSeccionVuelo"
+
+            />
+
+        <TextView
+            android:id="@+id/tvLlegada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/common_padding_min"
+            android:text="@string/llegada"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_13"
+            app:layout_constraintEnd_toStartOf="@id/cbLlegada"
+            app:layout_constraintTop_toTopOf="@id/tvLlegadaoSalida" />
+
+
+        <CheckBox
+            android:id="@+id/cbLlegada"
+            android:layout_width="@dimen/checkboxWidth"
+            android:layout_height="0dp"
+            android:layout_marginRight="@dimen/common_padding_middle"
+            android:buttonTint="@color/primaryLightColor"
+            android:clickable="false"
+            app:layout_constraintBottom_toBottomOf="@id/tvLlegada"
+            app:layout_constraintEnd_toStartOf="@id/tvSalida"
+            app:layout_constraintTop_toTopOf="@id/tvLlegada" />
+
+
+        <TextView
+            android:id="@+id/tvSalida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/common_padding_min"
+            android:text="@string/salida"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@id/cbSalida"
+            app:layout_constraintTop_toTopOf="@id/tvLlegada" />
+
+        <CheckBox
+            android:id="@+id/cbSalida"
+            android:layout_width="@dimen/checkboxWidth"
+            android:layout_height="0dp"
+            android:buttonTint="@color/primaryLightColor"
+            android:clickable="false"
+            app:layout_constraintBottom_toBottomOf="@id/tvSalida"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvSalida" />
+
+
+        <TextView
+            android:id="@+id/tvNotaLLegadaSalida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_padding_default"
+            android:text="@string/warning_llegada"
+            android:textColor="@color/primaryLightColor"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLlegada" />
+
+        <View
+            android:id="@+id/divider0"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/common_padding_default"
+            android:layout_marginBottom="@dimen/common_padding_default"
+            android:background="@color/color_divider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvNotaLLegadaSalida" />
+        <!--Inspección de aeronave-->
+
+        <TextView
+            android:id="@+id/tvInspeccionAeronave"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_padding_default"
+            android:text="@string/inspeccion_de_aeronave_form"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider0" />
+
+        <TextView
+            android:id="@+id/tvNota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_padding_min"
+            android:text="@string/instrucciones_inspec_aeronave"
+            android:textColor="@color/primaryLightColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvInspeccionAeronave" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/averiasRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvNota"
+            tools:itemCount="1"
+            tools:listitem="@layout/item_averia" />
+
+        <LinearLayout
+            android:id="@+id/error_faltan_fotos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/averiasRecycler"
+            app:layout_constraintTop_toBottomOf="@+id/averiasRecycler">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_round_camera"
+                android:backgroundTint="@color/amarillo_mensaje_aviso" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/foto_marco_comp_faltante"
+                android:textColor="@color/badge_text_color" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/error_incompleto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/error_faltan_fotos"
+            app:layout_constraintTop_toBottomOf="@+id/error_faltan_fotos">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_error"
+                android:backgroundTint="@color/amarillo_mensaje_aviso" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Recuerda que para este vuelo y esta inspección aún faltan elementos por responder para proceder a firmar"
+                android:textColor="@color/badge_text_color" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btnGuardarLocal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_4"
+            android:background="@drawable/background_logout_button"
+            android:clickable="true"
+            android:drawableStart="@drawable/ic_save"
+            android:drawablePadding="@dimen/dimen_4"
+            android:drawableTint="@color/white"
+            android:elevation="@dimen/dimen_8"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/guardar_formulario"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_14"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnEnviarForm"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/error_incompleto" />
+
+        <TextView
+            android:id="@+id/btnEnviarForm"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="@dimen/dimen_4"
+            android:background="@drawable/background_logout_button"
+            android:backgroundTint="@color/color_verde"
+            android:clickable="true"
+            android:drawableEnd="@drawable/ic_baseline_arrow_forward"
+            android:drawablePadding="@dimen/dimen_2"
+            android:drawableTint="@color/white"
+            android:elevation="@dimen/dimen_8"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Siguiente   "
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_14"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/btnGuardarLocal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btnGuardarLocal" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

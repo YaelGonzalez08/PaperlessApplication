@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contenedor_enviar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="@dimen/dimen_4"
+    android:padding="@dimen/dimen_4">
+
+    <TextView
+        android:id="@+id/txt_descripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+        android:textColor="@color/primaryColor"
+        android:textSize="@dimen/text_18"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Descripcion de equipo  " />
+
+    <TextView
+        android:id="@+id/textView132"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fecha_de_revision"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+        android:textColor="@color/primaryColor"
+        android:textSize="@dimen/text_14"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_descripcion" />
+
+    <TextView
+        android:id="@+id/txt_fecha_rev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_4"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+        android:textColor="@color/primaryColor"
+        android:textSize="@dimen/text_14"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView132"
+        app:layout_constraintStart_toEndOf="@+id/textView132"
+        app:layout_constraintTop_toTopOf="@+id/textView132"
+        tools:text="14/58/2400 88:88:88" />
+
+
+    <TextView
+        android:id="@+id/txt_supervisor_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+        android:textColor="@color/primaryColor"
+        android:textSize="@dimen/text_14"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView132"
+        tools:text="supervisor nombre   " />
+
+    <TextView
+        android:id="@+id/txt_operador_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+        android:textColor="@color/primaryColor"
+        android:textSize="@dimen/text_14"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_supervisor_name"
+        tools:text="operador nombre   " />
+
+    <TextView
+        android:id="@+id/btnEliminar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/common_padding_middle"
+        android:text="@string/eliminar"
+        android:textColor="#ff4d4d"
+        app:layout_constraintBottom_toBottomOf="@id/btnEnviar"
+        app:layout_constraintEnd_toStartOf="@id/btnEnviar"
+        app:layout_constraintTop_toTopOf="@id/btnEnviar" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnEnviar"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="@string/enviar"
+        android:textSize="@dimen/text_11"
+        app:icon="@drawable/ic_check_mini"
+        app:iconGravity="end"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_operador_name" />
+
+    <TextView
+        android:id="@+id/txt_falata_completar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+        android:textColor="@color/primaryColor"
+        android:textSize="@dimen/text_14"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:text="!Formulario Incompleto! Completar en el Modulo"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEnviar" />
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1"
+        android:background="@color/gray_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_falata_completar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

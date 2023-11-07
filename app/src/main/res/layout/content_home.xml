@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_main">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvTituloHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/menu"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+            android:layout_marginTop="@dimen/common_padding_default"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <!--<com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCampana"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_padding_default"
+            app:icon="@drawable/ic_notifications"
+            app:layout_constraintStart_toEndOf="@id/tvTituloHome"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Dialog"/>-->
+
+        <ImageButton
+            android:id="@+id/btnInspeccionAeronave"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="boton"
+            android:src="@drawable/ic_inspeccion_aeronave"
+            android:background="@null"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/btnMensajesOperacionales"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        <TextView
+            android:id="@+id/tvtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/inspeccion_de_aeronave"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            app:layout_constraintStart_toStartOf="@id/btnInspeccionAeronave"
+            app:layout_constraintEnd_toEndOf="@id/btnInspeccionAeronave"
+            app:layout_constraintTop_toBottomOf="@id/btnInspeccionAeronave"/>
+
+        <ImageButton
+            android:id="@+id/btnMensajesOperacionales"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_am_plane"
+            app:layout_constraintTop_toBottomOf="@id/tvtext"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvtext2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mensajes_operacionales"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            app:layout_constraintStart_toStartOf="@id/btnMensajesOperacionales"
+            app:layout_constraintEnd_toEndOf="@id/btnMensajesOperacionales"
+            app:layout_constraintTop_toBottomOf="@id/btnMensajesOperacionales"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
