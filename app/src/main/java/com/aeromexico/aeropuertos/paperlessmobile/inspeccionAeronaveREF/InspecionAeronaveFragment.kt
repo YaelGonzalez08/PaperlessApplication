@@ -182,6 +182,12 @@ class InspecionAeronaveFragment : Fragment() {
                 }
 
 
+            }else{
+                d.mostrarError("Error!","Error interno del servidor.")
+                    d.btnCerrar.setOnClickListener {
+                        d.Ocultar()
+                        mActivity?.onBackPressed()
+                    }
             }
         })
 
