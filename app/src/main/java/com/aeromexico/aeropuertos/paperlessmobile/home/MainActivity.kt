@@ -1,11 +1,13 @@
 package com.aeromexico.aeropuertos.paperlessmobile.home
 
 import android.app.Activity
+import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
 import android.content.res.Configuration
 import android.os.Build
 import android.os.Bundle
+import android.util.AttributeSet
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
@@ -187,12 +189,38 @@ class MainActivity : AppCompatActivity() {
             }
         })
         updateCampanita()
+      //  changeSplashScreem(false)
 
     }
 
+    override fun onPause() {
+        super.onPause()
+        changeSplashScreem(true)
+    }
     override fun onResume() {
         super.onResume()
         VerificarInicioDeSession()
+        changeSplashScreem(false)
+    }
+
+    private fun changeSplashScreem(isShow: Boolean) {
+
+
+        binding.apply {
+            if (isShow) {
+
+                splashPause.root.visibility = View.VISIBLE
+                actionViewMenu?.visibility = View.GONE
+                containner.visibility = View.GONE
+            } else {
+                viewModel.waithSeconds().observeOnce {
+                    splashPause.root.visibility = View.GONE
+                    actionViewMenu?.visibility = View.VISIBLE
+                    containner.visibility = View.VISIBLE
+                }
+
+            }
+        }
     }
 
     fun logOut() {
@@ -334,14 +362,15 @@ class MainActivity : AppCompatActivity() {
             cantMOPendientes + pendIA + pendInpAeroPrimerVuelo + pendInspEquipo + pendInspecAeronave + penDeshielo + pendientesOrdenCarga + pendientesNotoc
     }
 
+    var actionViewMenu:View? = null
 
     //Campana de notificaciones
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.campana, menu);
 
         val menuItem = menu!!.findItem(R.id.item_campana);
-        val actionView = menuItem.actionView;
-        val badge_notificaciones = actionView?.findViewById<View>(R.id.campana_badge) as TextView;
+        actionViewMenu = menuItem.actionView;
+        val badge_notificaciones = actionViewMenu?.findViewById<View>(R.id.campana_badge) as TextView;
 
         if (badge_notificaciones != null) {
             if (this.mCantidadNotificaciones == 0) {
@@ -356,8 +385,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        actionView.setOnClickListener { onOptionsItemSelected(menuItem) }
-
+        actionViewMenu?.setOnClickListener { onOptionsItemSelected(menuItem) }
         return true
     }
     var mostrarRenovDialog = true

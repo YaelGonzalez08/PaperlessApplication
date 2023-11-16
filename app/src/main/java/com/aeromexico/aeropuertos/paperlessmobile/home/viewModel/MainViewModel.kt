@@ -3,10 +3,13 @@ package com.aeromexico.aeropuertos.paperlessmobile.home.viewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.aeromexico.aeropuertos.paperlessmobile.PaperlessApplication
 import com.aeromexico.aeropuertos.paperlessmobile.common.database.entities.*
 import com.aeromexico.aeropuertos.paperlessmobile.common.database.interactors.*
 import com.aeromexico.aeropuertos.paperlessmobile.mensajesOperacionales.model.MOInteractor
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 
 class MainViewModel: ViewModel() {
@@ -27,6 +30,14 @@ class MainViewModel: ViewModel() {
         }
     }
 
+    fun waithSeconds(): MutableLiveData<Boolean> {
+        var returnValue = MutableLiveData<Boolean>()
+        viewModelScope.launch {
+            delay(800)
+            returnValue.postValue(true)
+        }
+        return returnValue
+    }
 
     private val firmas= MutableLiveData<MutableList<ModificarDetalleLirEntity>>()
     private val cambioFirmas= MutableLiveData<Boolean>()
