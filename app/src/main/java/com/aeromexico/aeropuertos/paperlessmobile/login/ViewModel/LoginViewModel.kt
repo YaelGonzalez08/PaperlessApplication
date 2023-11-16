@@ -61,4 +61,12 @@ class LoginViewModel(private val repository: UserRepository,private var oktaMana
         }
         return token
     }
+    fun waithSeconds(): MutableLiveData<Boolean> {
+        var returnValue = MutableLiveData<Boolean>()
+        viewModelScope.launch {
+            delay(1200)
+            returnValue.postValue(true)
+        }
+        return returnValue
+    }
 }

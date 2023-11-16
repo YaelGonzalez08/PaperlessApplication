@@ -7,6 +7,7 @@ import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.ArrayAdapter
 import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.lifecycle.Observer
@@ -278,6 +279,26 @@ class LoginActivity : AppCompatActivity(),
             }
         })
          */
+        changeSplashScreem(false)
+
+    }
+    override fun onPause() {
+        super.onPause()
+        changeSplashScreem(true)
+    }
+    private fun changeSplashScreem(isShow: Boolean) {
+
+        binding.apply {
+            if (isShow) {
+                splashPause.root.visibility = View.VISIBLE
+
+            } else {
+                model.waithSeconds().observeOnce {
+                    splashPause.root.visibility = View.GONE
+                }
+
+            }
+        }
     }
 
     private fun getSignOutCallback(): RequestCallback<Int, AuthorizationException> {
