@@ -7,9 +7,9 @@ plugins {
     id 'androidx.navigation.safeargs.kotlin'
     id 'kotlin-parcelize'
 }
-def ChangeNote= "ackTimeStamp"
-//def ambient = "prod"
-def ambient = "dev"
+def ChangeNote= "longTimeInspeccion"
+def ambient = "prod"
+//def ambient = "dev"
 
 android {
     compileSdkVersion 33
@@ -19,8 +19,8 @@ android {
         applicationId "com.aeromexico.aeropuertos.paperlessmobile"
         minSdkVersion 21
         targetSdkVersion 33
-        versionCode 42
-        versionName "1.16.4"
+        versionCode 43
+        versionName "1.16.5"
 
         setProperty("archivesBaseName", "PPL_${ambient}_${ChangeNote.trim()}_${versionName}")
         manifestPlaceholders = [ "webAuthenticationRedirectScheme": "com.okta.dev-95080594:/callback", "appAuthRedirectScheme": "com.okta.dev-95080594" ]
@@ -37,7 +37,7 @@ android {
                 //API DESARROLLO
 
                 buildConfigField "String", "PAPERLESS_AMBIENT", '"dev"'
-                buildConfigField "String", "PAPERLESS_URL_API", '"https://furostest.aeromexico.com/api/"'
+                buildConfigField "String", "PAPERLESS_URL_API", '"http://furostest.aeromexico.com/api/"'
                 // buildConfigField "String", "PAPERLESS_URL_API", '"https://0qdxh9tpza.execute-api.us-east-1.amazonaws.com/"'
             } else {
                 //PROD

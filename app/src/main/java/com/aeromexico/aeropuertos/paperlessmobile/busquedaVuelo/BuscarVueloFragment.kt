@@ -24,6 +24,7 @@ import com.aeromexico.aeropuertos.paperlessmobile.databinding.BuscarVueloFragmen
 import com.aeromexico.aeropuertos.paperlessmobile.home.MainActivity
 import com.aeromexico.aeropuertos.paperlessmobile.webService.Responses.Vuelos
 import com.aeromexico.aeropuertos.paperlessmobile.webService.WebServiceApi
+import ng.softcom.android.utils.ui.showToast
 
 class BuscarVueloFragment : Fragment(), OnClickListener {
 
@@ -110,6 +111,7 @@ class BuscarVueloFragment : Fragment(), OnClickListener {
             }
             else{
                 mAdapter.cleanFlightList()
+                showToast("Vuelo no encontrado")
             }
         })
     }

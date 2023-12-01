@@ -100,11 +100,11 @@ class WebServiceApi {
             interceptor.level = HttpLoggingInterceptor.Level.BODY
 
             val client = OkHttpClient.Builder()
-                .writeTimeout(60, TimeUnit.SECONDS)
-                .readTimeout(60, TimeUnit.SECONDS)
-                .connectTimeout(60, TimeUnit.SECONDS)
+                .writeTimeout(180, TimeUnit.SECONDS)
+                .readTimeout(180, TimeUnit.SECONDS)
+                .connectTimeout(180, TimeUnit.SECONDS)
                 .retryOnConnectionFailure(true)
-                .callTimeout(60, TimeUnit.SECONDS)
+                .callTimeout(180, TimeUnit.SECONDS)
                 .addInterceptor(interceptor).addInterceptor { chain ->
                     if (!token.isNullOrEmpty()) {
                         val newRequest: Request = chain.request().newBuilder()
