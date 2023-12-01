@@ -20,7 +20,7 @@ android {
         minSdkVersion 21
         targetSdkVersion 33
         versionCode 43
-        versionName "1.16.5"
+        versionName "2.0.0"
 
         setProperty("archivesBaseName", "PPL_${ambient}_${ChangeNote.trim()}_${versionName}")
         manifestPlaceholders = [ "webAuthenticationRedirectScheme": "com.okta.dev-95080594:/callback", "appAuthRedirectScheme": "com.okta.dev-95080594" ]
