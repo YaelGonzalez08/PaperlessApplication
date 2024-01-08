@@ -146,6 +146,8 @@ class InspeccionAeronaveDataSource(private val api: InspeccionAeronaveAPI) {
             ) {
                 if (response.isSuccessful) {
                     responseExisteInspeccion.postValue(response.body())
+                }else{
+                    responseExisteInspeccion.postValue(null)
                 }
             }
 

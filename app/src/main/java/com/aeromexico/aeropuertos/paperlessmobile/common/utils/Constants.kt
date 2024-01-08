@@ -2,7 +2,7 @@ package com.aeromexico.aeropuertos.paperlessmobile.common.utils
 
 object Constants {
     enum class Modulos{
-        Mensajes_Operacionales, Inspeccion_Aviones, Inspeccion_primer_vuelo , Deshielo, Orden_carga_combustible, OPT_BDM, Search_list,ControlAbordaje,NOTOC, ManifiestoCarga,Metar,NewInspeccion
+        Mensajes_Operacionales, Inspeccion_Aviones, Inspeccion_primer_vuelo , Deshielo, Orden_carga_combustible, OPT_BDM, Search_list,ControlAbordaje,NOTOC, ManifiestoCarga,Metar,NewInspeccion,Afan
     }
     //Controladores
     const val VUELOS = "Flights/"

@@ -47,6 +47,11 @@ class HomeFragment : Fragment() {
             image =R.drawable.deshielo,
             destination = ::  launchMetar))
         listModules.add(MenuModule(
+            name ="AFAN",
+            image =R.drawable.plane_check,
+            destination = ::  afanmodule))
+
+        listModules.add(MenuModule(
             name =getString(R.string.orden_de_carga_de_combustible),
             image =R.drawable.ic_bomba_de_gasolina,
             destination = ::launchOrdenCarga))
@@ -91,6 +96,7 @@ class HomeFragment : Fragment() {
             */
 
     }
+
 
     override fun onResume() {
         setupActionBar()
@@ -210,6 +216,11 @@ class HomeFragment : Fragment() {
         fragmentTransaction.commit()*/
     }
 
+    private fun afanmodule(menuModule: MenuModule) {
+        val bundle = bundleOf("ModuloSeleccionado" to Constants.Modulos.Afan.name)
+        bundle.putBoolean("btnManual", false)
+        findNavController().navigate(R.id.action_homeFragment2_to_buscarVueloFragment3,bundle)
+    }
 
     private fun launchInspeccionAeronaveFragment(module:MenuModule) {
 
