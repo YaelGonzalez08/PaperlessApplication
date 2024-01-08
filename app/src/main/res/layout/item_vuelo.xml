@@ -207,7 +207,7 @@
         android:id="@+id/textView2"
         android:layout_width="@dimen/dimen_16"
         android:layout_height="@dimen/dimen_8"
-        android:layout_marginEnd="@dimen/dimen_110"
+        android:layout_marginEnd="@dimen/dimen_90"
         android:background="@drawable/half_circle_bottom"
         android:backgroundTint="@color/primaryColor"
         app:layout_constraintEnd_toEndOf="parent"
@@ -216,7 +216,7 @@
     <TextView
         android:layout_width="@dimen/dimen_16"
         android:layout_height="@dimen/dimen_8"
-        android:layout_marginEnd="@dimen/dimen_110"
+        android:layout_marginEnd="@dimen/dimen_90"
         android:background="@drawable/half_circle_top"
         android:backgroundTint="@color/primaryColor"
         app:layout_constraintBottom_toBottomOf="parent"

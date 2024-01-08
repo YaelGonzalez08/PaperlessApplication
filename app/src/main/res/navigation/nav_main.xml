@@ -116,6 +116,9 @@
         <action
             android:id="@+id/action_buscarVueloFragment3_to_inspecionAeronaveFragment2"
             app:destination="@id/inspecionAeronaveFragment2" />
+        <action
+            android:id="@+id/action_buscarVueloFragment3_to_afanFragment"
+            app:destination="@id/afanFragment" />
     </fragment>
     <include app:graph="@navigation/nav_checklist_diario" />
     <fragment
@@ -269,6 +272,15 @@
         android:name="com.aeromexico.aeropuertos.paperlessmobile.inspeccionAeronaveREF.InspecionAeronaveFragment"
         android:label="fragment_inspecion_aeronave"
         tools:layout="@layout/fragment_inspecion_aeronave" >
+        <argument
+            android:name="vuelo"
+            app:argType="com.aeromexico.aeropuertos.paperlessmobile.webService.Responses.Vuelos" />
+    </fragment>
+    <fragment
+        android:id="@+id/afanFragment"
+        android:name="com.aeromexico.aeropuertos.paperlessmobile.afar.AfanFragment"
+        android:label="fragment_afan"
+        tools:layout="@layout/fragment_afan" >
         <argument
             android:name="vuelo"
             app:argType="com.aeromexico.aeropuertos.paperlessmobile.webService.Responses.Vuelos" />

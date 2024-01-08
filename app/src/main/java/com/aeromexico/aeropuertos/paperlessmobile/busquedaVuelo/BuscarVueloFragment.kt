@@ -218,7 +218,14 @@ class BuscarVueloFragment : Fragment(), OnClickListener {
             Constants.Modulos.ManifiestoCarga.name -> launchManifiestoCarga(flightEntity)
             Constants.Modulos.Metar.name -> launchMetar(flightEntity)
             Constants.Modulos.NewInspeccion.name -> launchNewInspeccionAeronave(flightEntity)
+            Constants.Modulos.Afan.name -> launchAfan(flightEntity)
+
         }
+    }
+
+    private fun launchAfan(flightEntity: Vuelos) {
+        val action = BuscarVueloFragmentDirections.actionBuscarVueloFragment3ToAfanFragment(flightEntity)
+        findNavController().navigate(action)
     }
 
     private fun launchNewInspeccionAeronave(flightEntity: Vuelos) {

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detalle_vuelo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/primaryColor">
+
+    <TextView
+        android:id="@+id/tvtextFechaVuelo"
+        style="@style/TextAppearance.MaterialComponents.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fecha_de_vuelo"
+        android:textAlignment="center"
+        android:textSize="@dimen/text_12"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/tvtextNumeroVuelo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvtextNumeroVuelo"
+        style="@style/TextAppearance.MaterialComponents.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/numero_de_vuelo"
+        android:textAlignment="center"
+        android:textSize="@dimen/text_12"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/tvtextRuta"
+        app:layout_constraintStart_toEndOf="@id/tvtextFechaVuelo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvtextRuta"
+        style="@style/TextAppearance.MaterialComponents.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ruta"
+        android:textAlignment="center"
+        android:textSize="@dimen/text_12"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/tvtextMatricula"
+        app:layout_constraintStart_toEndOf="@id/tvtextNumeroVuelo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvtextMatricula"
+        style="@style/TextAppearance.MaterialComponents.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/matricula"
+        android:textAlignment="center"
+        android:textSize="@dimen/text_12"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvtextRuta"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvFechaVuelo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="dd/MM/yyyy HH:mm"
+        android:textAlignment="center"
+        android:textSize="@dimen/text_12"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/tvtextFechaVuelo"
+        app:layout_constraintStart_toStartOf="@id/tvtextFechaVuelo"
+        app:layout_constraintTop_toBottomOf="@id/tvtextFechaVuelo" />
+
+    <TextView
+        android:id="@+id/tvNumeroVuelo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="AM355"
+        android:textAlignment="center"
+        android:textSize="@dimen/text_12"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/tvtextNumeroVuelo"
+        app:layout_constraintStart_toStartOf="@id/tvtextNumeroVuelo"
+        app:layout_constraintTop_toBottomOf="@id/tvtextNumeroVuelo" />
+
+    <TextView
+        android:id="@+id/tvRuta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EZE-MEX"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_12"
+        app:layout_constraintEnd_toEndOf="@id/tvtextRuta"
+        app:layout_constraintStart_toStartOf="@id/tvtextRuta"
+        app:layout_constraintTop_toBottomOf="@id/tvtextRuta" />
+
+    <TextView
+        android:id="@+id/tvMatricula"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="N446AM"
+        android:textAlignment="center"
+        android:textSize="@dimen/text_12"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/tvtextMatricula"
+        app:layout_constraintStart_toStartOf="@id/tvtextMatricula"
+        app:layout_constraintTop_toBottomOf="@id/tvtextMatricula" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/dimen_8"
+        android:background="@color/color_divider_pink"
+        app:layout_constraintEnd_toEndOf="@id/tvtextMatricula"
+        app:layout_constraintStart_toStartOf="@id/tvtextFechaVuelo"
+        app:layout_constraintTop_toBottomOf="@+id/tvFechaVuelo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
