@@ -60,7 +60,7 @@ class HomeFragment : Fragment() {
             image =R.drawable.ic_primer_vuelo,
             destination = ::launchFirstFlightDay))
         listModules.add(MenuModule(
-            name ="Control de abordaje \ny proc. de seg.",
+            name ="Control de \nabordaje y \nproc. de seg.",
             image =R.drawable.abordaje,
             destination = ::launchControlAbordaje))
 
@@ -80,12 +80,12 @@ class HomeFragment : Fragment() {
             destination = ::lauchSearchList))
 
         listModules.add(MenuModule(
-            name ="GAM e-Report",
+            name ="GAM \ne-Report",
             image =R.drawable.gam,
             destination = ::launchGAMReport))
 
         listModules.add(MenuModule(
-            name ="ACK Comunicados",
+            name ="ACK \nComunicados",
             image =R.drawable.ic_text_snippet,
             destination = ::launchACK))
         /*

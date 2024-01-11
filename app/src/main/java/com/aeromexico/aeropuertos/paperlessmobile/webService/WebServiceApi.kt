@@ -4,6 +4,8 @@ import android.util.Log
 import com.aeromexico.aeropuertos.paperlessmobile.BuildConfig
 import com.aeromexico.aeropuertos.paperlessmobile.PaperlessApplication
 import com.aeromexico.aeropuertos.paperlessmobile.webService.IAPI.*
+import com.google.gson.Gson
+import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.logging.HttpLoggingInterceptor
@@ -94,6 +96,9 @@ class WebServiceApi {
     fun getClient(): Retrofit? {
         var token = PaperlessApplication.tokenSession
         Log.e("token", "$token")
+        val gson: Gson = GsonBuilder()
+            .setLenient() // Permite JSON mal formado
+            .create()
 
         if (retrofit == null) {
             val interceptor = HttpLoggingInterceptor()
@@ -122,7 +127,7 @@ class WebServiceApi {
             retrofit = Retrofit.Builder()
                 .baseUrl(BuildConfig.PAPERLESS_URL_API)
                 .client(client)
-                .addConverterFactory(GsonConverterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
         }
         return retrofit

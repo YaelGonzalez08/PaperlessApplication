@@ -103,7 +103,7 @@
     <string name="nombre_del_supervisor">Nombre: </string>
     <string name="message_reporte_exitoso">El checklist de equipo diario se ha enviado de forma exitosa.</string>
     <string name="toolbar_title_first_flight">Primer vuelo</string>
-    <string name="check_plane_firts_flying_day">Primer vuelo del día</string>
+    <string name="check_plane_firts_flying_day">Primer vuelo \ndel día</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="manual_flight">Vuelo Manual</string>
     <string name="espere">Espere un momento</string>
