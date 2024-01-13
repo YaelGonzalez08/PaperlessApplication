@@ -88,7 +88,7 @@ dependencies {
     implementation 'com.android.volley:volley:1.2.0'
 
     //Gson
-    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.google.code.gson:gson:2.8.8'
     //Room
     implementation "androidx.room:room-runtime:$room_version"
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'

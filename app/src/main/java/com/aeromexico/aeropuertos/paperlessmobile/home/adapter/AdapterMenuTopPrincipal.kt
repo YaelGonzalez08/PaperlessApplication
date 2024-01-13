@@ -2,9 +2,12 @@ package com.aeromexico.aeropuertos.paperlessmobile.home.adapter
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.aeromexico.aeropuertos.paperlessmobile.home.MenuModule
+import com.aeromexico.aeropuertos.paperlessmobile.home.MenuModuleRecientes
 
-class AdapterMenuTopPrincipal(var listModules: ArrayList<MenuModule>) : RecyclerView.Adapter<menuTopViewHolder>()
+class AdapterMenuTopPrincipal(
+    var listModules: ArrayList<MenuModuleRecientes>,
+    var destination: (String) -> Unit
+) : RecyclerView.Adapter<menuTopViewHolder>()
 {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): menuTopViewHolder {
         return menuTopViewHolder.from(parent)
@@ -12,7 +15,7 @@ class AdapterMenuTopPrincipal(var listModules: ArrayList<MenuModule>) : Recycler
 
     override fun onBindViewHolder(holder: menuTopViewHolder, position: Int) {
         holder.bind(
-            listModules[position]
+            listModules[position], destination
         )
     }
 

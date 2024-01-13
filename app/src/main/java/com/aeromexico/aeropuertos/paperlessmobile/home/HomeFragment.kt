@@ -11,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import com.aeromexico.aeropuertos.paperlessmobile.BuildConfig
 import com.aeromexico.aeropuertos.paperlessmobile.R
 import com.aeromexico.aeropuertos.paperlessmobile.busquedaVuelo.viewModel.BuscarVueloViewModel
+import com.aeromexico.aeropuertos.paperlessmobile.common.DataStorage.AppPreferences
 import com.aeromexico.aeropuertos.paperlessmobile.common.utils.Constants
 import com.aeromexico.aeropuertos.paperlessmobile.databinding.FragmentHomeBinding
 import com.aeromexico.aeropuertos.paperlessmobile.home.adapter.AdapterMenuPrincipal
@@ -120,9 +121,20 @@ class HomeFragment : Fragment() {
         mBinding = FragmentHomeBinding.inflate(inflater,container,false)
 
         mBinding.reciclerMenu.adapter = AdapterMenuPrincipal(listModules)
-        mBinding.reciclerMenuTop.adapter = AdapterMenuTopPrincipal(listModules.shuffled().take(3) as ArrayList<MenuModule>)
+        var actualesList = AppPreferences(requireContext()).getList() as ArrayList<MenuModuleRecientes>
+        if(!actualesList.isNullOrEmpty()){
+            mBinding.tvTituloTop.visibility = View.VISIBLE
+            mBinding.reciclerMenuTop.visibility = View.VISIBLE
+            mBinding.reciclerMenuTop.adapter = AdapterMenuTopPrincipal(actualesList,::goRecent)
+        }
         return mBinding.root
     }
+
+    private fun goRecent(nameModule: String) {
+        var moduleSelected = listModules.first { nameModule.contains(it.name) }
+        moduleSelected.destination.invoke(moduleSelected)
+    }
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -140,37 +152,50 @@ class HomeFragment : Fragment() {
     }
 
     private fun launchACK(module:MenuModule) {
+        AppPreferences(requireContext()).saveModule(module)
         findNavController().navigate(R.id.action_homeFragment2_to_comunicadosFragment)
     }
 
     private fun launchGAMReport(module:MenuModule) {
+        AppPreferences(requireContext()).saveModule(module)
+
         findNavController().navigate(R.id.action_homeFragment2_to_GAMeReportFragment)
 
     }
 
     private fun launchControlAbordaje(module:MenuModule) {
+        AppPreferences(requireContext()).saveModule(module)
+
         val bundle = bundleOf("ModuloSeleccionado" to Constants.Modulos.ControlAbordaje.name)
         findNavController().navigate(R.id.action_homeFragment2_to_buscarVueloFragment3, bundle)
     }
 
     private fun launchInpeccionAeronave(module:MenuModule) {
+        AppPreferences(requireContext()).saveModule(module)
+
         val bundle = bundleOf("ModuloSeleccionado" to Constants.Modulos.NewInspeccion.name)
         findNavController().navigate(R.id.action_homeFragment2_to_buscarVueloFragment3, bundle)
 
     }
 
     private fun launchMetar(module:MenuModule) {
+        AppPreferences(requireContext()).saveModule(module)
+
         val bundle = bundleOf("ModuloSeleccionado" to Constants.Modulos.Metar.name)
         bundle.putBoolean("btnManual", false)
         findNavController().navigate(R.id.action_homeFragment2_to_buscarVueloFragment3, bundle)
     }
 
     private fun launchManifiestoCarga(module:MenuModule){
+        AppPreferences(requireContext()).saveModule(module)
+
         val bundle = bundleOf("ModuloSeleccionado" to Constants.Modulos.ManifiestoCarga.name)
         findNavController().navigate(R.id.action_homeFragment2_to_buscarVueloFragment3, bundle)
     }
 
     private fun launchNotoc(module:MenuModule) {
+        AppPreferences(requireContext()).saveModule(module)
+
         val bundle = bundleOf("ModuloSeleccionado" to Constants.Modulos.NOTOC.name)
         bundle.putBoolean("btnManual", true)
         findNavController().navigate(R.id.action_homeFragment2_to_buscarVueloFragment3, bundle)
@@ -178,26 +203,35 @@ class HomeFragment : Fragment() {
     }
 
     private fun lauchSearchList(module:MenuModule) {
+        AppPreferences(requireContext()).saveModule(module)
+
         val bundle = bundleOf("ModuloSeleccionado" to Constants.Modulos.Search_list.name)
         bundle.putBoolean("btnManual", true)
         findNavController().navigate(R.id.action_homeFragment2_to_buscarVueloFragment3, bundle)
     }
 
     private fun launchEncuesta(module:MenuModule) {
+        AppPreferences(requireContext()).saveModule(module)
+
         findNavController().navigate(R.id.action_homeFragment2_to_metarFragment)
     }
 
     private fun launchDesHielo(module:MenuModule) {
+        AppPreferences(requireContext()).saveModule(module)
+
         val bundle = bundleOf("ModuloSeleccionado" to Constants.Modulos.Deshielo.name)
         bundle.putBoolean("btnManual", true)
         findNavController().navigate(R.id.action_homeFragment2_to_buscarVueloFragment3, bundle)
     }
 
     private fun launchInspeccionEquipoFragment(module:MenuModule) {
+        AppPreferences(requireContext()).saveModule(module)
+
         findNavController().navigate(R.id.action_homeFragment2_to_nav_checklist_diario)
     }
 
     private fun launchMensajesOperacionalesFragment(module:MenuModule) {
+        AppPreferences(requireContext()).saveModule(module)
 
 //        Toast.makeText(this,Constants.Modulos.Mensajes_Operacionales.name,Toast.LENGTH_SHORT).show()
 //        mBuscarVueloViewModel.setSelectedModule(Constants.Modulos.Mensajes_Operacionales.name)
@@ -216,13 +250,16 @@ class HomeFragment : Fragment() {
         fragmentTransaction.commit()*/
     }
 
-    private fun afanmodule(menuModule: MenuModule) {
+    private fun afanmodule(module: MenuModule) {
+        AppPreferences(requireContext()).saveModule(module)
+
         val bundle = bundleOf("ModuloSeleccionado" to Constants.Modulos.Afan.name)
         bundle.putBoolean("btnManual", false)
         findNavController().navigate(R.id.action_homeFragment2_to_buscarVueloFragment3,bundle)
     }
 
     private fun launchInspeccionAeronaveFragment(module:MenuModule) {
+        AppPreferences(requireContext()).saveModule(module)
 
         val bundle = bundleOf("ModuloSeleccionado" to Constants.Modulos.Inspeccion_Aviones.name)
         bundle.putBoolean("btnManual", true)
@@ -230,12 +267,16 @@ class HomeFragment : Fragment() {
     }
 
     private fun launchFirstFlightDay (module:MenuModule) {
+        AppPreferences(requireContext()).saveModule(module)
+
         val bundle = bundleOf("ModuloSeleccionado" to Constants.Modulos.Inspeccion_primer_vuelo.name)
         bundle.putBoolean("btnManual", true)
         findNavController().navigate(R.id.action_homeFragment2_to_buscarVueloFragment3, bundle)
     }
 
     private fun launchOrdenCarga(module:MenuModule) {
+        AppPreferences(requireContext()).saveModule(module)
+
         val bundle = bundleOf("ModuloSeleccionado" to Constants.Modulos.Orden_carga_combustible.name)
         bundle.putBoolean("btnManual", true)
         findNavController().navigate(R.id.action_homeFragment2_to_buscarVueloFragment3, bundle)

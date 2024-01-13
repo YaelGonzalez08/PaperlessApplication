@@ -25,7 +25,7 @@ class menuPrincipalViewHolder(
            imagen.setBackgroundResource(menuModule.image)
             tvModulo.text = menuModule.name
             root.setOnClickListener {
-                menuModule.destination.invoke(menuModule)
+                menuModule.destination?.invoke(menuModule)
             }
         }
 

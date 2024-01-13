@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.aeromexico.aeropuertos.paperlessmobile.databinding.ItemMenuModuleBinding
 import com.aeromexico.aeropuertos.paperlessmobile.databinding.ItemMenuTopBinding
 import com.aeromexico.aeropuertos.paperlessmobile.home.MenuModule
+import com.aeromexico.aeropuertos.paperlessmobile.home.MenuModuleRecientes
 
 class menuTopViewHolder(
     var binding: ItemMenuTopBinding
@@ -20,13 +21,13 @@ class menuTopViewHolder(
         }
     }
 
-    fun bind(menuModule: MenuModule) {
+    fun bind(menuModule: MenuModuleRecientes,destination: (String) -> Unit) {
 
         binding.apply {
            imagen.setBackgroundResource(menuModule.image)
             tvModulo.text = menuModule.name
             root.setOnClickListener {
-                menuModule.destination.invoke(menuModule)
+                destination.invoke(menuModule.name)
             }
         }
 
