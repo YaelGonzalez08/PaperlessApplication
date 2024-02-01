@@ -90,7 +90,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dimen_10"
-            android:background="@drawable/background_logout_button"
+            android:background="@color/color_gray_white_background_checklist"
             android:gravity="center"
             android:padding="@dimen/dimen_8"
             android:text="@string/cerrar"
