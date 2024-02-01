@@ -58,12 +58,12 @@
         app:layout_constraintTop_toBottomOf="@+id/divider" />
 
     <TextView
-        android:layout_marginTop="@dimen/dimen_4"
         android:id="@+id/btn_Print"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="108dp"
+        android:layout_height="40dp"
         android:layout_marginHorizontal="@dimen/dimen_8"
-        android:background="@drawable/button_consultar"
+        android:layout_marginTop="@dimen/dimen_4"
+        android:background="#005DF6"
         android:clickable="true"
         android:drawableStart="@drawable/ic_print_black_24dp"
         android:drawableTint="@color/white"
@@ -73,8 +73,9 @@
         android:gravity="center_horizontal|center_vertical"
         android:text="Imprimir"
         android:textColor="@color/white"
-        android:textSize="@dimen/text_14"
+        android:textSize="@dimen/text_18"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="@+id/divider"
         app:layout_constraintTop_toBottomOf="@+id/tvFirma" />
 
@@ -131,10 +132,11 @@
 
     <TextView
         android:id="@+id/btn_cerrar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="84dp"
+        android:layout_height="38dp"
         android:layout_marginHorizontal="@dimen/dimen_4"
-        android:background="@drawable/button_consultar"
+        android:layout_marginTop="164dp"
+        android:background="@color/color_gray_white_background_checklist"
         android:clickable="true"
         android:elevation="@dimen/dimen_8"
         android:focusable="true"
@@ -142,8 +144,9 @@
         android:gravity="center_horizontal|center_vertical"
         android:text="@string/cerrar"
         android:textColor="@color/white"
-        android:textSize="@dimen/text_14"
+        android:textSize="@dimen/text_18"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_Print" />
 
     <LinearLayout
