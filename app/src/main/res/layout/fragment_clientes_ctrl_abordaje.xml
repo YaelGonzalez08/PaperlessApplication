@@ -52,19 +52,20 @@
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/text_J"
         app:layout_constraintTop_toBottomOf="@+id/textView34" />
+
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnUpdate"
-        android:textSize="@dimen/text_12"
-        android:layout_margin="@dimen/dimen_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/azul_boton_siguiente"
+        android:layout_margin="@dimen/dimen_2"
+        android:backgroundTint="@color/design_default_color_secondary"
         android:outlineAmbientShadowColor="@color/secondaryColor"
         android:text="Actualizar"
+        android:textSize="@dimen/text_12"
         app:icon="@drawable/ic_clear"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_Checklist"
