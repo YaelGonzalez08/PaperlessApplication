@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.aeromexico.aeropuertos.paperlessmobile",
+  "variantName": "release",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "versionCode": 33,
+      "versionName": "1.15.6",
+      "outputFile": "PPL_Combustibles_1.15.6-release.apk"
+    }
+  ]
+}

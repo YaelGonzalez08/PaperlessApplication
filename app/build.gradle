@@ -8,8 +8,8 @@ plugins {
     id 'kotlin-parcelize'
 }
 def ChangeNote= "longTimeInspeccion"
-def ambient = "prod"
-//def ambient = "dev"
+//def ambient = "prod"
+def ambient = "dev"
 
 android {
     compileSdkVersion 33
@@ -42,7 +42,6 @@ android {
             } else {
                 //PROD
                 buildConfigField "String", "PAPERLESS_AMBIENT", '"prod"'
-                buildConfigField "String", "PAPERLESS_URL_API", '"https://paperlessmobile.aeromexico.com/"'
             }
         }
         release {
