@@ -307,10 +307,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/common_padding_middle"
                 android:text="Firmar"
+                android:textColor="@color/white"
                 android:visibility="visible"
+                app:backgroundTint="#005DF6"
                 app:icon="@drawable/ic_draw"
                 app:iconGravity="textEnd"
-                app:iconTint="@color/primaryLightColor"
+                app:iconTint="@color/primaryTextColor"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/firmaOficialOperaciones" />
