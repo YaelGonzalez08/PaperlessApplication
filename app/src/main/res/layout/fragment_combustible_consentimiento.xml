@@ -26,15 +26,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.appcompat.widget.SwitchCompat
-            android:id="@+id/switchCompat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/primaryColor"
-            android:checked="false"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <TextView
             android:id="@+id/til_externo"
             style="@style/textViewFormItem"
@@ -45,9 +36,8 @@
             android:text="Externo"
             android:textSize="@dimen/text_10"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/switchCompat"
-            app:layout_constraintEnd_toStartOf="@+id/switchCompat"
-            app:layout_constraintTop_toTopOf="@+id/switchCompat" />
+            tools:layout_editor_absoluteX="281dp"
+            tools:layout_editor_absoluteY="17dp" />
 
         <LinearLayout
             android:id="@+id/containerUser"
@@ -194,16 +184,6 @@
                 android:textSize="@dimen/text_14" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <androidx.appcompat.widget.SwitchCompat
-            android:id="@+id/switchCompatMecanico"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/primaryColor"
-            android:checked="false"
-            app:layout_constraintBottom_toBottomOf="@+id/mecanicoExternoLabel"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/mecanicoExternoLabel" />
-
         <TextView
             android:id="@+id/mecanicoExternoLabel"
             style="@style/textViewFormItem"
@@ -215,8 +195,8 @@
             android:textSize="@dimen/text_10"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/tvSwitchMecanicoHeader"
-            app:layout_constraintEnd_toStartOf="@+id/switchCompatMecanico"
-            app:layout_constraintTop_toTopOf="@+id/tvSwitchMecanicoHeader" />
+            app:layout_constraintTop_toTopOf="@+id/tvSwitchMecanicoHeader"
+            tools:layout_editor_absoluteX="281dp" />
 
         <TextView
             android:id="@+id/tvSwitchMecanicoHeader"
@@ -462,14 +442,15 @@
                 android:inputType="none"
                 android:textSize="@dimen/text_14" />
         </com.google.android.material.textfield.TextInputLayout>
+
         <TextView
             android:id="@+id/btnEnviarForm"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_marginTop="@dimen/dimen_8"
+            android:layout_width="93dp"
+            android:layout_height="37dp"
             android:layout_marginHorizontal="@dimen/dimen_4"
+            android:layout_marginTop="@dimen/dimen_8"
             android:background="@drawable/background_logout_button"
-            android:backgroundTint="@color/color_verde"
+            android:backgroundTint="@color/color_rojo_carmin"
             android:clickable="true"
             android:drawablePadding="@dimen/dimen_4"
             android:drawableTint="@color/white"
