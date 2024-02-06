@@ -21,13 +21,14 @@
         android:padding="@dimen/dimen_8"
         tools:itemCount="5"
         android:layout_height="wrap_content"/>
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/mbEnviar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/dimen_16"
-        android:backgroundTint="@color/verde_success"
+        android:backgroundTint="@color/color_rojo_carmin"
         android:text="@string/continuar"
         android:visibility="visible"
         app:icon="@drawable/ic_send" />
