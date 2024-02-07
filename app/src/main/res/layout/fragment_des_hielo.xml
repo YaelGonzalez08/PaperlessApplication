@@ -78,7 +78,7 @@
             android:id="@+id/btn_regresar"
             android:layout_width="@dimen/dimen_150"
             android:layout_height="@dimen/dimen_40"
-            android:background="@drawable/background_gris_cuadrado_esquinasredondas"
+            android:background="@color/color_gray_white_background_checklist"
             android:gravity="center"
             android:paddingHorizontal="@dimen/dimen_8"
             android:text="@string/regresar"
