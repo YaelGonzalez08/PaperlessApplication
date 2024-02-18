@@ -94,7 +94,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dimen_16"
-            android:backgroundTint="#006600"
+            android:backgroundTint="@color/color_green_success"
             android:text="Finalizar"
             android:textSize="@dimen/text_13"
             app:icon="@drawable/ic_check"

@@ -1554,15 +1554,14 @@
                 android:id="@+id/btnSiguiente"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvErrorLlegadaSalida"
+                android:layout_marginTop="@dimen/common_padding_default"
+                android:backgroundTint="@color/color_rojo_carmin"
+                android:text="@string/siguiente"
+                android:textSize="@dimen/text_12"
                 app:icon="@drawable/ic_baseline_arrow_forward"
                 app:iconGravity="end"
-                android:text="@string/siguiente"
-                android:backgroundTint="#2d5986"
-                android:textSize="@dimen/text_12"
-                android:layout_marginTop="@dimen/common_padding_default"
-                />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvErrorLlegadaSalida" />
 
 
 

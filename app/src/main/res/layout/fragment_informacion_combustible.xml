@@ -553,12 +553,12 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
-                android:layout_marginTop="@dimen/dimen_10"
                 android:id="@+id/btnGuardarLocal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="93dp"
+                android:layout_height="33dp"
                 android:layout_marginHorizontal="@dimen/dimen_4"
-                android:background="@drawable/background_logout_button"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:background="@color/design_default_color_secondary"
                 android:clickable="true"
                 android:drawableStart="@drawable/ic_save"
                 android:drawablePadding="@dimen/dimen_4"

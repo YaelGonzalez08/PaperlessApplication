@@ -335,11 +335,11 @@
 
            <TextView
                android:id="@+id/btnContinue"
-               android:layout_width="@dimen/margin_0"
-               android:layout_height="wrap_content"
+               android:layout_width="179dp"
+               android:layout_height="26dp"
                android:layout_marginHorizontal="@dimen/dimen_4"
                android:layout_marginTop="@dimen/dimen_20"
-               android:background="@drawable/green_background_rounded"
+               android:background="@drawable/background_rojo_cuadrado_esquinasredondas"
                android:clickable="true"
                android:elevation="@dimen/dimen_8"
                android:focusable="true"
@@ -354,8 +354,8 @@
 
            <TextView
                android:id="@+id/btnBack"
-               android:layout_width="@dimen/margin_0"
-               android:layout_height="wrap_content"
+               android:layout_width="193dp"
+               android:layout_height="27dp"
                android:layout_marginHorizontal="@dimen/dimen_4"
                android:background="@drawable/green_background_rounded"
                android:backgroundTint="@color/gray_text"

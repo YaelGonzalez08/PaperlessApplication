@@ -20,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:backgroundTint="@color/primaryColor"
+            android:backgroundTint="@color/color_gray_white_background_checklist"
             android:text="@string/regresar"
             android:visibility="visible"
             app:icon="@drawable/ic_redo"

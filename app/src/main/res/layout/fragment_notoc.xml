@@ -90,7 +90,7 @@
             android:id="@+id/btn_continuar"
             android:layout_width="@dimen/dimen_150"
             android:layout_height="@dimen/dimen_40"
-            android:background="@drawable/background_azul_cuadrado_esquinasredondas"
+            android:background="@drawable/background_rojo_cuadrado_esquinasredondas"
             android:gravity="center"
             android:paddingHorizontal="@dimen/dimen_8"
             android:text="@string/continuar"
