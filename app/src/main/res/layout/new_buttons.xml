@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_Firma"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_8"
+        android:text="@string/firmar"
+        android:textColor="@color/white"
+        android:visibility="visible"
+        app:backgroundTint="@color/button_color_blue_actions"
+        app:icon="@drawable/ic_draw"
+        app:iconTint="@color/white" />
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_8"
+        android:text="@string/guardar_formulario"
+        android:textColor="@color/black"
+        android:visibility="visible"
+        app:backgroundTint="@color/button_color_green_save"
+        app:icon="@drawable/ic_save"
+        app:iconTint="@color/black" />
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_8"
+        android:layout_marginTop="@dimen/dimen_4"
+        android:clickable="true"
+        android:elevation="@dimen/dimen_8"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/imprimir_button"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_14"
+        android:visibility="visible"
+        app:backgroundTint="@color/button_color_blue_actions"
+        app:icon="@drawable/ic_print_black_24dp"
+        app:iconTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@+id/tvFirma" />
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_4"
+        android:layout_marginTop="@dimen/dimen_8"
+        android:backgroundTint="#E2CDC9C9"
+        android:clickable="true"
+        android:drawablePadding="@dimen/dimen_4"
+        android:elevation="@dimen/dimen_8"
+        android:focusable="true"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Regresar"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_14"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:icon="@drawable/ic_baseline_arrow_back"
+        app:iconGravity="start"
+
+
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnEnviarForm"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_4"
+        android:layout_marginTop="@dimen/dimen_8"
+        android:backgroundTint="@color/color_rojo_carmin"
+        android:clickable="true"
+        android:drawableEnd="@drawable/ic_baseline_arrow_forward"
+        android:drawablePadding="@dimen/dimen_4"
+        android:drawableTint="@color/white"
+        android:elevation="@dimen/dimen_8"
+        android:focusable="true"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Enviar"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_14"
+        android:textStyle="bold"
+        android:visibility="visible" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnFirmarMecanico"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_4"
+        android:clickable="true"
+        android:elevation="@dimen/dimen_8"
+        android:focusable="true"
+        app:backgroundTint="@color/button_color_blue_actions"
+        app:icon="@drawable/ic_draw"
+        app:iconTint="@color/white"
+        app:iconGravity="textEnd"
+        android:paddingVertical="@dimen/dimen_2"
+        app:layout_constraintBottom_toTopOf="@+id/btnFirmarHeaderMecanico"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivFirmaMecanico"
+        app:layout_constraintTop_toBottomOf="@+id/tilMecanicoHour"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_4"
+        android:background="@drawable/button_consultar"
+        android:clickable="true"
+        android:drawableTint="@color/white"
+        android:elevation="@dimen/dimen_8"
+        android:focusable="true"
+        app:drawableStartCompat="@drawable/ic_pencil"
+        app:layout_constraintBottom_toTopOf="@+id/btnFirmarHeaderMecanico"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivFirmaMecanico"
+        app:layout_constraintTop_toBottomOf="@+id/tilMecanicoHour" />
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/color_rojo_carmin"
+        android:clickable="true"
+        android:drawableEnd="@drawable/ic_baseline_arrow_forward"
+        android:drawableTint="@color/white"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/dimen_8"
+        android:text="@string/continuar"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabs_content"
+
+        />
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/color_rojo_carmin"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/dimen_8"
+        android:text="@string/continuar"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabs_content"
+
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAbrirCamara"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_padding_default"
+        android:layout_marginBottom="@dimen/common_padding_middle"
+        android:text="@string/btnTomarFoto"
+        android:textColor="@color/primaryLightColor"
+        android:textSize="@dimen/text_11"
+        app:icon="@drawable/ic_add"
+        app:iconGravity="textEnd"
+        app:iconTint="@color/primaryLightColor"
+        app:layout_constraintTop_toBottomOf="@id/mImageView" />
+
+
+</LinearLayout>
